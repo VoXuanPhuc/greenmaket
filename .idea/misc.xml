@@ -3,16 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/background.xml" value="0.2169230769230769" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/bg_color.xml" value="0.2203125" />
+        <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/bt_color.xml" value="0.2169230769230769" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/radious_avatar.xml" value="0.2203125" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/round.xml" value="0.2203125" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2203125" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable/radiou_editprofile.xml" value="0.2203125" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable/rodious_avatar.xml" value="0.2203125" />
+        <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_dangky.xml" value="0.20416666666666666" />
+        <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_dangnhap.xml" value="0.20416666666666666" />
+        <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_danngky.xml" value="0.20416666666666666" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_edit_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_giaodien1.xml" value="0.20416666666666666" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_manager_product.xml" value="0.20416666666666666" />
-        <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/laptrinhdidong/app/src/main/res/layout/activity_profile.xml" value="0.22" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/menu/navigation_items.xml" value="0.20416666666666666" />
       </map>
     </option>

@@ -32,7 +32,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="50dp"
-            android:text="Ng Thi Thu Thuy"
+            android:text="Nguyen Thi Thu Thuy"
             android:textColor="@color/black"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -46,7 +46,7 @@
         android:paddingHorizontal="15dp">
 
         <Button
-            android:id="@+id/be"
+            android:id="@+id/editProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/round"
@@ -56,22 +56,22 @@
             android:layout_marginVertical="10dp"
             />
         <Button
-            android:id="@+id/be1"
+            android:id="@+id/quanlybd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/round"
             android:backgroundTint="#086444"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="Quan Ly bai dang"
             android:textColor="#FFFFFF"
             android:layout_marginVertical="10dp"
             />
         <Button
-            android:id="@+id/be2"
+            android:id="@+id/hoadon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/round"
             android:backgroundTint="#086444"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="Hoa don"
             android:textColor="#FFFFFF"
             android:layout_marginVertical="10dp"/>
     </LinearLayout>
