@@ -39,17 +39,16 @@
         android:divider="@null"
         android:dividerHeight="12.0sp"
         android:paddingHorizontal="10dp"
-        android:scrollbars="none"/>
+        android:scrollbars="none" />
 
     <ImageButton
         android:id="@+id/themmoibaidang"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@drawable/addbd_icon"
-        android:background="@drawable/radiou_editprofile"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="75dp"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="20dp"
-        />
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/radiou_editprofile"
+        android:src="@drawable/addbd_icon" />
 </RelativeLayout>
