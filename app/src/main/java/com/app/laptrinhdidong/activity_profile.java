@@ -10,17 +10,24 @@ import android.widget.Button;
 public class activity_profile extends AppCompatActivity {
 
     Button editProfile;
+    Button managerBaiDang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
         editProfile = (Button) findViewById(R.id.editProfile);
-
+        managerBaiDang = (Button) findViewById(R.id.quanlybd);
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(activity_profile.this, com.app.laptrinhdidong.editProfile.class));
+            }
+        });
+        managerBaiDang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity_profile.this, com.app.laptrinhdidong.activity_quanlynongsan.class));
             }
         });
     }

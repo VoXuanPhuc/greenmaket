@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
+            android:name=".activity_chitietnongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_quanlynongsan"
+            android:exported="true" />
+        <activity
             android:name=".activity_dangky"
             android:exported="true" />
         <activity
