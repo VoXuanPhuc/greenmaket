@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/item1"
-        android:icon="@drawable/home_icon"
+    <item android:id="@+id/home"
+        android:icon="@drawable/img_5"
         android:title=""/>
-    <item android:id="@+id/item2"
-        android:icon="@drawable/card"
+    <item android:id="@+id/card"
+        android:icon="@drawable/img_4"
         android:title=""/>
-    <item android:id="@+id/item3"
+    <item android:id="@+id/notification"
         android:icon="@drawable/notification"
         android:title=""/>
-    <item android:id="@+id/item4"
+    <item android:id="@+id/profile"
         android:icon="@drawable/profile"
         android:title=""/>
 </menu>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round"
+    android:backgroundTint="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/editbaidang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit_baidang" />
+
+
+    <ImageView
+        android:id="@+id/imageviewTraicaybaidang"
+        android:layout_width="130dp"
+        android:layout_height="145dp"
+        android:layout_marginHorizontal="10dp" />
+
+    <TextView
+        android:id="@+id/tenNongsan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imageviewTraicaybaidang"
+        android:text="Ten"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/mieutaNongsan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tenNongsan"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/imageviewTraicaybaidang"
+        android:text="Ten"
+        android:textSize="15dp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/giaNongsan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mieutaNongsan"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@id/imageviewTraicaybaidang"
+        android:text="Ten"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/soluongCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/imageviewTraicaybaidang"
+        android:text="Ten"
+        android:textSize="15dp"
+        android:layout_below="@+id/giaNongsan"/>
+    />
+
+</RelativeLayout>

@@ -7,6 +7,17 @@
     tools:context=".MainActivity"
     android:background="@drawable/bg_color">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/icon_color"
+        app:itemRippleColor="#AAAAAA"
+        app:menu="@menu/navigation_items">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>
 
 

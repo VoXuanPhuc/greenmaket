@@ -12,6 +12,24 @@
         <activity
             android:name=".GioHangActivity"
             android:exported="false" />
+         <activity
+            android:name=".activity_themnongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_chitietnongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_quanlynongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_dangky"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_dangnhap"
+            android:exported="true" />
+        <activity
+            android:name=".activity_profile"
+            android:exported="true" />
         <activity
             android:name=".DanhSachHoaDonActivity"
             android:exported="false" />

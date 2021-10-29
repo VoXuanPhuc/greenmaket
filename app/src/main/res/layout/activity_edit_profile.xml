@@ -16,8 +16,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="160dp"
-            android:src="@drawable/bg_profile"
-            ></ImageView>
+            android:src="@drawable/bg_profile"></ImageView>
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="90dp"
@@ -33,7 +32,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="50dp"
-            android:text="Ng Thi Thu Thuy"
+            android:text="Nguyen Thi Thu Thuy"
             android:textColor="@color/black"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -56,7 +55,7 @@
             android:backgroundTint="#38AB83"
             android:drawableEnd="@drawable/edit_icon"
             android:paddingEnd="20dp"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="Nguyen Thi Thu Thuy"
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
@@ -69,7 +68,7 @@
             android:backgroundTint="#38AB83"
             android:drawableEnd="@drawable/edit_icon"
             android:paddingEnd="20dp"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="16/01/2001"
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
@@ -82,7 +81,7 @@
             android:backgroundTint="#38AB83"
             android:drawableEnd="@drawable/edit_icon"
             android:paddingEnd="20dp"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="0382319028"
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
@@ -95,7 +94,7 @@
             android:backgroundTint="#38AB83"
             android:drawableEnd="@drawable/edit_icon"
             android:paddingEnd="20dp"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="thuthuyxh1311@gmail.com"
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
@@ -108,7 +107,7 @@
             android:backgroundTint="#38AB83"
             android:drawableEnd="@drawable/edit_icon"
             android:paddingEnd="20dp"
-            android:text="Cap nhat thong tin ca nhan"
+            android:text="Hai Chau - Da Nang"
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
