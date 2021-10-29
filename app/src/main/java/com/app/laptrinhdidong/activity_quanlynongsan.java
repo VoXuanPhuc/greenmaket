@@ -32,6 +32,7 @@ public class activity_quanlynongsan extends AppCompatActivity {
         lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
         lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
 
+
         themnongsan = (ImageButton) findViewById(R.id.themmoibaidang);
 
         // goi ham tai nong san vao listview
@@ -42,6 +43,7 @@ public class activity_quanlynongsan extends AppCompatActivity {
         themnongsan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(activity_quanlynongsan.this, activity_themnongsan.class));
             }
         });
         lvQuanLyNongSan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
