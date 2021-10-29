@@ -3,6 +3,17 @@ package com.app.laptrinhdidong;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+
+import android.os.Bundle;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageButton;
+>>>>>>> phuc
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -14,6 +25,10 @@ public class activity_quanlynongsan extends AppCompatActivity {
     ListView lvQuanLyNongSan;
     quanlybaidangAdapter lvbaidangAdapter;
     List<nongsanClass> nongsan;
+<<<<<<< HEAD
+=======
+    ImageButton themnongsan;
+>>>>>>> phuc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +37,34 @@ public class activity_quanlynongsan extends AppCompatActivity {
         Nopvao();
         lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
         lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
+<<<<<<< HEAD
+=======
+
+        Nopvao();
+        lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
+        lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
+
+        themnongsan = (ImageButton) findViewById(R.id.themmoibaidang);
+
+        // goi ham tai nong san vao listview
+        Nopvao();
+        lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
+        lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
+
+        themnongsan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(activity_quanlynongsan.this, activity_themnongsan.class));
+            }
+        });
+        lvQuanLyNongSan.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                startActivity(new Intent(activity_quanlynongsan.this, activity_chitietnongsan.class));
+            }
+        });
+
+>>>>>>> phuc
     }
     private void Nopvao(){
         dm = new ArrayList<>();

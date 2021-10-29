@@ -7,14 +7,13 @@
     >
 
     <ImageView
-
+        android:id="@+id/editbaidang"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/edit_baidang"
         android:layout_alignParentRight="true"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        />
+        android:background="@drawable/edit_baidang" />
 
 
     <ImageView

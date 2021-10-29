@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
+<<<<<<< HEAD
+=======
+            android:name=".activity_themnongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_chitietnongsan"
+            android:exported="true" />
+        <activity
+>>>>>>> phuc
             android:name=".activity_quanlynongsan"
             android:exported="true" />
         <activity
@@ -33,6 +42,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
