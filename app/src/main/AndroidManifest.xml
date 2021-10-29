@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
-            android:name=".GioHangActivity"
+            android:name=".ChiTietHoaDonActivity"
             android:exported="false" />
         <activity
             android:name=".DanhSachHoaDonActivity"
@@ -19,7 +19,7 @@
             android:name=".DanhMucActivity"
             android:exported="false" />
         <activity
-            android:name=".ChiTietHoaDonActivity"
+            android:name=".GioHangActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
