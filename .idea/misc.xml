@@ -7,14 +7,17 @@
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_danhmuc2.xml" value="0.15197368421052632" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_dong_danhmuc.xml" value="0.15197368421052632" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_dong_hoadon.xml" value="0.1" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_chi_tiet_hoa_don.xml" value="0.2" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_danh_muc.xml" value="0.33" />
-        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_danh_sach_hoa_don.xml" value="0.24114285714285713" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_danh_sach_hoa_don.xml" value="0.17" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_edit_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_gio_hang.xml" value="0.168359375" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_list_view.xml" value="0.10989583333333333" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_main.xml" value="0.168359375" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_profile.xml" value="0.33" />
-        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/dong_hoa_don.xml" value="0.33" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/dong_hoa_don.xml" value="0.18" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/dong_sinh_vien.xml" value="0.33" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/layout_dongchitiet_hoadon.xml" value="0.9" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/bg_color.xml" value="0.2203125" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/radious_avatar.xml" value="0.2203125" />
         <entry key="..\:/laptrinhdidong/app/src/main/res/drawable-v24/round.xml" value="0.2203125" />

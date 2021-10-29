@@ -15,6 +15,9 @@ public class HoaDonAdapter extends BaseAdapter {
         int layout;
         List<HoaDon> hoaDonList;
 
+
+
+
         public HoaDonAdapter(Context context, int layout, List<HoaDon> hoaDonList){
                 this.context = context;
                 this.layout = layout;

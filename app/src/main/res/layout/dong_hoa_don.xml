@@ -116,7 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="17dp"
                 android:layout_marginTop="5dp"
-                android:text="Thành Tiền : "
+                android:text="Trạng thái : "
                 android:textColor="#484848"
                 android:textSize="13dp"
                 app:layout_constraintStart_toStartOf="parent"

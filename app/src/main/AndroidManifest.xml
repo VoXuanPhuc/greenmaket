@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
-            android:name=".DanhMucActivity"
+            android:name=".GioHangActivity"
             android:exported="false" />
         <activity
             android:name=".DanhSachHoaDonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DanhMucActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietHoaDonActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
