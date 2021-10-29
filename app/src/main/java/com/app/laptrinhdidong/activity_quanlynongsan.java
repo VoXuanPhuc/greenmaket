@@ -2,7 +2,6 @@ package com.app.laptrinhdidong;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.os.Bundle;
 
 import android.content.Intent;
@@ -26,8 +25,6 @@ public class activity_quanlynongsan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quanlynongsan);
-
-
         Nopvao();
         lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
         lvQuanLyNongSan.setAdapter(lvbaidangAdapter);

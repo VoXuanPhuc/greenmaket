@@ -3,9 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_danhmuc.xml" value="0.12604166666666666" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_danhmuc2.xml" value="0.15197368421052632" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_dong_danhmuc.xml" value="0.15197368421052632" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_dong_hoadon.xml" value="0.1" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_chi_tiet_hoa_don.xml" value="0.2" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_danh_muc.xml" value="0.33" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_danh_sach_hoa_don.xml" value="0.17" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_edit_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_gio_hang.xml" value="0.168359375" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_list_view.xml" value="0.10989583333333333" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_main.xml" value="0.168359375" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/dong_hoa_don.xml" value="0.18" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/dong_sinh_vien.xml" value="0.33" />
+        <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/layout/layout_dongchitiet_hoadon.xml" value="0.9" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable-v24/background.xml" value="0.1125" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable-v24/bg_color.xml" value="0.1125" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable-v24/round.xml" value="0.2169230769230769" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable/edit_baidang.xml" value="0.2169230769230769" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_quanlynongsan.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable/bottom_line_editext.xml" value="0.2203125" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable/edit_baidang.xml" value="0.2169230769230769" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_baidang.xml" value="0.2" />
