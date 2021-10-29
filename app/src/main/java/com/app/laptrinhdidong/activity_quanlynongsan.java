@@ -2,7 +2,6 @@ package com.app.laptrinhdidong;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
 
 import android.os.Bundle;
 
@@ -28,13 +27,11 @@ public class activity_quanlynongsan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quanlynongsan);
 
-        Nopvao();
-        lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
-        lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
 
         Nopvao();
         lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
         lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
+
 
         themnongsan = (ImageButton) findViewById(R.id.themmoibaidang);
 
