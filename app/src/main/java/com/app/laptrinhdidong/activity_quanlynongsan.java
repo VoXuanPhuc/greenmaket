@@ -3,17 +3,12 @@ package com.app.laptrinhdidong;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-<<<<<<< HEAD
-=======
-
-import android.os.Bundle;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
->>>>>>> phuc
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -25,24 +20,15 @@ public class activity_quanlynongsan extends AppCompatActivity {
     ListView lvQuanLyNongSan;
     quanlybaidangAdapter lvbaidangAdapter;
     List<nongsanClass> nongsan;
-<<<<<<< HEAD
-=======
     ImageButton themnongsan;
->>>>>>> phuc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quanlynongsan);
-
         Nopvao();
         lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
         lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
-<<<<<<< HEAD
-=======
 
-        Nopvao();
-        lvbaidangAdapter = new quanlybaidangAdapter(this, R.layout.lv_baidang, nongsan);
-        lvQuanLyNongSan.setAdapter(lvbaidangAdapter);
 
         themnongsan = (ImageButton) findViewById(R.id.themmoibaidang);
 
@@ -64,7 +50,6 @@ public class activity_quanlynongsan extends AppCompatActivity {
             }
         });
 
->>>>>>> phuc
     }
     private void Nopvao(){
         dm = new ArrayList<>();
