@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
-<<<<<<< HEAD
-=======
+            android:name=".GioHangActivity"
+            android:exported="false" />
+         <activity
             android:name=".activity_themnongsan"
             android:exported="true" />
         <activity
             android:name=".activity_chitietnongsan"
             android:exported="true" />
         <activity
->>>>>>> phuc
             android:name=".activity_quanlynongsan"
             android:exported="true" />
         <activity
@@ -31,10 +31,13 @@
             android:name=".activity_profile"
             android:exported="true" />
         <activity
-            android:name=".editProfile"
-            android:exported="true" />
+            android:name=".DanhSachHoaDonActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".DanhMucActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietHoaDonActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +45,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_profile"
+            android:exported="true" />
+        <activity
+            android:name=".editProfile"
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
