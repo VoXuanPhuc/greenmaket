@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.app.laptrinhdidong">
 
     <application
@@ -11,7 +12,7 @@
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
             android:name=".GioHangActivity"
-            android:exported="false" />
+            android:exported="true" />
          <activity
             android:name=".activity_themnongsan"
             android:exported="true" />
@@ -32,12 +33,12 @@
             android:exported="true" />
         <activity
             android:name=".DanhSachHoaDonActivity"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".DanhMucActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ChiTietHoaDonActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,11 +47,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity_profile"
-            android:exported="true" />
+            android:name=".ChiTietHoaDonActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity" />
+
         <activity
             android:name=".editProfile"
             android:exported="true" />
