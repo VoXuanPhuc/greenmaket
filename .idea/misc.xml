@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable-v24/bg_color.xml" value="0.240625" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_btn_buy.xml" value="0.240625" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_danhmuc2.xml" value="0.240625" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_hinhtron.xml" value="0.240625" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_khuyenmai.xml" value="0.240625" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_thesanpham.xml" value="0.240625" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/layout/activity_edit_profile.xml" value="0.22447916666666667" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/layout/activity_gio_hang.xml" value="0.22447916666666667" />
+        <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/layout/activity_sanham_theo_danh_muc.xml" value="0.67" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_danhmuc.xml" value="0.12604166666666666" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_danhmuc2.xml" value="0.15197368421052632" />
         <entry key="..\:/TRAN DAI/greenmaket-Main/greenmaket/app/src/main/res/drawable/bg_dong_danhmuc.xml" value="0.15197368421052632" />
