@@ -47,6 +47,7 @@
                 android:layout_marginBottom="10dp"
 
                 android:background="@drawable/bg_danhmuc2"
+                android:onClick="open"
                 android:orientation="horizontal">
 
 

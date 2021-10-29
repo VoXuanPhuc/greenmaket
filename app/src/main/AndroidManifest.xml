@@ -11,9 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
+            android:name=".SanPhamTheoDanhMucActivity"
+            android:exported="false" />
+        <activity
             android:name=".GioHangActivity"
             android:exported="true" />
-         <activity
+        <activity
             android:name=".activity_themnongsan"
             android:exported="true" />
         <activity
@@ -50,7 +53,6 @@
             android:name=".ChiTietHoaDonActivity"
             android:exported="true"
             tools:ignore="DuplicateActivity" />
-
         <activity
             android:name=".editProfile"
             android:exported="true" />
