@@ -11,9 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
-            android:name=".SanPhamTheoDanhMucActivity"
+            android:name=".SanhamTheoDanhMucActivity"
             android:exported="false" />
         <activity
+            android:name=".ChiTietHoaDonActivity"
+            android:exported="false" />
+      <activity
             android:name=".GioHangActivity"
             android:exported="true" />
         <activity
