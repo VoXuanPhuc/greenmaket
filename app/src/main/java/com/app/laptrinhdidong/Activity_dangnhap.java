@@ -18,6 +18,7 @@ public class Activity_dangnhap extends AppCompatActivity {
         setContentView(R.layout.activity_dangnhap);
         btnDangNhap = (Button) findViewById(R.id.btnDangnhap);
         tvDangky = (TextView) findViewById(R.id.dangky);
+
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -35,7 +35,7 @@ public class DanhMucActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home :
-
+                        startActivity(new Intent(DanhMucActivity.this, DanhMucActivity.class));
                         break;
                     case R.id.card :
                         startActivity(new Intent(DanhMucActivity.this, GioHangActivity.class));

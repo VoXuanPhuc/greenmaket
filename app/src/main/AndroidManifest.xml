@@ -44,11 +44,22 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
+            android:name=".giaodien4"
+            android:exported="true" />
+        <activity
+            android:name=".giaodien2"
+            android:exported="true" />
+        <activity
+            android:name=".giaodien3"
+            android:exported="true" />
+        <activity
             android:name=".DanhMucActivity"
+            android:exported="true" />
+        <activity
+            android:name=".giaodien1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

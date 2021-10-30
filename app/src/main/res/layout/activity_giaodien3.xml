@@ -10,18 +10,21 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
         android:text="Nhận và giao hàng nhanh chóng"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="chóng"/>
+        android:text="chóng"
+        tools:ignore="MissingConstraints" />
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -54,14 +57,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:srcCompat="@drawable/door" />
 
-    <Button
+    <ImageButton
+        android:id="@+id/next"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
         android:background="@drawable/bttron"
-        android:text="->"
+        android:src="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="336dp" />
+        app:layout_constraintVertical_bias="0.081"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
