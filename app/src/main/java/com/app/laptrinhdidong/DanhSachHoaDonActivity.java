@@ -2,7 +2,10 @@ package com.app.laptrinhdidong;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -31,5 +34,19 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
         hoaDonAdapter = new HoaDonAdapter(DanhSachHoaDonActivity.this, R.layout.dong_hoa_don, hoaDonList);
         listView.setAdapter(hoaDonAdapter);
 
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                moChiTietHoaDon();
+            }
+        });
+
+
+
+    }
+    public void moChiTietHoaDon() {
+        Intent intent = new Intent(this,ChiTietHoaDonActivity.class);
+        startActivity(intent);
     }
 }
