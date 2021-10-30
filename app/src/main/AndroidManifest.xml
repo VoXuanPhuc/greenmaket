@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
             android:name=".SanhamTheoDanhMucActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ChiTietHoaDonActivity"
             android:exported="false" />
@@ -52,10 +52,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ChiTietHoaDonActivity"
-            android:exported="true"
-            tools:ignore="DuplicateActivity" />
+
         <activity
             android:name=".editProfile"
             android:exported="true" />
