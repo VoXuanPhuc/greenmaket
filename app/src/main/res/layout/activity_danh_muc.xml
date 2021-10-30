@@ -41,6 +41,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/traicaytuoi"
                 android:layout_width="380dp"
                 android:layout_height="130dp"
                 android:layout_marginTop="10dp"
