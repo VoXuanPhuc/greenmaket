@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.app.laptrinhdidong">
 
     <application
@@ -15,14 +16,35 @@
         <activity
             android:name=".ChiTietHoaDonActivity"
             android:exported="false" />
+      <activity
+            android:name=".GioHangActivity"
+            android:exported="true" />
+         <activity
+            android:name=".activity_themnongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_chitietnongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_quanlynongsan"
+            android:exported="true" />
+        <activity
+            android:name=".activity_dangky"
+            android:exported="true" />
+        <activity
+            android:name=".Activity_dangnhap"
+            android:exported="true" />
+        <activity
+            android:name=".activity_profile"
+            android:exported="true" />
         <activity
             android:name=".DanhSachHoaDonActivity"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
         <activity
             android:name=".DanhMucActivity"
-            android:exported="false" />
-        <activity
-            android:name=".GioHangActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,11 +53,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity_profile"
-            android:exported="true" />
+            android:name=".ChiTietHoaDonActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity" />
+
         <activity
             android:name=".editProfile"
             android:exported="true" />
