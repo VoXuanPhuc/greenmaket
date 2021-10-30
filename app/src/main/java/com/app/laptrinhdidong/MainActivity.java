@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -40,4 +41,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void moTrangHoaDon() {
+        Intent intent = new Intent(this, DanhSachHoaDonActivity.class);
+        startActivity(intent);
+    }
 }
