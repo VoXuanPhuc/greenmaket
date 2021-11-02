@@ -11,12 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
+            android:name=".UI_saunutmuangayActivity"
+            android:exported="false" />
+        <activity
             android:name=".SanhamTheoDanhMucActivity"
             android:exported="true" />
         <activity
             android:name=".ChiTietHoaDonActivity"
             android:exported="false" />
-      <activity
+        <activity
             android:name=".GioHangActivity"
             android:exported="true" />
         <activity
@@ -60,10 +63,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".editProfile"
             android:exported="true" />

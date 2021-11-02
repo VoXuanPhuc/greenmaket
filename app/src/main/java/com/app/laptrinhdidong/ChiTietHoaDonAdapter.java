@@ -41,15 +41,15 @@ public class ChiTietHoaDonAdapter extends BaseAdapter {
         convertView = inflater.inflate(layout,null);
 
         TextView ten = (TextView) convertView.findViewById(R.id.tenSanPham_CTHD);
-        TextView moTa = (TextView)  convertView.findViewById(R.id.moTa_CTHD);
+
         TextView soLuong = (TextView)  convertView.findViewById(R.id.soLuowng_CTHD);
-        TextView donGia = (TextView)  convertView.findViewById(R.id.donGia_CTHD);
+
         TextView tong = (TextView)  convertView.findViewById(R.id.tong_CTHD);
 
         ten.setText(chiTietHoaDons.get(position).getTen());
-        moTa.setText(chiTietHoaDons.get(position).getMoTa());
+
         soLuong.setText(String.valueOf(chiTietHoaDons.get(position).getSoLuong()));
-        donGia.setText(String.valueOf(chiTietHoaDons.get(position).getDonGia()));
+
         tong.setText(String.valueOf(chiTietHoaDons.get(position).getTong()));
 
 

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class GioHangActivity extends AppCompatActivity {
     ArrayList<ChiTietGioHang> chiTietGioHangs;
     ListView listView;
-    ListView listViewTinhTien;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,9 @@ public class GioHangActivity extends AppCompatActivity {
         DongTinhTienGioHangAdapter dongTinhTienGioHangAdapter = new DongTinhTienGioHangAdapter(GioHangActivity.this,R.layout.layout_dongtinhtien_giohang,chiTietGioHangs);
 
         listView  = findViewById(R.id.listViewSAnPhamGioHang);
-        listViewTinhTien  = findViewById(R.id.listViwTinhTien_giohang);
+
         listView.setAdapter(chiTietHoaDonAdapter);
-        listViewTinhTien.setAdapter(dongTinhTienGioHangAdapter);
+
 
 
     }
