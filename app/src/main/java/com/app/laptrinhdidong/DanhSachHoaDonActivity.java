@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +25,11 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
         listView = findViewById(R.id.listViewHoaDon);
         hoaDonList = new ArrayList<>();
 
-        hoaDonList.add(new HoaDon("#HD000001","12/11/2021","2500000","Đã thanh toán"));
-        hoaDonList.add(new HoaDon("#HD000001","12/11/2021","2500000","Đã thanh toán"));
-        hoaDonList.add(new HoaDon("#HD000001","12/11/2021","2500000","Đã thanh toán"));
-        hoaDonList.add(new HoaDon("#HD000001","12/11/2021","2500000","Đã thanh toán"));
-        hoaDonList.add(new HoaDon("#HD000001","12/11/2021","2500000","Đã thanh toán"));
+        hoaDonList.add(new HoaDon("#HD000001","12/11/2021",270000,"Đã thanh toán"));
+        hoaDonList.add(new HoaDon("#HD000002","12/11/2021",270000,"Đã thanh toán"));
+        hoaDonList.add(new HoaDon("#HD000003","12/11/2021",270000,"Đã thanh toán"));
+        hoaDonList.add(new HoaDon("#HD000004","12/11/2021",270000,"Đã thanh toán"));
+        hoaDonList.add(new HoaDon("#HD000005","12/11/2021",270000,"Đã thanh toán"));
 
         HoaDonAdapter hoaDonAdapter;
         hoaDonAdapter = new HoaDonAdapter(DanhSachHoaDonActivity.this, R.layout.dong_hoa_don, hoaDonList);
@@ -49,4 +50,6 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
         Intent intent = new Intent(this,ChiTietHoaDonActivity.class);
         startActivity(intent);
     }
+
+
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class HoaDonAdapter extends BaseAdapter {
@@ -57,7 +58,7 @@ public class HoaDonAdapter extends BaseAdapter {
 
                 maHoaDon.setText(hoaDonList.get(position).maHoaDon);
                 ngay.setText(hoaDonList.get(position).ngay);
-                thanhTien.setText(hoaDonList.get(position).thanhTien);
+                thanhTien.setText(withLargeIntegers(hoaDonList.get(position).thanhTien));
                 trangThai.setText(hoaDonList.get(position).trangThai);
 
 
@@ -65,5 +66,9 @@ public class HoaDonAdapter extends BaseAdapter {
 
 
                 return convertView;
+        }
+        public static String withLargeIntegers(double value) {
+                DecimalFormat df = new DecimalFormat("###,###,###");
+                return df.format(value);
         }
 }

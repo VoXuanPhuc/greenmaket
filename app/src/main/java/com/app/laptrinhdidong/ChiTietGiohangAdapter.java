@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class ChiTietGiohangAdapter extends BaseAdapter {
@@ -47,12 +48,17 @@ public class ChiTietGiohangAdapter extends BaseAdapter {
         TextView soLuong = convertView.findViewById(R.id.giohang_soLuong);
 
         ten.setText(chiTietGioHangs.get(position).getTenSP());
-        donGia.setText(String.valueOf(chiTietGioHangs.get(position).getDonGia()));
+        donGia.setText(withLargeIntegers(chiTietGioHangs.get(position).getDonGia()));
         soLuong.setText(String.valueOf(chiTietGioHangs.get(position).getSoLuong()));
 
 
 
 
         return convertView;
+    }
+
+    public static String withLargeIntegers(double value) {
+        DecimalFormat df = new DecimalFormat("###,###,###");
+        return df.format(value);
     }
 }
