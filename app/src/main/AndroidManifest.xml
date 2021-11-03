@@ -14,10 +14,9 @@
             android:name=".UI_saunutmuangayActivity"
             android:exported="false" />
         <activity
-       <activity-->
-            android:name=".activity_search"-->
-            android:exported="true" />-->
-        <activity-->
+            android:name=".activity_search"
+            android:exported="true" />
+        <activity
             android:name=".SanhamTheoDanhMucActivity"
             android:exported="true" />
         <activity
