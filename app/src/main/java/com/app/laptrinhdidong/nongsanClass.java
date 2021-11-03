@@ -13,6 +13,12 @@ public class nongsanClass {
     private Integer donvi;
     private Integer hinh;
 
+    public nongsanClass(String ten, String mieuTa, Integer hinh) {
+        this.ten = ten;
+        this.mieuTa = mieuTa;
+        this.hinh = hinh;
+    }
+
     public nongsanClass(String ten, danhmucClass danhmuc, String mieuTa,
                         Double gia, Integer donvi, Integer hinh) {
         this.ten = ten;

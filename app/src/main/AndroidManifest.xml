@@ -10,13 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
-        <activity
+<!--        <activity-->
+<!--            android:name=".activity_search"-->
+<!--            android:exported="true" />-->
+<!--        <activity-->
             android:name=".SanhamTheoDanhMucActivity"
             android:exported="true" />
         <activity
             android:name=".ChiTietHoaDonActivity"
             android:exported="false" />
-      <activity
+        <activity
             android:name=".GioHangActivity"
             android:exported="true" />
         <activity
@@ -56,14 +59,14 @@
             android:name=".DanhMucActivity"
             android:exported="true" />
         <activity
-            android:name=".giaodien1"
+            android:name=".activity_search"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".editProfile"
             android:exported="true" />

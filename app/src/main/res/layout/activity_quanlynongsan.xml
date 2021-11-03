@@ -39,7 +39,7 @@
         android:divider="@null"
         android:dividerHeight="12.0sp"
         android:paddingHorizontal="10dp"
-        android:scrollbars="none"/>
+        android:scrollbars="none" />
 
 
     <ImageButton
