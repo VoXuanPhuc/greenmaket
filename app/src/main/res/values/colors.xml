@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="mauchudm">#282828</color>
+    <color name="profileedittext">#2DA44E</color>
+    <color name="edSearch">#A2F3C3</color>
+    <color name="edHintSearch">#2DA44E</color>
 </resources>

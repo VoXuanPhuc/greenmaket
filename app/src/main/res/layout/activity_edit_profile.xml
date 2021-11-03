@@ -19,8 +19,8 @@
             android:src="@drawable/bg_profile"></ImageView>
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="30dp"
             android:src="@drawable/avatar"
@@ -32,7 +32,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="50dp"
-            android:text="Nguyen Thi Thu Thuy"
+            android:text="Nguyễn Thị Thu Thủy"
             android:textColor="@color/black"
             android:textSize="16dp"
             android:textStyle="bold" />
@@ -42,94 +42,83 @@
         android:id="@+id/infor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:orientation="vertical"
-        android:paddingEnd="25dp">
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="130dp"
+        >
 
         <EditText
             android:id="@+id/be"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_marginVertical="10dp"
             android:background="@drawable/radiou_editprofile"
-            android:backgroundTint="#38AB83"
+            android:backgroundTint="@color/profileedittext"
             android:drawableEnd="@drawable/edit_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
             android:paddingEnd="20dp"
-            android:text="Nguyen Thi Thu Thuy"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/be1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginVertical="10dp"
-            android:background="@drawable/radiou_editprofile"
-            android:backgroundTint="#38AB83"
-            android:drawableEnd="@drawable/edit_icon"
-            android:paddingEnd="20dp"
-            android:text="16/01/2001"
-            android:textAlignment="center"
+            android:text="Nguyễn Thị Thu Thủy"
             android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/be2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_marginVertical="10dp"
             android:background="@drawable/radiou_editprofile"
-            android:backgroundTint="#38AB83"
+            android:backgroundTint="@color/profileedittext"
             android:drawableEnd="@drawable/edit_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
             android:paddingEnd="20dp"
             android:text="0382319028"
-            android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/be3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_marginVertical="10dp"
             android:background="@drawable/radiou_editprofile"
-            android:backgroundTint="#38AB83"
+            android:backgroundTint="@color/profileedittext"
             android:drawableEnd="@drawable/edit_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
             android:paddingEnd="20dp"
-            android:text="thuthuyxh1311@gmail.com"
-            android:textAlignment="center"
+            android:text="Hải Châu - Đà Nẵng"
             android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/be4"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="70dp"
             android:layout_marginVertical="10dp"
             android:background="@drawable/radiou_editprofile"
-            android:backgroundTint="#38AB83"
+            android:backgroundTint="@color/profileedittext"
             android:drawableEnd="@drawable/edit_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
             android:paddingEnd="20dp"
-            android:text="Hai Chau - Da Nang"
-            android:textAlignment="center"
+            android:text="0382319024"
             android:textColor="#FFFFFF" />
 
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="106dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#006104"
+            android:paddingHorizontal="20dp"
+            android:text="Lưu thông tin"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnEditProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@+id/infor"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginVertical="10dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="132dp"
-        android:background="@drawable/round"
-        android:backgroundTint="#086444"
-        android:paddingHorizontal="20dp"
-        android:text="Luu thong tin"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menubottom"

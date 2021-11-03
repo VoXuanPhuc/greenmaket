@@ -27,10 +27,13 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home :
+                        startActivity(new Intent(MainActivity.this, DanhMucActivity.class));
                         break;
                     case R.id.card :
+                        startActivity(new Intent(MainActivity.this, GioHangActivity.class));
                         break;
-                    case R.id.notification:
+                    case R.id.search:
+                        startActivity(new Intent(MainActivity.this, activity_search.class));
                         break;
                     case R.id.profile:
                         startActivity(new Intent(MainActivity.this, Activity_dangnhap.class));

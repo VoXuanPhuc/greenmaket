@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_chitietnongsan"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/back_icon"
+        android:text="Sản phẩm"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round"
+                android:backgroundTint="@color/edSearch"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:hint="Tìm kiếm tên món"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/edHintSearch"
+                android:textColorHint="@color/edHintSearch" />
+
+            <TextView
+                android:id="@+id/tvtimnhanh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edSearch"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Tìm nhanh "
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                tools:ignore="UnknownId" />
+
+            <LinearLayout
+                android:id="@+id/timkiemnhanh"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_below="@+id/tvtimnhanh"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginVertical="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageviewTraicaybaidang"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/thit_search" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/profileedittext"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tenNongsan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:text="Rau xanh"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/mieutaNongsan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tenNongsan"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:text="Được trồng và chăm sóc từ nông trại sạch"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginVertical="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageviewTraicaybaidang2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/ca_search" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/profileedittext"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tenNongsan2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:text="Rau xanh"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/mieutaNongsan2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tenNongsan"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:text="Được trồng và chăm sóc từ nông trại sạch"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginVertical="5dp">
+
+                    <ImageView
+                        android:id="@+id/imageviewTraicaybaidang3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/thit_search" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/profileedittext"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tenNongsan3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:text="Rau xanh"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/mieutaNongsan3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tenNongsan"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:text="Được trồng và chăm sóc từ nông trại sạch"
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/gioithieu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timkiemnhanh"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Những thực phẩm phổ biến hiện nay"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                tools:ignore="UnknownId" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gioithieu"
+                android:layout_marginHorizontal="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/trung_image" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_marginVertical="10dp"
+                        android:src="@drawable/dualeo_image" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/thitga_search" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/suplo_search" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_marginVertical="10dp"
+                        android:src="@drawable/vegatable" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/bido_search" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/icon_color"
+        app:itemRippleColor="#AAAAAA"
+        app:menu="@menu/navigation_items">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+</RelativeLayout>
+
