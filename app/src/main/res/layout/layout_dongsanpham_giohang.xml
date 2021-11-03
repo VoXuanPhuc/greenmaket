@@ -9,28 +9,29 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_margin="7dp"
+
         android:background="@color/white"
         android:padding="7dp">
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="15dp"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="48dp"
+
             android:padding="5dp"
-            android:background="@drawable/giohang_bg_anhsanpham"
             android:src="@drawable/trailuu"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/giohang_ten"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
             android:text="Lựu đỏ Thái"
             android:textColor="#000000"
             android:textSize="15dp"
@@ -38,88 +39,32 @@
             app:layout_constraintStart_toEndOf="@+id/imageView6"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/star_rate"
-            app:layout_constraintStart_toEndOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/star_rate"
-            app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/star_rate"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/star_rate"
-            app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/star_rate"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
-
         <TextView
             android:id="@+id/gihang_giaSP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
             android:text="100.000"
             android:textSize="15dp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:text="VNĐ"
-
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="đ"
             android:textSize="10dp"
-            app:layout_constraintStart_toEndOf="@+id/gihang_giaSP"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="10dp"
-            android:text="/Ký"
-            android:textSize="15dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+            app:layout_constraintStart_toEndOf="@+id/gihang_giaSP"
+            app:layout_constraintTop_toBottomOf="@+id/giohang_ten" />
 
         <TextView
-            android:background="@drawable/bg_soluong_giohang"
+
             android:id="@+id/giohang_soLuong"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
@@ -139,7 +84,7 @@
             android:layout_height="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="7dp"
-            android:src="@drawable/giohang_sub"
+            android:src="@drawable/ic_baseline_add_circle_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,29 +94,19 @@
 
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:src="@drawable/giohang_add"
+            android:src="@drawable/ic_baseline_remove_circle_24"
             app:layout_constraintEnd_toStartOf="@+id/giohang_soLuong"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView13"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11"
-            app:srcCompat="@drawable/heart" />
-
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11"
-            app:srcCompat="@drawable/giorac" />
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:button="@drawable/image_checkbox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
