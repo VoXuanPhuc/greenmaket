@@ -26,7 +26,7 @@ public class activity_chitietnongsan extends AppCompatActivity {
         love = (ImageButton) findViewById(R.id.yeuthichbaidang);
         number = (TextView) findViewById(R.id.soluongctns);
 
-        sl = Integer.parseInt(number.toString());
+        sl = Integer.parseInt(number.getText().toString());
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

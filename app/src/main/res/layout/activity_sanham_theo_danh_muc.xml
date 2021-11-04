@@ -249,9 +249,10 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-
+                    android:id="@+id/ctheSanPham1"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
+                    android:onClick="moChiTietNongSan"
                     android:background="@drawable/bg_thesanpham"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -378,7 +379,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-
+                    android:onClick="moChiTietNongSan"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
                     android:background="@drawable/bg_thesanpham"
@@ -518,7 +519,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-
+                    android:onClick="moChiTietNongSan"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
                     android:background="@drawable/bg_thesanpham"
@@ -656,8 +657,9 @@
                     app:layout_constraintHorizontal_bias="0.84"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.523">
-
+                    app:layout_constraintVertical_bias="0.523"
+                    android:onClick="moChiTietNongSan"
+                    >
 
                     <ImageView
                         android:id="@+id/image1"
@@ -786,7 +788,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-
+                    android:onClick="moChiTietNongSan"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
                     android:background="@drawable/bg_thesanpham"
@@ -915,6 +917,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:onClick="moChiTietNongSan"
                     android:id="@+id/constraintLayout9"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
