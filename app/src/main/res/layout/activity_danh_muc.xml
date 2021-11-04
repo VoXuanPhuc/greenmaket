@@ -4,21 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_color"
+    android:background="#A2F3C3"
     tools:context=".DanhMucActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Danh Mục"
-        android:textColor="#28352E"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Danh mục"
+                android:textColor="#2DA44E"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:background="@drawable/img_38" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -60,17 +76,15 @@
                     app:srcCompat="@drawable/fruits" />
 
                 <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_height="90dp"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="22dp"
                     android:gravity="center"
-                    android:text="Trái Cây Tươi"
-                    android:textColor="@color/mauchudm"
+                    android:text="Trái cây tươi"
+                    android:textColor="#2DA44E"
                     android:textSize="30dp"
-                    android:textStyle="bold"
-
-                    />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -79,7 +93,6 @@
                 android:layout_height="130dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-
                 android:background="@drawable/bg_danhmuc2"
                 android:orientation="horizontal">
 
@@ -97,8 +110,8 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="25dp"
                     android:gravity="center"
-                    android:text="Rau Tươi"
-                    android:textColor="@color/mauchudm"
+                    android:text="Rau tươi"
+                    android:textColor="#2DA44E"
                     android:textSize="30dp"
                     android:textStyle="bold"
 
@@ -129,8 +142,8 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="25dp"
                     android:gravity="center"
-                    android:text="Thịt Sạch"
-                    android:textColor="@color/mauchudm"
+                    android:text="Thịt tươi"
+                    android:textColor="#2DA44E"
                     android:textSize="30dp"
                     android:textStyle="bold"
 
@@ -159,10 +172,10 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="15dp"
                     android:gravity="center"
-                    android:text="Cá"
-                    android:textColor="@color/mauchudm"
+                    android:text="Cá tươi"
+                    android:textColor="#2DA44E"
                     android:textSize="30dp"
                     android:textStyle="bold"
 
