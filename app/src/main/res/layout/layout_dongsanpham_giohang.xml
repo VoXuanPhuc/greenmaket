@@ -18,7 +18,6 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_marginStart="48dp"
-
             android:padding="5dp"
             android:src="@drawable/trailuu"
             app:layout_constraintBottom_toBottomOf="parent"

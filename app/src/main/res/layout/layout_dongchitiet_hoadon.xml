@@ -10,7 +10,6 @@
         android:layout_height="54dp"
         android:layout_margin="10dp"
         android:padding="2dp"
-
    >
 
         <ImageView
@@ -18,7 +17,6 @@
             android:layout_width="39dp"
             android:layout_height="33dp"
             android:layout_marginStart="24dp"
-
             android:src="@drawable/pngegg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

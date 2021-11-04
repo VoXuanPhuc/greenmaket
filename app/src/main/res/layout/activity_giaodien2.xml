@@ -17,7 +17,6 @@
         android:text="Nhiều loại hàng tốt"
         android:textColor="#F8C81E"
         android:textSize="30dp"
-<<<<<<< HEAD
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.612"
@@ -25,35 +24,8 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Đến với chúng tôi bạn không những mua   "
-        android:textColor="#AAAAAA"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:gravity="center"/>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="được nhiều loại hàng tốt mà còn đem đến "
-        android:textColor="#AAAAAA"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.689"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:gravity="center"/>
-=======
-        android:textStyle="bold" />
->>>>>>> 15a3e168d1c45d88a625e8bc47fb777bfa7c1724
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,30 +44,17 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
-<<<<<<< HEAD
         android:layout_height="350dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/woman" />
-=======
-        android:layout_height="400dp"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="2dp"
-            app:srcCompat="@drawable/woman" />
-    </LinearLayout>
->>>>>>> 15a3e168d1c45d88a625e8bc47fb777bfa7c1724
 
     <ImageButton
         android:id="@+id/next"
         android:layout_width="50dp"
         android:layout_height="50dp"
-<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:background="@drawable/bttron"
         android:src="@drawable/next"
@@ -106,11 +65,4 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-=======
-        android:layout_marginTop="3dp"
-        android:background="@drawable/bttron"
-        android:src="@drawable/img_37"
-        android:layout_marginLeft="320dp"/>
 </LinearLayout>
->>>>>>> 15a3e168d1c45d88a625e8bc47fb777bfa7c1724
