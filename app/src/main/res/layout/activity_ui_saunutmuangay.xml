@@ -66,13 +66,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
         android:background="@color/white"
         app:itemIconTint="@color/icon_color"
         app:itemRippleColor="#AAAAAA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/navigation_items"/>
+        app:menu="@menu/navigation_items" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -166,6 +168,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
+        android:id="@+id/thongBaoSoLuong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -177,8 +180,9 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <ListView
+        android:id="@+id/listViewThanhToan"
         android:layout_marginTop="270dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="160dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -186,4 +190,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:text="Tổng tiền hàng"
+        android:textColor="#535353"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan" />
+
+    <TextView
+        android:id="@+id/tongTienThanhToan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:text="300.000 đ"
+        android:textColor="#535353"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan" />
+
+    <Button
+        android:id="@+id/btnThanhToan"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_btn"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+
+        android:text="Thanh toán hóa đơn"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/menubottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan"
+        app:layout_constraintVertical_bias="0.807" />
 </androidx.constraintlayout.widget.ConstraintLayout>

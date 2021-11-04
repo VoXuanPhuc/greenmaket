@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2DA44E"
+    android:orientation="vertical"
     tools:context=".giaodien2">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="313dp"
-        android:layout_height="38dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:gravity="center"
         android:text="Nhiều loại hàng tốt"
-        android:textColor="@color/black"
+        android:textColor="#F8C81E"
         android:textSize="30dp"
+<<<<<<< HEAD
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.612"
@@ -48,33 +51,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         android:gravity="center"/>
+=======
+        android:textStyle="bold" />
+>>>>>>> 15a3e168d1c45d88a625e8bc47fb777bfa7c1724
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cho bạn những điều thú vị."
-        android:textColor="#AAAAAA"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView2"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Đến với chúng tôi bạn không những mua\n được nhiều loại hàng tốt mà còn đem đến\n cho bạn những điều thú vị.   "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
+<<<<<<< HEAD
         android:layout_height="350dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/woman" />
+=======
+        android:layout_height="400dp"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="2dp"
+            app:srcCompat="@drawable/woman" />
+    </LinearLayout>
+>>>>>>> 15a3e168d1c45d88a625e8bc47fb777bfa7c1724
 
     <ImageButton
         android:id="@+id/next"
         android:layout_width="50dp"
         android:layout_height="50dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:background="@drawable/bttron"
         android:src="@drawable/next"
@@ -86,3 +107,10 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bttron"
+        android:src="@drawable/img_37"
+        android:layout_marginLeft="320dp"/>
+</LinearLayout>
+>>>>>>> 15a3e168d1c45d88a625e8bc47fb777bfa7c1724

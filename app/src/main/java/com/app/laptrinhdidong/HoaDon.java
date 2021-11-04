@@ -2,9 +2,10 @@ package com.app.laptrinhdidong;
 
 public class HoaDon {
 
-    String maHoaDon,ngay,thanhTien,trangThai;
+    String maHoaDon,ngay,trangThai;
+    double thanhTien;
 
-    public HoaDon(String maHoaDon, String ngay, String thanhTien, String trangThai) {
+    public HoaDon(String maHoaDon, String ngay, double thanhTien, String trangThai) {
         this.maHoaDon = maHoaDon;
         this.ngay = ngay;
         this.thanhTien = thanhTien;
@@ -27,11 +28,11 @@ public class HoaDon {
         this.ngay = ngay;
     }
 
-    public String getThanhTien() {
+    public double getThanhTien() {
         return thanhTien;
     }
 
-    public void setThanhTien(String thanhTien) {
+    public void setThanhTien(double thanhTien) {
         this.thanhTien = thanhTien;
     }
 

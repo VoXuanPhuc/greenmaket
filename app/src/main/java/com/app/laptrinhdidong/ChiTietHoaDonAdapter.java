@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class ChiTietHoaDonAdapter extends BaseAdapter {
@@ -46,14 +48,21 @@ public class ChiTietHoaDonAdapter extends BaseAdapter {
 
         TextView tong = (TextView)  convertView.findViewById(R.id.tong_CTHD);
 
+        ImageView hinhAnh = (ImageView) convertView.findViewById(R.id.hinhanhchitiet_hoaDon);
+
         ten.setText(chiTietHoaDons.get(position).getTen());
 
         soLuong.setText(String.valueOf(chiTietHoaDons.get(position).getSoLuong()));
 
-        tong.setText(String.valueOf(chiTietHoaDons.get(position).getTong()));
+        tong.setText(withLargeIntegers(chiTietHoaDons.get(position).getDonGia()*chiTietHoaDons.get(position).getSoLuong()));
 
-
+        hinhAnh.setImageResource(chiTietHoaDons.get(position).image);
 
         return convertView;
+    }
+
+    public static String withLargeIntegers(double value) {
+        DecimalFormat df = new DecimalFormat("###,###,###");
+        return df.format(value);
     }
 }

@@ -14,7 +14,7 @@
    >
 
         <ImageView
-            android:id="@+id/hinhanhchitiet"
+            android:id="@+id/hinhanhchitiet_hoaDon"
             android:layout_width="39dp"
             android:layout_height="33dp"
             android:layout_marginStart="24dp"
@@ -35,7 +35,7 @@
             android:textColor="#000000"
             android:textSize="15dp"
 
-            app:layout_constraintStart_toEndOf="@+id/hinhanhchitiet"
+            app:layout_constraintStart_toEndOf="@+id/hinhanhchitiet_hoaDon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:textColor="#414141"
             android:textSize="10dp"
 
-            app:layout_constraintStart_toEndOf="@+id/hinhanhchitiet"
+            app:layout_constraintStart_toEndOf="@+id/hinhanhchitiet_hoaDon"
             app:layout_constraintTop_toBottomOf="@+id/tenSanPham_CTHD" />
 
         <TextView
@@ -102,7 +102,7 @@
             android:textColor="#414141"
             android:textSize="7dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/hinhanhchitiet"
+            app:layout_constraintStart_toEndOf="@+id/hinhanhchitiet_hoaDon"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

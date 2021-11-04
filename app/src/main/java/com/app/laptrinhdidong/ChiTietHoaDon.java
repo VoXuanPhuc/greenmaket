@@ -2,14 +2,14 @@ package com.app.laptrinhdidong;
 
 class ChiTietHoaDon  {
     String ten,moTa;
-    int soLuong;
+    int soLuong,image;
     double donGia,tong;
 
 
-    public ChiTietHoaDon(String ten, String moTa, int soLuong, double donGia) {
+    public ChiTietHoaDon(String ten, String moTa, int soLuong, double donGia,int image) {
         this.ten = ten;
         this.moTa = moTa;
-
+        this.image = image;
         this.soLuong = soLuong;
         this.donGia = donGia;
         this.tong = soLuong*donGia;
