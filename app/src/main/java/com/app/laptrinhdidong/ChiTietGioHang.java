@@ -5,12 +5,14 @@ public class ChiTietGioHang {
     double donGia;
     int soLuong;
     String TenSP;
+    int image;
 
 
-    public ChiTietGioHang(double donGia, int soLuong, String tenSP) {
+    public ChiTietGioHang(double donGia, int soLuong, String tenSP,int image) {
         this.donGia = donGia;
         this.soLuong = soLuong;
         TenSP = tenSP;
+        this.image = image;
     }
 
 
@@ -36,5 +38,13 @@ public class ChiTietGioHang {
 
     public void setTenSP(String tenSP) {
         TenSP = tenSP;
+    }
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 }
