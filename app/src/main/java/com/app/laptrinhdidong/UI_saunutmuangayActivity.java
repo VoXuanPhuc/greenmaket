@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.app.laptrinhdidong.alladapter.ChiTietGiohangAdapter;
+import com.app.laptrinhdidong.alladapter.ChiTietThanhToanAdapter;
 import com.app.laptrinhdidong.allclass.ChiTietGioHang;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -58,14 +59,14 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
 
 
         chiTietGioHangs = new ArrayList<>();
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Dưa hấu Bắc Mỹ",R.drawable.dualeo_image));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Dưa hấu Bắc Mỹ",R.drawable.duahau));
         chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Chuối ngự",R.drawable.bananas));
         chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Cam Vinh",R.drawable.oranges));
         chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Nho Bình Thuận",R.drawable.grape));
         chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Táo Cao Bằng",R.drawable.apple));
         chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Dứa Bình Định",R.drawable.pineapple));
 
-        ChiTietGiohangAdapter chiTietHoaDonAdapter = new ChiTietGiohangAdapter(UI_saunutmuangayActivity.this,R.layout.layout_dongsanpham_giohang,chiTietGioHangs);
+        ChiTietThanhToanAdapter chiTietHoaDonAdapter = new ChiTietThanhToanAdapter(UI_saunutmuangayActivity.this,R.layout.dong_sanphan_thanhtoan,chiTietGioHangs);
 
         listView  = findViewById(R.id.listViewThanhToan);
 
