@@ -252,7 +252,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/sanpham1"
+                    android:id="@+id/ctheSanPham1"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
                     android:onClick="moChiTietNongSan"
@@ -789,10 +789,6 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-<<<<<<< HEAD
-=======
-                    android:onClick="moChiTietNongSan"
->>>>>>> 9f4b575b0d7458d873816c6391b7a2ba9f11a373
                     android:layout_width="142dp"
                     android:layout_height="181dp"
                     android:background="@drawable/bg_thesanpham"
