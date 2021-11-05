@@ -20,21 +20,21 @@
         />
 
 
-
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Danh Sách Hóa Đơn"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -42,23 +42,28 @@
         android:text="Trạng thái đơn hàng"
         android:textColor="@color/black"
         android:textSize="12dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textView11"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/bevietnampro_regular"
         android:text="Phương thức thanh toán"
         android:textColor="@color/black"
         android:textSize="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,6 +76,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,6 +90,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,6 +114,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -115,6 +126,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,6 +157,8 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="144dp"
         android:textSize="10dp"
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:text="Nguyễn Thị Thu Thủy, 48 Cao Thắng, Hải Châu, Đà Nẵng
 \nSĐT: 090558932"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,6 +199,8 @@
 
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -195,6 +212,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
+
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -218,6 +238,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -231,10 +253,12 @@
 
     <TextView
         android:id="@+id/tongTienHang"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="48dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="300.000 đ"
         android:textColor="#535353"
         android:textSize="15dp"
