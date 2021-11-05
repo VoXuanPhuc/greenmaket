@@ -68,28 +68,28 @@
                 android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/bg_hinhtron"
-                android:src="@drawable/raucaixanh" />
+                android:src="@drawable/potatoes_image" />
 
             <ImageView
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/bg_hinhtron"
-                android:src="@drawable/raucaixanh" />
+                android:src="@drawable/garlics" />
 
             <ImageView
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/bg_hinhtron"
-                android:src="@drawable/raucaixanh" />
+                android:src="@drawable/otngot" />
 
             <ImageView
                 android:layout_width="55dp"
                 android:layout_height="55dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/bg_hinhtron"
-                android:src="@drawable/raucaixanh" />
+                android:src="@drawable/onions" />
 
             <ImageView
                 android:layout_width="55dp"
@@ -287,7 +287,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Chuối Ngự"
+                        android:text="Dưa hấu Bắc Mỹ"
                         android:textColor="@color/black"
                         android:textSize="16dp"
                         android:textStyle="bold"
@@ -400,7 +400,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/duahau" />
+                        app:srcCompat="@drawable/bananas" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -539,7 +539,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/duahau" />
+                        app:srcCompat="@drawable/oranges" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -556,7 +556,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Chuối Ngự"
+                        android:text="Cam Vinh"
                         android:textColor="@color/black"
                         android:textSize="16dp"
                         android:textStyle="bold"
@@ -670,7 +670,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/duahau" />
+                        app:srcCompat="@drawable/grape" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -687,7 +687,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Chuối Ngự"
+                        android:text="Nho Bình Thuận"
                         android:textColor="@color/black"
                         android:textSize="16dp"
                         android:textStyle="bold"
@@ -808,7 +808,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/duahau" />
+                        app:srcCompat="@drawable/apple" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -825,7 +825,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Chuối Ngự"
+                        android:text="Táo cao bằng"
                         android:textColor="@color/black"
                         android:textSize="16dp"
                         android:textStyle="bold"
@@ -939,7 +939,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/duahau" />
+                        app:srcCompat="@drawable/pineapple" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -956,7 +956,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Chuối Ngự"
+                        android:text="Dứa Bình Định"
                         android:textColor="@color/black"
                         android:textSize="16dp"
                         android:textStyle="bold"

@@ -23,12 +23,12 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ui_saunutmuangay);
 
         chiTietGioHangs = new ArrayList<>();
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Trái Lựu"));
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Trái Thông"));
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Trái Xoài"));
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Trái Lựu"));
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Trái Lựu"));
-        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Trái Lựu"));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Dưa hấu Bắc Mỹ",R.drawable.dualeo_image));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Chuối ngự",R.drawable.bananas));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Cam Vinh",R.drawable.oranges));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Nho Bình Thuận",R.drawable.grape));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Táo Cao Bằng",R.drawable.apple));
+        chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Dứa Bình Định",R.drawable.pineapple));
 
         ChiTietGiohangAdapter chiTietHoaDonAdapter = new ChiTietGiohangAdapter(UI_saunutmuangayActivity.this,R.layout.layout_dongsanpham_giohang,chiTietGioHangs);
 

@@ -22,12 +22,12 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listViewCTHD);
         chiTietHoaDons = new ArrayList<>();
-        chiTietHoaDons.add(new ChiTietHoaDon("Trái Lựu","Được Đại trồng",3,15000,R.drawable.trailuu));
-        chiTietHoaDons.add(new ChiTietHoaDon("Trái Lựu","Được Đại trồng",3,15000,R.drawable.trailuu));
-        chiTietHoaDons.add(new ChiTietHoaDon("Trái Lựu","Được Đại trồng",3,15000,R.drawable.trailuu));
-        chiTietHoaDons.add(new ChiTietHoaDon("Trái Lựu","Được Đại trồng",3,15000,R.drawable.trailuu));
-        chiTietHoaDons.add(new ChiTietHoaDon("Trái Lựu","Được Đại trồng",3,15000,R.drawable.trailuu));
-        chiTietHoaDons.add(new ChiTietHoaDon("Trái Lựu","Được Đại trồng",3,15000,R.drawable.trailuu));
+        chiTietHoaDons.add(new ChiTietHoaDon("Dưa hấu Bắc Mỹ","Dưa hấu Bắc Mỹ",3,15000,R.drawable.duahau));
+        chiTietHoaDons.add(new ChiTietHoaDon("Dưa hấu Bắc Mỹ","Dưa hấu Bắc Mỹ",3,15000,R.drawable.bananas));
+        chiTietHoaDons.add(new ChiTietHoaDon("Cam Vinh","Cam Vinh",3,15000,R.drawable.oranges));
+        chiTietHoaDons.add(new ChiTietHoaDon("Nho Bình Thuận","Nho Bình Thuận",3,15000,R.drawable.grape));
+        chiTietHoaDons.add(new ChiTietHoaDon("Táo Cao Bằng","Được Đại trồng",3,15000,R.drawable.apple));
+        chiTietHoaDons.add(new ChiTietHoaDon("Dứa Bình Định","Được Đại trồng",3,15000,R.drawable.pineapple));
 
 
         ChiTietHoaDonAdapter chiTietHoaDonAdapter = new ChiTietHoaDonAdapter(ChiTietHoaDonActivity.this,R.layout.layout_dongchitiet_hoadon,chiTietHoaDons);

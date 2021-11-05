@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
@@ -46,11 +47,12 @@ public class ChiTietGiohangAdapter extends BaseAdapter {
         TextView ten = convertView.findViewById(R.id.giohang_ten);
         TextView donGia = convertView.findViewById(R.id.gihang_giaSP);
         TextView soLuong = convertView.findViewById(R.id.giohang_soLuong);
+        ImageView image = convertView.findViewById(R.id.imageView_giohang);
 
         ten.setText(chiTietGioHangs.get(position).getTenSP());
         donGia.setText(withLargeIntegers(chiTietGioHangs.get(position).getDonGia()));
         soLuong.setText(String.valueOf(chiTietGioHangs.get(position).getSoLuong()));
-
+        image.setImageResource(chiTietGioHangs.get(position).getImage());
 
 
 
