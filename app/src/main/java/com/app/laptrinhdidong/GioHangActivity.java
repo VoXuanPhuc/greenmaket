@@ -89,7 +89,7 @@ public class GioHangActivity extends AppCompatActivity {
 
         for (ChiTietGioHang chiTietGioHang :
                 chiTietGioHangs) {
-            tongTienhang+=chiTietGioHang.donGia*chiTietGioHang.soLuong;
+            tongTienhang+=chiTietGioHang.getDonGia()*chiTietGioHang.getSoLuong();
         }
 
 

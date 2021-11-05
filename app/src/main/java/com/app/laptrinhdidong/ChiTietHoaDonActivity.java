@@ -29,7 +29,7 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chi_tiet_hoa_don);
 
         bottomNavigationView  = findViewById(R.id.menubottom);
-        bottomNavigationView.setSelectedItemId(R.id.card);
+        bottomNavigationView.setSelectedItemId(R.id.profile);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
