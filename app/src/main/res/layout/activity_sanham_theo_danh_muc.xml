@@ -18,6 +18,8 @@
         app:srcCompat="@drawable/back" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,6 +134,9 @@
                 android:background="@drawable/bg_khuyenmai">
                 
                 <TextView
+                    android:fontFamily="@font/bevietnampro_medium"
+
+                    android:textColor="@color/white"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:text="Hàng khuyến mãi"
@@ -157,6 +162,8 @@
                 android:background="@drawable/bg_khuyenmai">
 
                 <TextView
+                    android:fontFamily="@font/bevietnampro_medium"
+android:textColor="@color/white"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:text="Hàng khuyến mãi"
@@ -181,6 +188,8 @@
             android:background="@drawable/bg_khuyenmai">
 
             <TextView
+                android:fontFamily="@font/bevietnampro_medium"
+android:textColor="@color/white"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:text="Hàng khuyến mãi"
@@ -205,6 +214,8 @@
             android:background="@drawable/bg_khuyenmai">
 
             <TextView
+                android:fontFamily="@font/bevietnampro_medium"
+android:textColor="@color/white"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:text="Hàng khuyến mãi"
@@ -289,6 +300,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:text="Dưa hấu Bắc Mỹ"
                         android:textColor="@color/black"
                         android:textSize="16dp"
@@ -299,6 +312,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -323,6 +337,7 @@
                         app:srcCompat="@drawable/star_2" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -336,6 +351,7 @@
                         app:layout_constraintVertical_bias="0.67" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_regular"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -416,6 +432,8 @@
                         app:layout_constraintVertical_bias="0.099" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -429,6 +447,8 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:id="@+id/textView16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -453,6 +473,7 @@
                         app:srcCompat="@drawable/star_2" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -466,6 +487,8 @@
                         app:layout_constraintVertical_bias="0.67" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:id="@+id/textView19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -481,6 +504,8 @@
                         app:layout_constraintVertical_bias="0.9" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="VND"
@@ -521,6 +546,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+
                     android:onClick="moChiTietNongSan"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
@@ -555,6 +581,8 @@
                         app:layout_constraintVertical_bias="0.099" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -568,6 +596,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -592,6 +621,7 @@
                         app:srcCompat="@drawable/star_2" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -605,6 +635,7 @@
                         app:layout_constraintVertical_bias="0.67" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_regular"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -620,6 +651,8 @@
                         app:layout_constraintVertical_bias="0.9" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="VND"
@@ -650,6 +683,8 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:fontFamily="@font/bevietnampro_medium"
+
                     android:id="@+id/constraintLayout3"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
@@ -686,6 +721,8 @@
                         app:layout_constraintVertical_bias="0.099" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -736,6 +773,8 @@
                         app:layout_constraintVertical_bias="0.67" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_regular"
+
                         android:id="@+id/textView17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -822,6 +861,8 @@
                         app:layout_constraintVertical_bias="0.099" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -835,6 +876,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -859,6 +901,7 @@
                         app:srcCompat="@drawable/star_2" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -872,6 +915,7 @@
                         app:layout_constraintVertical_bias="0.67" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_regular"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -887,6 +931,8 @@
                         app:layout_constraintVertical_bias="0.9" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="VND"
@@ -953,6 +999,8 @@
                         app:layout_constraintVertical_bias="0.099" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -966,6 +1014,8 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:id="@+id/textView23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -990,6 +1040,7 @@
                         app:srcCompat="@drawable/star_2" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1003,6 +1054,8 @@
                         app:layout_constraintVertical_bias="0.67" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_regular"
+
                         android:id="@+id/textView25"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1018,6 +1071,8 @@
                         app:layout_constraintVertical_bias="0.9" />
 
                     <TextView
+                        android:fontFamily="@font/bevietnampro_medium"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="VND"

@@ -18,6 +18,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,6 +31,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,6 +55,8 @@
         app:srcCompat="@drawable/back" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_regular"
+
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,6 +116,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -120,6 +128,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -131,6 +141,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -143,6 +155,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/editTextTextPersonName"
         android:layout_width="363dp"
         android:layout_height="33dp"
@@ -156,6 +170,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,6 +184,8 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/thongBaoSoLuong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -191,6 +209,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -203,6 +223,8 @@
         app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan" />
 
     <TextView
+        android:fontFamily="@font/bevietnampro_medium"
+
         android:id="@+id/tongTienThanhToan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -216,6 +238,8 @@
         app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan" />
 
     <Button
+        android:fontFamily="@font/bevietnampro_medium"
+android:textColor="@color/white"
         android:id="@+id/btnThanhToan"
         android:layout_width="match_parent"
         android:layout_height="45dp"
