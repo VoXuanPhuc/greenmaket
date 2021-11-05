@@ -52,12 +52,13 @@
         android:background="@drawable/bg_btn"
         android:padding="2dp"
 
-        android:text="Thanh Toán"
+        android:text="Mua ngay"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/menubottom"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

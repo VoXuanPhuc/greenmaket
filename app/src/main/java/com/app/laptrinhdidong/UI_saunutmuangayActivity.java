@@ -1,13 +1,17 @@
 package com.app.laptrinhdidong;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -17,10 +21,39 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
     ArrayList<ChiTietGioHang> chiTietGioHangs;
     TextView textViewTongTienThanhToan;
     Button btnThanhToan;
+    BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ui_saunutmuangay);
+
+        bottomNavigationView  = findViewById(R.id.menubottom);
+        bottomNavigationView.setSelectedItemId(R.id.card);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home :
+                        startActivity(new Intent(UI_saunutmuangayActivity.this, DanhMucActivity.class));
+                        break;
+                    case R.id.card :
+                        startActivity(new Intent(UI_saunutmuangayActivity.this, GioHangActivity.class));
+
+                        break;
+                    case R.id.search:
+                        startActivity(new Intent(UI_saunutmuangayActivity.this, activity_search.class));
+                        break;
+                    case R.id.profile:
+                        startActivity(new Intent(UI_saunutmuangayActivity.this, Activity_dangnhap.class));
+                        break;
+                }
+                return true;
+            }
+        });
+
+
+
 
         chiTietGioHangs = new ArrayList<>();
         chiTietGioHangs.add(new ChiTietGioHang(15000,3,"Dưa hấu Bắc Mỹ",R.drawable.dualeo_image));
