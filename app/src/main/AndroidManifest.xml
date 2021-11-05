@@ -28,9 +28,7 @@
         <activity
             android:name=".activity_themnongsan"
             android:exported="true" />
-        <activity
-            android:name=".activity_chitietnongsan"
-            android:exported="true" />
+
         <activity
             android:name=".activity_quanlynongsan"
             android:exported="true" />
@@ -60,6 +58,9 @@
             android:exported="true" />
         <activity
             android:name=".DanhMucActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity_chitietnongsan"
             android:exported="true" />
         <activity
             android:name=".giaodien1"

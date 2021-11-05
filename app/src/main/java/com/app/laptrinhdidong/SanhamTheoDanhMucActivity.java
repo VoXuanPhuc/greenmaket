@@ -3,15 +3,14 @@ package com.app.laptrinhdidong;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class SanhamTheoDanhMucActivity extends AppCompatActivity {
+
     ConstraintLayout theSanPham1;
 
     BottomNavigationView bottomNavigationView;
@@ -49,20 +48,11 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
 
 
         theSanPham1 = findViewById(R.id.ctheSanPham1);
-//        theSanPham1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(SanhamTheoDanhMucActivity.this, activity_chitietnongsan.class));
-//
-//            }
-//        });
 
 
     }
-
-
     public void moChiTietNongSan(View view) {
-                        startActivity(new Intent(SanhamTheoDanhMucActivity.this, activity_chitietnongsan.class));
+        startActivity(new Intent(SanhamTheoDanhMucActivity.this, activity_chitietnongsan.class));
 
     }
 }

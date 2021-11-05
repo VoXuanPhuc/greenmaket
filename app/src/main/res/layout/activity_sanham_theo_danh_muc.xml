@@ -48,7 +48,8 @@
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="none">
 
         <LinearLayout
 
@@ -115,8 +116,9 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
-
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        android:scrollbars="none"
+        >
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -235,7 +237,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="211dp">
+        tools:layout_editor_absoluteY="211dp"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -262,7 +265,6 @@
 
 
                     <ImageView
-
                         android:layout_width="80dp"
                         android:layout_height="70dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -270,7 +272,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/duahau" />
+                        app:srcCompat="@drawable/chuoi" />
 
                     <ImageView
                         android:layout_width="20dp"
@@ -783,12 +785,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="202dp"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:onClick="moChiTietNongSan"
                     android:layout_width="142dp"
                     android:layout_height="181dp"
                     android:background="@drawable/bg_thesanpham"
