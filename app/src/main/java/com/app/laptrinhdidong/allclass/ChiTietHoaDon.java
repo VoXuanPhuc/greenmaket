@@ -1,6 +1,6 @@
-package com.app.laptrinhdidong;
+package com.app.laptrinhdidong.allclass;
 
-class ChiTietHoaDon  {
+public class ChiTietHoaDon  {
     String ten,moTa;
     int soLuong,image;
     double donGia,tong;
@@ -36,6 +36,9 @@ class ChiTietHoaDon  {
 
     public int getSoLuong() {
         return soLuong;
+    }
+    public int getImage() {
+        return image;
     }
 
     public void setSoLuong(int soLuong) {

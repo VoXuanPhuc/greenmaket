@@ -1,4 +1,6 @@
-package com.app.laptrinhdidong;
+package com.app.laptrinhdidong.allclass;
+
+import com.app.laptrinhdidong.allclass.danhmucClass;
 
 import java.util.Date;
 

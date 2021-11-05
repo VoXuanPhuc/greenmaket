@@ -1,4 +1,4 @@
-package com.app.laptrinhdidong;
+package com.app.laptrinhdidong.alladapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,23 +8,28 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.app.laptrinhdidong.R;
+import com.app.laptrinhdidong.allclass.ChiTietGioHang;
+
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class ChiTietHoaDonAdapter extends BaseAdapter {
+public class ChiTietGiohangAdapter extends BaseAdapter {
+
     Context context;
     int layout;
-    List<ChiTietHoaDon> chiTietHoaDons;
+    List<ChiTietGioHang> chiTietGioHangs;
 
-    public ChiTietHoaDonAdapter(Context context, int layout, List<ChiTietHoaDon> chiTietHoaDons) {
+
+    public ChiTietGiohangAdapter(Context context, int layout, List<ChiTietGioHang> chiTietGioHangs) {
         this.context = context;
         this.layout = layout;
-        this.chiTietHoaDons = chiTietHoaDons;
+        this.chiTietGioHangs = chiTietGioHangs;
     }
 
     @Override
     public int getCount() {
-        return chiTietHoaDons.size();
+        return chiTietGioHangs.size();
     }
 
     @Override
@@ -42,21 +47,17 @@ public class ChiTietHoaDonAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout,null);
 
-        TextView ten = (TextView) convertView.findViewById(R.id.tenSanPham_CTHD);
+        TextView ten = convertView.findViewById(R.id.giohang_ten);
+        TextView donGia = convertView.findViewById(R.id.gihang_giaSP);
+        TextView soLuong = convertView.findViewById(R.id.giohang_soLuong);
+        ImageView image = convertView.findViewById(R.id.imageView_giohang);
 
-        TextView soLuong = (TextView)  convertView.findViewById(R.id.soLuowng_CTHD);
+        ten.setText(chiTietGioHangs.get(position).getTenSP());
+        donGia.setText(withLargeIntegers(chiTietGioHangs.get(position).getDonGia()));
+        soLuong.setText(String.valueOf(chiTietGioHangs.get(position).getSoLuong()));
+        image.setImageResource(chiTietGioHangs.get(position).getImage());
 
-        TextView tong = (TextView)  convertView.findViewById(R.id.tong_CTHD);
 
-        ImageView hinhAnh = (ImageView) convertView.findViewById(R.id.hinhanhchitiet_hoaDon);
-
-        ten.setText(chiTietHoaDons.get(position).getTen());
-
-        soLuong.setText(String.valueOf(chiTietHoaDons.get(position).getSoLuong()));
-
-        tong.setText(withLargeIntegers(chiTietHoaDons.get(position).getDonGia()*chiTietHoaDons.get(position).getSoLuong()));
-
-        hinhAnh.setImageResource(chiTietHoaDons.get(position).image);
 
         return convertView;
     }

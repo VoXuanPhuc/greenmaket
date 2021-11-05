@@ -1,4 +1,4 @@
-package com.app.laptrinhdidong;
+package com.app.laptrinhdidong.alladapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.app.laptrinhdidong.R;
+import com.app.laptrinhdidong.allclass.HoaDon;
 
 import java.text.DecimalFormat;
 import java.util.List;
@@ -56,10 +59,10 @@ public class HoaDonAdapter extends BaseAdapter {
 
                 TextView trangThai = (TextView) convertView.findViewById(R.id.trangThai);
 
-                maHoaDon.setText(hoaDonList.get(position).maHoaDon);
-                ngay.setText(hoaDonList.get(position).ngay);
-                thanhTien.setText(withLargeIntegers(hoaDonList.get(position).thanhTien));
-                trangThai.setText(hoaDonList.get(position).trangThai);
+                maHoaDon.setText(hoaDonList.get(position).getMaHoaDon());
+                ngay.setText(hoaDonList.get(position).getNgay());
+                thanhTien.setText(withLargeIntegers(hoaDonList.get(position).getThanhTien()));
+                trangThai.setText(hoaDonList.get(position).getTrangThai());
 
 
 

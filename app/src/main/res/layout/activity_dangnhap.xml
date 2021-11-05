@@ -33,7 +33,7 @@
             android:hint="Email"
             android:textColor="@color/black"
             android:layout_gravity="center"
-            android:paddingLeft="30dp"
+            android:paddingHorizontal="30dp"
             />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -43,11 +43,12 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:hint="Password"
-            android:textColor="#C8C4C4"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             app:passwordToggleEnabled="true"
             android:background="@drawable/color"
-            android:paddingLeft="20dp">
+            android:paddingHorizontal="20dp"
+            android:gravity="center_vertical">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:background="@drawable/color"
@@ -55,7 +56,7 @@
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
                 android:ems="15"
-                android:layout_marginLeft="5dp">
+                android:paddingBottom="5dp">
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>

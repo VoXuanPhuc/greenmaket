@@ -1,4 +1,4 @@
-package com.app.laptrinhdidong;
+package com.app.laptrinhdidong.allclass;
 
 public class HoaDon {
 

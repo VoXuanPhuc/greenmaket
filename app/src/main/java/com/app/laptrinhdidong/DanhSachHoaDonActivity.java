@@ -8,9 +8,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.text.DecimalFormat;
+import com.app.laptrinhdidong.alladapter.HoaDonAdapter;
+import com.app.laptrinhdidong.allclass.HoaDon;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class DanhSachHoaDonActivity extends AppCompatActivity {
 

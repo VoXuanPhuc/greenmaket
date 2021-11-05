@@ -29,10 +29,11 @@
             android:layout_marginTop="40dp"
             android:layout_marginRight="50dp"
             android:background="@drawable/color"
-            android:hint="   Email"
-            android:textColor="#C4C4C4"
+            android:hint="Email"
+            android:textColor="@color/black"
             android:layout_gravity="center"
-            android:padding="15dp"/>
+            android:gravity="center_vertical"
+            android:paddingHorizontal="30dp"/>
 
         <EditText
             android:layout_width="354dp"
@@ -40,11 +41,11 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:hint="   Password"
-            android:textColor="#C4C4C4"
+            android:hint="Password"
+            android:textColor="@color/black"
             android:background="@drawable/color"
             android:layout_gravity="center"
-            android:padding="15dp"/>
+            android:paddingHorizontal="30dp"/>
 
         <EditText
             android:layout_width="354dp"
@@ -52,11 +53,11 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:hint="   Repeat Password "
-            android:textColor="#C4C4C4"
+            android:hint="Repeat Password "
+            android:textColor="@color/black"
             android:background="@drawable/color"
             android:layout_gravity="center"
-            android:padding="15dp"/>
+            android:paddingHorizontal="30dp"/>
     </LinearLayout>
 
     <LinearLayout
