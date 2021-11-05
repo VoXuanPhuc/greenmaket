@@ -8,7 +8,7 @@ import android.widget.ImageButton;
 
 public class giaodien1 extends AppCompatActivity {
 
-
+    ImageButton nextbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

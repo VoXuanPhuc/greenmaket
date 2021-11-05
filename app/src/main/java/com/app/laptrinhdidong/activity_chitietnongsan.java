@@ -16,17 +16,18 @@ public class activity_chitietnongsan extends AppCompatActivity {
     ImageButton love;
     TextView number;
     Integer sl;
+    int tym1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chitietnongsan);
-
+        tym1 = R.drawable.tym_icon;
         add = (ImageButton) findViewById(R.id.them);
         minus = (ImageButton) findViewById(R.id.giam);
         love = (ImageButton) findViewById(R.id.yeuthichbaidang);
         number = (TextView) findViewById(R.id.soluongctns);
 
-        sl = Integer.parseInt(number.toString());
+        sl = Integer.parseInt(number.getText().toString());
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,7 +39,7 @@ public class activity_chitietnongsan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (sl > 1) {
-                    sl += 1;
+                    sl -= 1;
                     number.setText(sl.toString());
                 } else {
                     Toast.makeText(activity_chitietnongsan.this, "Số lượng tối thiểu là 1", Toast.LENGTH_SHORT).show();
@@ -49,7 +50,12 @@ public class activity_chitietnongsan extends AppCompatActivity {
         love.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                love.setImageResource(R.drawable.tym_icon);
+                if (tym1 == R.drawable.tym_icon) {
+                    tym1 = R.drawable.traitim2;
+                } else  {
+                    tym1 = R.drawable.tym_icon;
+                }
+                love.setImageResource(tym1);
             }
         });
 
