@@ -1,13 +1,17 @@
 package com.app.laptrinhdidong;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -17,18 +21,43 @@ public class GioHangActivity extends AppCompatActivity {
     ListView listView;
     Button buttonThanhToan;
     TextView textViewTongTienhang;
-
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gio_hang);
 
+        bottomNavigationView  = findViewById(R.id.menubottom);
+        bottomNavigationView.setSelectedItemId(R.id.card);
+
         buttonThanhToan = findViewById(R.id.button);
         buttonThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(GioHangActivity.this,UI_saunutmuangayActivity.class));
+            }
+        });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home :
+                        startActivity(new Intent(GioHangActivity.this, DanhMucActivity.class));
+                        break;
+                    case R.id.card :
+                        startActivity(new Intent(GioHangActivity.this, GioHangActivity.class));
+
+                        break;
+                    case R.id.search:
+                        startActivity(new Intent(GioHangActivity.this, activity_search.class));
+                        break;
+                    case R.id.profile:
+                        startActivity(new Intent(GioHangActivity.this, Activity_dangnhap.class));
+                        break;
+                }
+                return true;
             }
         });
 
