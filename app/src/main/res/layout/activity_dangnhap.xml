@@ -30,10 +30,11 @@
             android:layout_marginTop="40dp"
             android:layout_marginRight="50dp"
             android:background="@drawable/color"
-            android:hint="  Email"
-            android:textColor="#C8C4C4"
+            android:hint="Email"
+            android:textColor="@color/black"
             android:layout_gravity="center"
-            android:padding="15dp"/>
+            android:paddingLeft="30dp"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="354dp"
@@ -41,11 +42,12 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:hint="   Password"
+            android:hint="Password"
             android:textColor="#C8C4C4"
             android:layout_gravity="center"
             app:passwordToggleEnabled="true"
-            android:background="@drawable/color">
+            android:background="@drawable/color"
+            android:paddingLeft="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:background="@drawable/color"

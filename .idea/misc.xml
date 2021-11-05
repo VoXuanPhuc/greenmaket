@@ -15,9 +15,10 @@
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable/edit_baidang.xml" value="0.2169230769230769" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable/radiou_editprofile.xml" value="0.14536082474226805" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/drawable/radious_bg_profile.xml" value="0.14536082474226805" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/font/roboto_medium.xml" value="0.1361111111111111" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_baidang.xml" value="0.2" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_chitietnongsan.xml" value="0.14" />
-        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_dangnhap.xml" value="0.20416666666666666" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_dangnhap.xml" value="0.15" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_danh_muc.xml" value="0.1361111111111111" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_edit_profile.xml" value="0.1361111111111111" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_giaodien1.xml" value="0.18" />
@@ -26,7 +27,7 @@
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_giaodien4.xml" value="0.16" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_gio_hang.xml" value="0.1361111111111111" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_profile.xml" value="0.15" />
+        <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_profile.xml" value="0.13" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_quanlynongsan.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_san_pham_theo_danh_muc.xml" value="0.1" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/activity_sanham_theo_danh_muc.xml" value="0.18" />
@@ -41,12 +42,6 @@
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/lv_baidang.xml" value="0.16" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/layout/lvsearch.xml" value="0.14" />
         <entry key="..\:/HKI-3/laptrinhdidong/app/src/main/res/menu/navigation_items.xml" value="0.20416666666666666" />
-        <entry key="..\:/TRAN DAI/LapTrinhAndroid/greenmarket/app/src/main/res/layout/activity_baidang.xml" value="0.22447916666666667" />
-        <entry key="..\:/TRAN DAI/LapTrinhAndroid/greenmarket/app/src/main/res/layout/activity_chitietnongsan.xml" value="0.25" />
-        <entry key="..\:/TRAN DAI/LapTrinhAndroid/greenmarket/app/src/main/res/layout/activity_danh_muc.xml" value="0.22447916666666667" />
-        <entry key="..\:/TRAN DAI/LapTrinhAndroid/greenmarket/app/src/main/res/layout/activity_sanham_theo_danh_muc.xml" value="0.22" />
-        <entry key="..\:/TRAN DAI/LapTrinhAndroid/greenmarket/app/src/main/res/layout/activity_ui_saunutmuangay.xml" value="0.22447916666666667" />
-        <entry key="..\:/TRAN DAI/LapTrinhAndroid/greenmarket/app/src/main/res/layout/layout_dongsanpham_giohang.xml" value="0.25" />
         <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable-v24/bg_color.xml" value="0.240625" />
         <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_btn_buy.xml" value="0.240625" />
         <entry key="..\:/TRAN DAI/Phuc/greenmaket/app/src/main/res/drawable/bg_danhmuc2.xml" value="0.240625" />

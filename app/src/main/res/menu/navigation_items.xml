@@ -8,7 +8,7 @@
         android:icon="@drawable/img_4"
         android:title=""/>
     <item android:id="@+id/search"
-        android:icon="@drawable/notification"
+        android:icon="@drawable/search_icon"
         android:title=""/>
     <item android:id="@+id/profile"
         android:icon="@drawable/profile"
