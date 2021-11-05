@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".editProfile"
     android:background="@drawable/bg_color">
 
 
@@ -27,11 +27,13 @@
             app:shapeAppearanceOverlay="@style/Circular" />
 
         <TextView
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/roboto_mono_medium"
             android:text="Nguyễn Thị Thu Thủy"
             android:textColor="@color/black"
             android:textSize="16dp"
@@ -48,7 +50,7 @@
         >
 
         <EditText
-            android:id="@+id/be"
+            android:id="@+id/edit_name"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginVertical="10dp"

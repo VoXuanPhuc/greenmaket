@@ -104,7 +104,8 @@
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
                             android:text="Được trồng và chăm sóc từ nông trại sạch"
                             android:textColor="@color/white"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:fontFamily="@font/roboto"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -148,7 +149,8 @@
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
                             android:text="Được trồng và chăm sóc từ nông trại sạch"
                             android:textColor="@color/white"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:fontFamily="@font/roboto"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -192,7 +194,8 @@
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
                             android:text="Được trồng và chăm sóc từ nông trại sạch"
                             android:textColor="@color/white"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:fontFamily="@font/roboto"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -209,7 +212,8 @@
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                tools:ignore="UnknownId" />
+                tools:ignore="UnknownId"
+                android:fontFamily="@font/roboto"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

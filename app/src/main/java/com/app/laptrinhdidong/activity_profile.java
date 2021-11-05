@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -15,16 +16,20 @@ public class activity_profile extends AppCompatActivity {
 
     Button editProfile;
     Button hoaDon;
+    TextView tvName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         editProfile = (Button) findViewById(R.id.editProfile);
         hoaDon = (Button) findViewById(R.id.hoadon);
+        tvName = (TextView) findViewById(R.id.name);
+
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity_profile.this, com.app.laptrinhdidong.editProfile.class));
+                startActivity(new Intent(activity_profile.this, com.app.laptrinhdidong.editProfile.class)
+                .putExtra("username", tvName.getText().toString()));
             }
         });
 
@@ -35,7 +40,10 @@ public class activity_profile extends AppCompatActivity {
             }
         });
 
-
+        Intent intentEditProfile = getIntent();
+        if (intentEditProfile.getStringExtra("name") != null) {
+            tvName.setText(intentEditProfile.getStringExtra("name"));
+        }
 
 
     }
