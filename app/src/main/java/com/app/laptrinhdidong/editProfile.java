@@ -13,7 +13,6 @@ public class editProfile extends AppCompatActivity {
 
     Button btnEditProfile;
     EditText eName;
-    TextView username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +21,7 @@ public class editProfile extends AppCompatActivity {
         Intent getIntent = getIntent();
         btnEditProfile = (Button) findViewById(R.id.btnEditProfile);
         eName = (EditText) findViewById(R.id.edit_name);
-        username = (TextView) findViewById(R.id.username);
 
-        username.setText(getIntent.getStringExtra("username"));
         eName.setText(getIntent.getStringExtra("username"));
 
         btnEditProfile.setOnClickListener(new View.OnClickListener() {

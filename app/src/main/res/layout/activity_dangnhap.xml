@@ -16,25 +16,37 @@
         android:textSize="30dp"
         android:layout_marginTop="100dp"
         android:layout_gravity="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/bevietnampro_medium"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="354dp"
             android:layout_height="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"
             android:layout_marginRight="50dp"
-            android:background="@drawable/color"
             android:hint="Email"
             android:textColor="@color/black"
             android:layout_gravity="center"
-            android:paddingHorizontal="30dp"
-            />
+            android:background="@drawable/color"
+            android:paddingHorizontal="20dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:background="@drawable/color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:ems="15"
+                android:paddingBottom="5dp">
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="354dp"
@@ -74,7 +86,8 @@
             android:layout_height="50dp"
             android:background="@drawable/bt_color"
             android:textColor="@color/white"
-            android:text="Đăng nhập"/>
+            android:text="Đăng nhập"
+            android:fontFamily="@font/bevietnampro_medium"/>
     </LinearLayout>
 
     <LinearLayout
@@ -87,11 +100,12 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:text="Đăng Ký"
+            android:text="Đăng ký"
             android:paddingLeft="20sp"
             android:textColor="#23834C"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="@font/bevietnampro_regular"/>
 
         <TextView
             android:layout_width="160dp"
@@ -101,7 +115,8 @@
             android:text="Quên mật khẩu"
             android:textColor="#23834C"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/bevietnampro_regular"/>
     </LinearLayout>
 
     <LinearLayout

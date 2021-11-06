@@ -17,7 +17,8 @@
         android:text="Tạo cửa hàng dành riêng \ncho bạn "
         android:textColor="#F8C81E"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:fontFamily="@font/bevietnampro_medium"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +33,8 @@
             android:text="Hãy biến nó thành của riêng bạn. Khi bạn\n thiết lập cửa hàng trực tuyến của mình."
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:fontFamily="@font/bevietnampro_regular"/>
 
     </LinearLayout>
 

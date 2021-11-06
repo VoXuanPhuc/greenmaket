@@ -32,7 +32,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="40dp"
-            android:fontFamily="@font/roboto"
+            android:fontFamily="@font/bevietnampro_regular"
             android:text="Nguyễn Thị Thu Thủy"
             android:textColor="@color/black"
             android:textSize="17dp"
@@ -55,10 +55,11 @@
             android:backgroundTint="@color/profileedittext"
             android:drawableStart="@drawable/infoedit"
             android:gravity="center_vertical"
-            android:paddingVertical="15dp"
             android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp"
             android:text="  Cập nhật thông tin cá nhân"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:tint="@color/white"/>
 
         <Button
             android:id="@+id/hoadon"
@@ -72,7 +73,8 @@
             android:paddingVertical="15dp"
             android:paddingHorizontal="20dp"
             android:text="  Hóa đơn"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:tint="@android:color/white"/>
 
         <Button
             android:id="@+id/quanlybd"
@@ -86,7 +88,9 @@
             android:paddingHorizontal="20dp"
             android:gravity="center_vertical"
             android:text="   Chính sách bảo mật"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:tint="@android:color/white"
+            />
     </LinearLayout>
 
     <ImageView
@@ -97,6 +101,7 @@
         android:src="@drawable/img" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

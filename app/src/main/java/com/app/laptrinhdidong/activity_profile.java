@@ -24,6 +24,27 @@ public class activity_profile extends AppCompatActivity {
         editProfile = (Button) findViewById(R.id.editProfile);
         hoaDon = (Button) findViewById(R.id.hoadon);
         tvName = (TextView) findViewById(R.id.name);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavi);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home :
+                        startActivity(new Intent(activity_profile.this, DanhMucActivity.class));
+                        break;
+                    case R.id.card :
+                        startActivity(new Intent(activity_profile.this, GioHangActivity.class));
+                        break;
+                    case R.id.search:
+                        startActivity(new Intent(activity_profile.this, activity_search.class));
+                        break;
+                    case R.id.profile:
+                        break;
+                }
+                return true;
+            }
+        });
 
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override

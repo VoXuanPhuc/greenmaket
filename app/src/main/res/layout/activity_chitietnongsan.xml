@@ -49,11 +49,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto"
                 android:text="Nông sản sạch"
                 android:textColor="@color/black"
                 android:textSize="18dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/roboto"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/gianongsanctns"
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:text="50.000 VND"
+                android:text="50.000 đ"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
@@ -98,7 +98,7 @@
                 android:layout_height="30dp"
                 android:background="@drawable/radiou_editprofile"
                 android:scaleType="fitCenter"
-                android:src="@drawable/tru_icon"
+                android:src="@drawable/ic_baseline_remove_circle_24"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <TextView

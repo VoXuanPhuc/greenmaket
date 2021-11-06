@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_chitietnongsan"
+    tools:context=".activity_search"
     android:background="@color/white">
 
     <TextView
@@ -14,9 +14,10 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:drawableStart="@drawable/back_icon"
-        android:text="Sản phẩm"
+        android:text="Tìm kiếm"
         android:textColor="@color/black"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:fontFamily="@font/bevietnampro_regular"/>
 
 
     <ScrollView
@@ -54,7 +55,8 @@
                 android:text="Tìm nhanh "
                 android:textColor="@color/black"
                 android:textSize="18dp"
-                tools:ignore="UnknownId" />
+                tools:ignore="UnknownId"
+                android:fontFamily="@font/bevietnampro_regular"/>
 
             <LinearLayout
                 android:id="@+id/timkiemnhanh"
@@ -74,8 +76,8 @@
                         android:id="@+id/imageviewTraicaybaidang"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/thit_search"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/vegatable" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -93,7 +95,8 @@
                             android:text="Rau xanh"
                             android:textColor="@color/white"
                             android:textSize="20dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/bevietnampro_regular"/>
 
                         <TextView
                             android:id="@+id/mieutaNongsan"
@@ -102,10 +105,10 @@
                             android:layout_below="@+id/tenNongsan"
                             android:layout_marginTop="5dp"
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:fontFamily="@font/bevietnampro_regular"
                             android:text="Được trồng và chăm sóc từ nông trại sạch"
                             android:textColor="@color/white"
-                            android:textSize="15dp"
-                            android:fontFamily="@font/roboto"/>
+                            android:textSize="15dp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -118,8 +121,8 @@
                         android:id="@+id/imageviewTraicaybaidang2"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ca_search"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ca_search" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -127,18 +130,18 @@
                         android:background="@color/profileedittext"
                         android:orientation="vertical"
                         android:paddingHorizontal="20dp"
-                        android:paddingVertical="5px"
-                        >
+                        android:paddingVertical="5px">
 
                         <TextView
                             android:id="@+id/tenNongsan2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
-                            android:text="Rau xanh"
+                            android:text="Cá tươi"
                             android:textColor="@color/white"
                             android:textSize="20dp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/bevietnampro_regular"/>
 
                         <TextView
                             android:id="@+id/mieutaNongsan2"
@@ -147,10 +150,10 @@
                             android:layout_below="@+id/tenNongsan"
                             android:layout_marginTop="5dp"
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:fontFamily="@font/bevietnampro_regular"
                             android:text="Được trồng và chăm sóc từ nông trại sạch"
                             android:textColor="@color/white"
-                            android:textSize="15dp"
-                            android:fontFamily="@font/roboto"/>
+                            android:textSize="15dp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -163,8 +166,8 @@
                         android:id="@+id/imageviewTraicaybaidang3"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/thit_search"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/thit_search" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -172,17 +175,17 @@
                         android:background="@color/profileedittext"
                         android:orientation="vertical"
                         android:paddingHorizontal="20dp"
-                        android:paddingVertical="5px"
-                        >
+                        android:paddingVertical="5px">
 
                         <TextView
                             android:id="@+id/tenNongsan3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
-                            android:text="Rau xanh"
+                            android:text="Thịt tươi "
                             android:textColor="@color/white"
                             android:textSize="20dp"
+                            android:fontFamily="@font/bevietnampro_regular"
                             android:textStyle="bold" />
 
                         <TextView
@@ -192,10 +195,10 @@
                             android:layout_below="@+id/tenNongsan"
                             android:layout_marginTop="5dp"
                             android:layout_toRightOf="@id/imageviewTraicaybaidang"
+                            android:fontFamily="@font/bevietnampro_regular"
                             android:text="Được trồng và chăm sóc từ nông trại sạch"
                             android:textColor="@color/white"
-                            android:textSize="15dp"
-                            android:fontFamily="@font/roboto"/>
+                            android:textSize="15dp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -208,12 +211,12 @@
                 android:layout_marginVertical="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/bevietnampro_regular"
                 android:text="Những thực phẩm phổ biến hiện nay"
                 android:textColor="@color/black"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                tools:ignore="UnknownId"
-                android:fontFamily="@font/roboto"/>
+                tools:ignore="UnknownId" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -230,21 +233,21 @@
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/trung_image"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/trung_image" />
 
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:layout_marginVertical="5dp"
-                        android:src="@drawable/dualeo_image"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dualeo_image" />
 
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/thitga_search"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/thitga_search" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -255,21 +258,21 @@
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/suplo_search"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/suplo_search" />
 
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="100dp"
                         android:layout_marginVertical="5dp"
-                        android:src="@drawable/vegatable"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/vegatable" />
 
                     <ImageView
                         android:layout_width="200dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/bido_search"
-                        android:scaleType="fitXY"/>
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bido_search" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

@@ -7,8 +7,6 @@
     tools:context=".GioHangActivity"
     android:background="#A2F3C3"
     >
-
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="20dp"

@@ -22,10 +22,8 @@
         app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-
-
+        tools:ignore="MissingConstraints"
+        android:fontFamily="@font/bevietnampro_medium"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +38,8 @@
             android:gravity="center"
             android:text="Đến với chúng tôi bạn không những mua\n được nhiều loại hàng tốt mà còn đem đến\n cho bạn những điều thú vị.   "
             android:textColor="#FFFFFF"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:fontFamily="@font/bevietnampro_regular"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -56,20 +55,12 @@
             android:layout_height="400dp"
             app:srcCompat="@drawable/woman" />
     </LinearLayout>
-
     <ImageButton
         android:id="@+id/next"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="1dp"
         android:background="@drawable/bttron"
-        android:src="@drawable/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_gravity="end"
-        tools:ignore="MissingConstraints" />
+        android:src="@drawable/img_37"
+        android:layout_marginLeft="320dp"/>
 </LinearLayout>
