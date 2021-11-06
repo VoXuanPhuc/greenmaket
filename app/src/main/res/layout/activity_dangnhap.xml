@@ -35,6 +35,7 @@
             android:layout_gravity="center"
             android:background="@drawable/color"
             android:paddingHorizontal="20dp"
+            android:paddingBottom="5dp"
             android:gravity="center_vertical">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -43,7 +44,7 @@
                 android:layout_height="match_parent"
                 android:inputType="text"
                 android:ems="15"
-                android:paddingBottom="5dp">
+                android:paddingBottom="10dp">
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -60,6 +61,7 @@
             app:passwordToggleEnabled="true"
             android:background="@drawable/color"
             android:paddingHorizontal="20dp"
+            android:paddingBottom="5dp"
             android:gravity="center_vertical">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -68,7 +70,7 @@
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
                 android:ems="15"
-                android:paddingBottom="5dp">
+                android:paddingBottom="10dp">
             </com.google.android.material.textfield.TextInputEditText>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,9 +105,9 @@
             android:text="Đăng ký"
             android:paddingLeft="20sp"
             android:textColor="#23834C"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold"
-            android:fontFamily="@font/bevietnampro_regular"/>
+            android:fontFamily="@font/bevietnampro_light"/>
 
         <TextView
             android:layout_width="160dp"
@@ -114,9 +116,9 @@
             android:paddingLeft="20sp"
             android:text="Quên mật khẩu"
             android:textColor="#23834C"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:textStyle="bold"
-            android:fontFamily="@font/bevietnampro_regular"/>
+            android:fontFamily="@font/bevietnampro_light"/>
     </LinearLayout>
 
     <LinearLayout

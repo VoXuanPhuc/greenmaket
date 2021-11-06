@@ -34,7 +34,7 @@
             <EditText
                 android:id="@+id/edSearch"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/round"
@@ -43,7 +43,8 @@
                 android:hint="Tìm kiếm tên món"
                 android:paddingHorizontal="20dp"
                 android:textColor="@color/edHintSearch"
-                android:textColorHint="@color/edHintSearch" />
+                android:textColorHint="@color/edHintSearch"
+                />
 
             <TextView
                 android:id="@+id/tvtimnhanh"
