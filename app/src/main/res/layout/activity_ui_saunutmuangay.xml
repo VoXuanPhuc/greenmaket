@@ -26,7 +26,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="136dp"
         android:text="Phí vận chuyển: 25.000 đ"
-        android:textSize="10dp"
+        android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,7 +39,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="120dp"
         android:text="Ship hàng 25.000 đ"
-        android:textSize="10dp"
+        android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,7 +72,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="4dp"
         android:background="@color/white"
         app:itemIconTint="@color/icon_color"
         app:itemRippleColor="#AAAAAA"
@@ -123,20 +122,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:text="Giao dịch tại cửa hàng"
-        android:textSize="10dp"
+        android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/textView20"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="80dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="205 Đống Đa, Đà Nẵng"
-        android:textSize="10dp"
+        android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -150,7 +149,7 @@
         android:layout_marginTop="172dp"
         android:text="Địa chỉ giao hàng"
         android:textColor="@color/black"
-        android:textSize="10dp"
+        android:textSize="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -164,7 +163,7 @@
         android:inputType="textPersonName"
         android:hint="Nhập ở đây"
 
-        android:textSize="10dp"
+        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -179,7 +178,7 @@
         android:layout_marginTop="4dp"
         android:text="Giỏ hàng"
         android:textColor="#000"
-        android:textSize="10dp"
+        android:textSize="12dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
@@ -193,7 +192,7 @@
         android:layout_marginTop="20dp"
         android:text="Có x sản phẩm trong giõ hàng"
         android:textColor="#A0A0A0"
-        android:textSize="10dp"
+        android:textSize="11dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
