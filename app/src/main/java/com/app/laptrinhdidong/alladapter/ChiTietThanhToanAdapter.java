@@ -14,14 +14,14 @@ import com.app.laptrinhdidong.allclass.ChiTietGioHang;
 import java.text.DecimalFormat;
 import java.util.List;
 
-public class ChiTietGiohangAdapter extends BaseAdapter {
+public class ChiTietThanhToanAdapter extends BaseAdapter {
 
     Context context;
     int layout;
     List<ChiTietGioHang> chiTietGioHangs;
 
 
-    public ChiTietGiohangAdapter(Context context, int layout, List<ChiTietGioHang> chiTietGioHangs) {
+    public ChiTietThanhToanAdapter(Context context, int layout, List<ChiTietGioHang> chiTietGioHangs) {
         this.context = context;
         this.layout = layout;
         this.chiTietGioHangs = chiTietGioHangs;
@@ -47,10 +47,10 @@ public class ChiTietGiohangAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(layout,null);
 
-        TextView ten = convertView.findViewById(R.id.ten_hoadon);
-        TextView donGia = convertView.findViewById(R.id.giohang_giaSP);
-        TextView soLuong = convertView.findViewById(R.id.giohang_soLuong);
-        ImageView image = convertView.findViewById(R.id.imageView_giohang);
+        TextView ten = convertView.findViewById(R.id.ten_thanhtoan);
+        TextView donGia = convertView.findViewById(R.id.thanhtoan_giaSP);
+        TextView soLuong = convertView.findViewById(R.id.thanhtoan_soLuong);
+        ImageView image = convertView.findViewById(R.id.imageView_thanhtoan);
 
         ten.setText(chiTietGioHangs.get(position).getTenSP());
         donGia.setText(withLargeIntegers(chiTietGioHangs.get(position).getDonGia()));

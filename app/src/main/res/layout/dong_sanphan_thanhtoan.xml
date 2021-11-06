@@ -16,10 +16,10 @@
         android:padding="7dp">
 
         <ImageView
-            android:id="@+id/imageView_giohang"
+            android:id="@+id/imageView_thanhtoan"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginStart="30dp"
             android:padding="5dp"
             android:src="@drawable/trailuu"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,31 +30,31 @@
         <TextView
             android:fontFamily="@font/bevietnampro_medium"
 
-            android:id="@+id/ten_hoadon"
-            android:layout_width="135dp"
+            android:id="@+id/ten_thanhtoan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
             android:text="Lựu đỏ Thái"
             android:textColor="#000000"
-            android:textSize="16dp"
+            android:textSize="15dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView_giohang"
+            app:layout_constraintStart_toEndOf="@+id/imageView_thanhtoan"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:fontFamily="@font/bevietnampro_medium"
+            android:id="@+id/thanhtoan_giaSP"
 
-            android:id="@+id/giohang_giaSP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/bevietnampro_medium"
             android:text="100.000"
             android:textSize="15dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView_giohang"
-            app:layout_constraintTop_toBottomOf="@+id/ten_hoadon" />
+            app:layout_constraintStart_toEndOf="@+id/imageView_thanhtoan"
+            app:layout_constraintTop_toBottomOf="@+id/ten_thanhtoan" />
 
         <TextView
             android:fontFamily="@font/bevietnampro_medium"
@@ -67,54 +67,36 @@
             android:text="đ"
             android:textSize="10dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/giohang_giaSP"
-            app:layout_constraintTop_toBottomOf="@+id/ten_hoadon" />
+            app:layout_constraintStart_toEndOf="@+id/thanhtoan_giaSP"
+            app:layout_constraintTop_toBottomOf="@+id/ten_thanhtoan" />
 
         <TextView
-            android:id="@+id/giohang_soLuong"
+            android:id="@+id/thanhtoan_soLuong"
 
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
             android:fontFamily="@font/bevietnampro_medium"
             android:gravity="center"
             android:padding="5dp"
             android:text="01"
-            android:textSize="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/imageView11"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="23dp"
-
-            android:layout_height="23dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="7dp"
-            android:src="@drawable/ic_baseline_add_circle_24"
+            android:textSize="14dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="23dp"
-            android:layout_height="23dp"
+        <TextView
+            android:id="@+id/giohang_soLuong2"
 
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_baseline_remove_circle_24"
-            app:layout_constraintEnd_toStartOf="@+id/giohang_soLuong"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <CheckBox
-            android:checked="true"
-            android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:button="@drawable/image_checkbox"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/bevietnampro_medium"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Số lượng: "
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@+id/thanhtoan_soLuong"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

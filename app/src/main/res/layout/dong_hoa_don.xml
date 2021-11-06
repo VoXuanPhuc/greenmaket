@@ -55,11 +55,11 @@
 
                 android:id="@+id/tt"
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="Thành Tiền : "
                 android:textColor="#484848"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -68,11 +68,11 @@
 
                 android:id="@+id/ngay"
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="01/30/2021"
                 android:textColor="#28363A"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -83,11 +83,11 @@
 
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="Ngày : "
                 android:textColor="#484848"
-                android:textSize="13dp"
+                android:textSize="14dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -96,12 +96,12 @@
 
                 android:id="@+id/thanhTien"
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="5dp"
                 android:text="15.124.000"
                 android:textColor="#990000"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/tt"
                 app:layout_constraintTop_toBottomOf="@+id/ngay" />
@@ -111,12 +111,12 @@
                 android:fontFamily="@font/bevietnampro_medium"
 
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:text="VND"
                 android:textColor="#28363A"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/thanhTien"
                 app:layout_constraintTop_toBottomOf="@+id/ngay" />
@@ -127,11 +127,11 @@
 
                 android:id="@+id/tth"
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="Trạng thái : "
                 android:textColor="#484848"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tt" />
 
@@ -140,12 +140,12 @@
 
                 android:id="@+id/trangThai"
                 android:layout_width="wrap_content"
-                android:layout_height="17dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:text="Chưa thanh toán"
                 android:textColor="#990000"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/tth"
                 app:layout_constraintTop_toBottomOf="@+id/tt" />
