@@ -77,7 +77,6 @@ public class DanhMucActivity extends AppCompatActivity {
                 listView = findViewById(R.id.listView);
                 listView.setAdapter(danhMucAdapter);
 
-
             }
 
             @Override
