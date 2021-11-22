@@ -9,18 +9,27 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.app.laptrinhdidong.API.ApiService;
+import com.app.laptrinhdidong.model.KhachHang;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class activity_profile extends AppCompatActivity {
 
     Button editProfile;
     Button hoaDon;
     TextView tvName;
+    public static KhachHang khachHang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
         editProfile = (Button) findViewById(R.id.editProfile);
         hoaDon = (Button) findViewById(R.id.hoadon);
         tvName = (TextView) findViewById(R.id.name);
@@ -61,11 +70,29 @@ public class activity_profile extends AppCompatActivity {
             }
         });
 
+        getKhachHangById((long) 1401);
+
         Intent intentEditProfile = getIntent();
         if (intentEditProfile.getStringExtra("name") != null) {
             tvName.setText(intentEditProfile.getStringExtra("name"));
         }
+    }
 
+    public void getKhachHangById(long khachhangId) {
+        ApiService.apiService.getKhachHangById(khachhangId).enqueue(
+                new Callback<KhachHang>() {
+                    @Override
+                    public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
+                        activity_profile.khachHang = response.body();
+                        tvName.setText(khachHang.getHoTenKH());
+                    }
+
+                    @Override
+                    public void onFailure(Call<KhachHang> call, Throwable t) {
+
+                    }
+                }
+        );
 
     }
 }
