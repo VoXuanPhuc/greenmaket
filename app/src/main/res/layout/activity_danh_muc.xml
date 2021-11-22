@@ -36,8 +36,8 @@
     </LinearLayout>
 
 
-    <ScrollView
-        android:id="@+id/scrollView2"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
@@ -51,138 +51,9 @@
         app:layout_constraintVertical_bias="0.0">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/traicaytuoi"
-                android:layout_width="380dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-
-                android:background="@drawable/bg_danhmuc2"
-                android:orientation="horizontal">
 
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/fruits" />
-
-                <TextView
-                    android:layout_width="200dp"
-                    android:layout_height="90dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="22dp"
-                    android:gravity="center"
-                    android:text="Trái cây tươi"
-                    android:textColor="#2DA44E"
-                    android:textSize="30dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/bg_danhmuc2"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/vegatable" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:gravity="center"
-                    android:text="Rau tươi"
-                    android:textColor="#2DA44E"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-
-                android:background="@drawable/bg_danhmuc2"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/meat" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="25dp"
-                    android:gravity="center"
-                    android:text="Thịt tươi"
-                    android:textColor="#2DA44E"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="130dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-
-                android:background="@drawable/bg_danhmuc2"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@drawable/fish" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="15dp"
-                    android:gravity="center"
-                    android:text="Cá tươi"
-                    android:textColor="#2DA44E"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-
-                    />
-
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+    </ListView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavi"
