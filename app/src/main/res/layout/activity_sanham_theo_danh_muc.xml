@@ -20,7 +20,7 @@
     <TextView
         android:fontFamily="@font/bevietnampro_regular"
 
-        android:id="@+id/textView4"
+        android:id="@+id/tenDanhMuc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -132,7 +132,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_gravity="center"
                 android:background="@drawable/bg_khuyenmai">
-                
+
                 <TextView
                     android:fontFamily="@font/bevietnampro_medium"
 
@@ -146,12 +146,12 @@
                     android:textSize="12dp"
                     android:textStyle="bold"
                     />
-                    <ImageView
-                        android:layout_width="54dp"
-                        android:layout_height="48dp"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:src="@drawable/grape"/>
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/grape"/>
 
             </LinearLayout>
             <LinearLayout
@@ -163,7 +163,7 @@
 
                 <TextView
                     android:fontFamily="@font/bevietnampro_medium"
-android:textColor="@color/white"
+                    android:textColor="@color/white"
                     android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:text="Hàng khuyến mãi"
@@ -189,7 +189,7 @@ android:textColor="@color/white"
 
             <TextView
                 android:fontFamily="@font/bevietnampro_medium"
-android:textColor="@color/white"
+                android:textColor="@color/white"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:text="Hàng khuyến mãi"
@@ -215,7 +215,7 @@ android:textColor="@color/white"
 
             <TextView
                 android:fontFamily="@font/bevietnampro_medium"
-android:textColor="@color/white"
+                android:textColor="@color/white"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 android:text="Hàng khuyến mãi"
@@ -242,1008 +242,148 @@ android:textColor="@color/white"
 
     </HorizontalScrollView>
 
-    <ScrollView
-        android:layout_marginTop="220dp"
-        android:layout_marginBottom="60dp"
+    <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="211dp"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="202dp"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/ctheSanPham1"
-                    android:layout_width="142dp"
-                    android:layout_height="181dp"
-                    android:background="@drawable/bg_thesanpham"
-                    android:onClick="moChiTietNongSan"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.159"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.523">
-
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/chuoi" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.868"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.099" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:gravity="center"
-
-                        android:text="Dưa hấu Bắc Mỹ"
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:text="7 ngày"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <ImageView
-
-                        android:id="@+id/imageView30"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="112dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.658"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/star_2" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:text="4.8"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.046"
-                        app:layout_constraintStart_toEndOf="@+id/imageView30"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <TextView
-                        android:id="@+id/textView21"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bevietnampro_regular"
-                        android:text="15.000"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.166"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="đ"
-                        android:textColor="#292929"
-                        android:textSize="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/textView21"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.904" />
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="18dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/bg_btn_buy"
-                        android:padding="3dp"
-                        android:src="@drawable/shopping_cart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.312"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.901" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:onClick="moChiTietNongSan"
-                    android:layout_width="142dp"
-                    android:layout_height="181dp"
-                    android:background="@drawable/bg_thesanpham"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.84"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.523">
-
-
-                    <ImageView
-
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/bananas" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.868"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.099" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Chuối Ngự"
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:id="@+id/textView16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:text="7 ngày"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <ImageView
-
-                        android:id="@+id/imageView18"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="112dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.658"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/star_2" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.8"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.046"
-                        app:layout_constraintStart_toEndOf="@+id/imageView18"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15.000"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.166"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:text="đ"
-                        android:textColor="#292929"
-                        android:textSize="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.904" />
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="18dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/bg_btn_buy"
-                        android:padding="3dp"
-                        android:src="@drawable/shopping_cart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.312"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.901" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="202dp"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-
-                    android:onClick="moChiTietNongSan"
-                    android:layout_width="142dp"
-                    android:layout_height="181dp"
-                    android:background="@drawable/bg_thesanpham"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.16"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-
-                    <ImageView
-
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/oranges" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.868"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.099" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Cam Vinh"
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:text="7 ngày"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <ImageView
-
-                        android:id="@+id/imageView17"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="112dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.658"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/star_2" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.8"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.046"
-                        app:layout_constraintStart_toEndOf="@+id/imageView17"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <TextView
-                        android:id="@+id/textView27"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bevietnampro_regular"
-                        android:text="15.000"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.166"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:text="đ"
-                        android:textColor="#292929"
-                        android:textSize="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/textView27"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.904" />
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="18dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/bg_btn_buy"
-                        android:padding="3dp"
-                        android:src="@drawable/shopping_cart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.312"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.901" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:fontFamily="@font/bevietnampro_medium"
-
-                    android:id="@+id/constraintLayout3"
-                    android:layout_width="142dp"
-                    android:layout_height="181dp"
-                    android:background="@drawable/bg_thesanpham"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.84"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.523"
-                    android:onClick="moChiTietNongSan"
-                    >
-
-                    <ImageView
-                        android:id="@+id/image1"
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/grape" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.868"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.099" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Nho Bình Thuận"
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:text="7 ngày"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <ImageView
-
-                        android:id="@+id/imageView16"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="112dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.658"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/star_2" />
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.8"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.046"
-                        app:layout_constraintStart_toEndOf="@+id/imageView16"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_regular"
-
-                        android:id="@+id/textView17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15.000"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.166"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="đ"
-                        android:textColor="#292929"
-                        android:textSize="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/textView17"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.904" />
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="18dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/bg_btn_buy"
-                        android:padding="3dp"
-                        android:src="@drawable/shopping_cart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.312"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.901" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="202dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="142dp"
-                    android:layout_height="181dp"
-                    android:background="@drawable/bg_thesanpham"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.16"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-
-                    <ImageView
-
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/apple" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.868"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.099" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Táo cao bằng"
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:text="7 ngày"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <ImageView
-
-                        android:id="@+id/imageView21"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="112dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.658"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/star_2" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.8"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.046"
-                        app:layout_constraintStart_toEndOf="@+id/imageView21"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <TextView
-                        android:id="@+id/textView22"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/bevietnampro_regular"
-                        android:text="15.000"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.166"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:text="đ"
-                        android:textColor="#292929"
-                        android:textSize="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/textView22"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.904" />
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="18dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/bg_btn_buy"
-                        android:padding="3dp"
-                        android:src="@drawable/shopping_cart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.312"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.901" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:onClick="moChiTietNongSan"
-                    android:id="@+id/constraintLayout9"
-                    android:layout_width="142dp"
-                    android:layout_height="181dp"
-                    android:background="@drawable/bg_thesanpham"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.84"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.523">
-
-
-                    <ImageView
-                        android:id="@+id/image001"
-                        android:layout_width="80dp"
-                        android:layout_height="70dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.144"
-                        app:srcCompat="@drawable/pineapple" />
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/heart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.868"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.099" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Dứa Bình Định"
-                        android:textColor="@color/black"
-                        android:textSize="16dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:text="7 ngày"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <ImageView
-
-                        android:id="@+id/imageView24"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginTop="112dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.658"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/star_2" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_medium"
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4.8"
-                        android:textSize="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.046"
-                        app:layout_constraintStart_toEndOf="@+id/imageView24"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67" />
-
-                    <TextView
-                        android:fontFamily="@font/bevietnampro_regular"
-
-                        android:id="@+id/textView25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="15.000"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.166"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:fontFamily="@font/bevietnampro_medium"
-                        android:text="đ"
-                        android:textColor="#292929"
-                        android:textSize="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/textView25"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.904" />
-
-                    <ImageView
-                        android:layout_width="27dp"
-                        android:layout_height="18dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@drawable/bg_btn_buy"
-                        android:padding="3dp"
-                        android:src="@drawable/shopping_cart"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.312"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.901" />
-
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_marginTop="210dp"
+        android:layout_marginBottom="60dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </ListView>
 
     <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:layout_width="142dp"-->
-<!--        android:layout_height="181dp"-->
-<!--        android:background="@drawable/bg_thesanpham"-->
-<!--        tools:layout_editor_absoluteX="26dp"-->
-<!--        tools:layout_editor_absoluteY="222dp">-->
+    <!--        android:layout_width="142dp"-->
+    <!--        android:layout_height="181dp"-->
+    <!--        android:background="@drawable/bg_thesanpham"-->
+    <!--        tools:layout_editor_absoluteX="26dp"-->
+    <!--        tools:layout_editor_absoluteY="222dp">-->
 
 
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView14"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="70dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.144"-->
-<!--            app:srcCompat="@drawable/duahau" />-->
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imageView14"-->
+    <!--            android:layout_width="80dp"-->
+    <!--            android:layout_height="70dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.144"-->
+    <!--            app:srcCompat="@drawable/duahau" />-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="20dp"-->
-<!--            android:layout_height="20dp"-->
-<!--            android:src="@drawable/heart"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.868"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.099" />-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="20dp"-->
+    <!--            android:layout_height="20dp"-->
+    <!--            android:src="@drawable/heart"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.868"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.099" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView11"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Chuối Ngự"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="16dp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView11"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="Chuối Ngự"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="16dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView13"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="7 ngày"-->
-<!--            android:textSize="10dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/textView11"-->
-<!--            app:layout_constraintHorizontal_bias="0.141"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.67" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView13"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="7 ngày"-->
+    <!--            android:textSize="10dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="@+id/textView11"-->
+    <!--            app:layout_constraintHorizontal_bias="0.141"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.67" />-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/imageView15"-->
-<!--            android:layout_width="13dp"-->
-<!--            android:layout_height="13dp"-->
-<!--            android:layout_marginTop="112dp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.452"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/textView13"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:srcCompat="@drawable/star_2" />-->
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imageView15"-->
+    <!--            android:layout_width="13dp"-->
+    <!--            android:layout_height="13dp"-->
+    <!--            android:layout_marginTop="112dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.452"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/textView13"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:srcCompat="@drawable/star_2" />-->
 
-<!--        <TextView-->
+    <!--        <TextView-->
 
-<!--            android:id="@+id/textView15"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="4.8"-->
-<!--            android:textSize="10dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/textView11"-->
-<!--            app:layout_constraintHorizontal_bias="0.312"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/imageView15"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.664" />-->
+    <!--            android:id="@+id/textView15"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="4.8"-->
+    <!--            android:textSize="10dp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="@+id/textView11"-->
+    <!--            app:layout_constraintHorizontal_bias="0.312"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/imageView15"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.664" />-->
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="15.000"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="15dp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.166"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.9" />-->
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="15.000"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="15dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.166"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.9" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/textView14"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="VND"-->
-<!--            android:textColor="#292929"-->
-<!--            android:textSize="10dp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.516"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.904" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/textView14"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="VND"-->
+    <!--            android:textColor="#292929"-->
+    <!--            android:textSize="10dp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.516"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.904" />-->
 
-<!--        <ImageView-->
-<!--            android:layout_width="27dp"-->
-<!--            android:layout_height="18dp"-->
-<!--            android:background="@drawable/bg_btn_buy"-->
-<!--            android:padding="3dp"-->
-<!--            android:src="@drawable/shopping_cart"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.312"-->
-<!--            app:layout_constraintStart_toEndOf="@+id/textView14"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.901" />-->
+    <!--        <ImageView-->
+    <!--            android:layout_width="27dp"-->
+    <!--            android:layout_height="18dp"-->
+    <!--            android:background="@drawable/bg_btn_buy"-->
+    <!--            android:padding="3dp"-->
+    <!--            android:src="@drawable/shopping_cart"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintHorizontal_bias="0.312"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/textView14"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.901" />-->
 
 
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 

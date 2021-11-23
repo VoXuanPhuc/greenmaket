@@ -5,11 +5,12 @@
 
     <LinearLayout
 
+        android:id="@+id/danhMuc"
         android:layout_width="380dp"
         android:layout_height="130dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
 
+        android:layout_marginBottom="10dp"
         android:background="@drawable/bg_danhmuc2"
         android:orientation="horizontal">
 

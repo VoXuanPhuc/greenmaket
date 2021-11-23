@@ -2,6 +2,7 @@ package com.app.laptrinhdidong.API;
 
 import com.app.laptrinhdidong.model.DanhMuc;
 import com.app.laptrinhdidong.model.KhachHang;
+import com.app.laptrinhdidong.model.nongsan;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -30,5 +31,7 @@ public interface ApiService {
     @GET("api/khach-hangs/{id}")
     Call<KhachHang> getKhachHangById(@Path("id") long idUser);
 
+    @GET("api/nong-sans")
+    Call<ArrayList<nongsan>> convertTatcaNongSan();
 
 }
