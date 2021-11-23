@@ -33,7 +33,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginRight="40dp"
             android:fontFamily="@font/bevietnampro_regular"
-            android:text="Nguyễn Thị Thu Thủy"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="17dp"
             android:textStyle="bold" />

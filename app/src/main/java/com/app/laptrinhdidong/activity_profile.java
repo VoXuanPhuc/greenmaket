@@ -24,6 +24,7 @@ public class activity_profile extends AppCompatActivity {
     Button editProfile;
     Button hoaDon;
     TextView tvName;
+
     public static KhachHang khachHang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,13 +71,10 @@ public class activity_profile extends AppCompatActivity {
             }
         });
 
-        getKhachHangById((long) 1401);
-
-        Intent intentEditProfile = getIntent();
-        if (intentEditProfile.getStringExtra("name") != null) {
-            tvName.setText(intentEditProfile.getStringExtra("name"));
-        }
+        getKhachHangById((long) 1702);
     }
+
+
 
     public void getKhachHangById(long khachhangId) {
         ApiService.apiService.getKhachHangById(khachhangId).enqueue(

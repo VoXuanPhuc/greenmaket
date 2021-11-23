@@ -11,10 +11,10 @@ public class KhachHang implements Serializable {
     private String matkhau;
     private String email;
     private String sdt;
-    private Date ngaysinh;
+    private Date ngaySinh;
     private String gioitinh;
     private String chitietdiachi;
-    private XaPhuong diaChi;
+    private XaPhuong xa;
 
     public KhachHang() {
     }
@@ -28,10 +28,10 @@ public class KhachHang implements Serializable {
         this.matkhau = matkhau;
         this.email = email;
         this.sdt = sdt;
-        this.ngaysinh = ngaysinh;
+        this.ngaySinh = ngaysinh;
         this.gioitinh = gioitinh;
         this.chitietdiachi = chitietdiachi;
-        this.diaChi = diaChi;
+        this.xa = diaChi;
     }
 
     public int getId() {
@@ -83,11 +83,11 @@ public class KhachHang implements Serializable {
     }
 
     public Date getNgaysinh() {
-        return ngaysinh;
+        return ngaySinh;
     }
 
     public void setNgaysinh(Date ngaysinh) {
-        this.ngaysinh = ngaysinh;
+        this.ngaySinh = ngaysinh;
     }
 
     public String getGioitinh() {
@@ -107,10 +107,10 @@ public class KhachHang implements Serializable {
     }
 
     public XaPhuong getDiaChi() {
-        return diaChi;
+        return xa;
     }
 
     public void setDiaChi(XaPhuong diaChi) {
-        this.diaChi = diaChi;
+        this.xa = diaChi;
     }
 }

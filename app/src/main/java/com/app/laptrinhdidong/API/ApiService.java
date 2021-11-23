@@ -11,7 +11,10 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ApiService {
@@ -28,7 +31,9 @@ public interface ApiService {
     Call<ArrayList<DanhMuc>> convertDanhMuc();
 
     @GET("api/khach-hangs/{id}")
-    Call<KhachHang> getKhachHangById(@Path("id") long idUser);
+    Call<KhachHang> getKhachHangById (@Path("id") long idUser);
 
+    @PUT("api/khach-hangs/{id}")
+    Call<KhachHang> updateKhachhangById (@Path("id") long idUser, @Body KhachHang khachHang);
 
 }
