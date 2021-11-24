@@ -17,12 +17,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.laptrinhdidong.API.ApiService;
+import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.DanhMuc;
-import com.app.laptrinhdidong.model.nongsan;
+import com.app.laptrinhdidong.model.NongSan;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -32,8 +32,9 @@ import retrofit2.Response;
 public class DanhMucActivity extends AppCompatActivity {
     LinearLayout traiCayTuoi;
     ArrayList<DanhMuc> danhMucs;
-    static public ArrayList<nongsan> nongsans;
+    static public ArrayList<NongSan> nongsans;
     ListView listView;
+    static ArrayList<AnhNongSan> anhNongSans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class DanhMucActivity extends AppCompatActivity {
 
         callApi();
         callTatCaNongSanApi();
+        callApiHinhAnhNongSan();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavi);
 
@@ -71,8 +73,7 @@ public class DanhMucActivity extends AppCompatActivity {
         ApiService.apiService.convertDanhMuc().enqueue(new Callback<ArrayList<DanhMuc>>() {
             @Override
             public void onResponse(Call<ArrayList<DanhMuc>> call, Response<ArrayList<DanhMuc>> response) {
-                Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
-                System.out.println("111111111111111111111111111111111111111111111111111");
+//                Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
                 danhMucs = response.body();
                 DanhMucAdapter danhMucAdapter = new DanhMucAdapter();
                 listView = findViewById(R.id.listView);
@@ -90,22 +91,39 @@ public class DanhMucActivity extends AppCompatActivity {
     }
 
     void callTatCaNongSanApi() {
-        ApiService.apiService.convertTatcaNongSan().enqueue(new Callback<ArrayList<nongsan>>() {
+        ApiService.apiService.convertTatcaNongSan().enqueue(new Callback<ArrayList<NongSan>>() {
             @Override
-            public void onResponse(Call<ArrayList<nongsan>> call, Response<ArrayList<nongsan>> response) {
+            public void onResponse(Call<ArrayList<NongSan>> call, Response<ArrayList<NongSan>> response) {
                 nongsans = response.body();
 
 //                Toast.makeText(DanhMucActivity.this, "Call API thanh cong tat ca nong san", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(Call<ArrayList<nongsan>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<NongSan>> call, Throwable t) {
                 Toast.makeText(DanhMucActivity.this, "Call API that bai", Toast.LENGTH_SHORT).show();
 
 
             }
         });
 
+    }
+
+
+    void callApiHinhAnhNongSan() {
+        ApiService.apiService.convertAnhNongSan().enqueue(new Callback<ArrayList<AnhNongSan>>() {
+            @Override
+            public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
+                Toast.makeText(DanhMucActivity.this, "Call API Anh nong san thanh cong", Toast.LENGTH_SHORT).show();
+
+                anhNongSans = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
+
+            }
+        });
     }
 
 
@@ -133,7 +151,7 @@ public class DanhMucActivity extends AppCompatActivity {
             textView.setText(danhMucs.get(position).getTenDM());
             ImageView imageView = view.findViewById(R.id.hinhAnh);
 
-            if (danhMucs.get(position).getAnhDanhMuc() != null  && danhMucs.get(position).getAnhDanhMuc().length()!= 0) {
+            if (danhMucs.get(position).getAnhDanhMuc() != null && danhMucs.get(position).getAnhDanhMuc().length() != 0) {
                 Picasso.with(DanhMucActivity.this).load(danhMucs.get(position).getAnhDanhMuc())
                         .placeholder(R.drawable.fruits)
                         .into(imageView);
@@ -144,9 +162,8 @@ public class DanhMucActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
 
-
                     Intent intent = new Intent(DanhMucActivity.this, SanhamTheoDanhMucActivity.class);
-                    intent.putExtra("tenDanhMuc",danhMucs.get(position).getTenDM());
+                    intent.putExtra("tenDanhMuc", danhMucs.get(position).getTenDM());
 
                     startActivity(intent);
 

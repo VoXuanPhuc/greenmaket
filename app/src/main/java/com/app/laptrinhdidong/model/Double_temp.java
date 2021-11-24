@@ -1,6 +1,6 @@
 package com.app.laptrinhdidong.model;
 
 public class Double_temp {
-    public nongsan nongSan0;
-    public nongsan nongSan1;
+    public NongSan nongSan0;
+    public NongSan nongSan1;
 }

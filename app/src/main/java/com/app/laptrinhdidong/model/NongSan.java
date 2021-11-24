@@ -2,10 +2,10 @@ package com.app.laptrinhdidong.model;
 
 import androidx.annotation.NonNull;
 
-public class nongsan {
+public class NongSan {
     int id;
     String tenNS;
-    double gia;
+    int gia;
     int soluongNhap;
     int soluongCon;
     String noiSanXuat;
@@ -29,11 +29,11 @@ public class nongsan {
         this.tenNS = tenNS;
     }
 
-    public double getGia() {
+    public int getGia() {
         return gia;
     }
 
-    public void setGia(double gia) {
+    public void setGia(int gia) {
         this.gia = gia;
     }
 

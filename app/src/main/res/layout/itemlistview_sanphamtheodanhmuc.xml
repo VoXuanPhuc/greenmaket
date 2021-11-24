@@ -18,7 +18,7 @@
             android:layout_width="142dp"
             android:layout_height="181dp"
             android:background="@drawable/bg_thesanpham"
-            android:onClick="moChiTietNongSan"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.159"
@@ -160,7 +160,8 @@
             android:layout_width="142dp"
             android:layout_height="181dp"
             android:background="@drawable/bg_thesanpham"
-            android:onClick="moChiTietNongSan"
+
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.84"
