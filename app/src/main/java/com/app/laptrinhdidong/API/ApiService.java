@@ -19,11 +19,15 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
+import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 
 public interface ApiService {
-    Gson GSON = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+    Gson GSON = new GsonBuilder().serializeNulls().create();
 
     ApiService apiService= new Retrofit.Builder()
             .baseUrl("https://androidgreenmarketphuc.herokuapp.com/")
@@ -36,8 +40,10 @@ public interface ApiService {
     Call<ArrayList<DanhMuc>> convertDanhMuc();
 
     @GET("api/khach-hangs/{id}")
-    Call<KhachHang> getKhachHangById(@Path("id") long idUser);
+    Call<KhachHang> getKhachHangById (@Path("id") long idUser);
 
+    @PUT("api/khach-hangs/{id}")
+    Call<KhachHang> updateKhachhangById (@Path("id") long idUser, @Body KhachHang khachHang);
     @GET("api/nong-sans")
     Call<ArrayList<NongSan>> convertTatcaNongSan();
 

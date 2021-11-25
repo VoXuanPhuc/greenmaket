@@ -24,6 +24,7 @@ public class activity_profile extends AppCompatActivity {
     Button editProfile;
     Button hoaDon;
     TextView tvName;
+
     public static KhachHang khachHang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,13 +80,17 @@ public class activity_profile extends AppCompatActivity {
         }
     }
 
+
+
     public void getKhachHangById(long khachhangId) {
         ApiService.apiService.getKhachHangById(khachhangId).enqueue(
                 new Callback<KhachHang>() {
                     @Override
                     public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
-                        activity_profile.khachHang = response.body();
-                        tvName.setText(khachHang.getHoTenKH());
+                        if (response.isSuccessful()) {
+                            activity_profile.khachHang = response.body();
+                            tvName.setText(khachHang.getHoTenKH());
+                        }
                     }
 
                     @Override
