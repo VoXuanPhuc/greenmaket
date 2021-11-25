@@ -1,6 +1,10 @@
 package com.app.laptrinhdidong.API;
 
+
 import com.app.laptrinhdidong.model.ChiTietHoaDon;
+
+import com.app.laptrinhdidong.model.AnhNongSan;
+
 import com.app.laptrinhdidong.model.DanhMuc;
 import com.app.laptrinhdidong.model.HoaDon;
 import com.app.laptrinhdidong.model.KhachHang;
@@ -43,4 +47,10 @@ public interface ApiService {
     @GET("api/chi-tiet-hoa-dons")
     Call<ArrayList<ChiTietHoaDon>> convertTatChaChiTietHoaDon();
 
+    @GET("api/anh-nong-sans")
+    Call<ArrayList<AnhNongSan>> convertAnhNongSan();
+
+
+    @GET("api/khach-hangs")
+    Call<ArrayList<KhachHang>> getAllKhachHang();
 }

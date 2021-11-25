@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.laptrinhdidong.API.ApiService;
+import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.DanhMuc;
 import com.app.laptrinhdidong.model.NongSan;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -33,6 +34,7 @@ public class DanhMucActivity extends AppCompatActivity {
     ArrayList<DanhMuc> danhMucs;
     static public ArrayList<NongSan> nongsans;
     ListView listView;
+    static ArrayList<AnhNongSan> anhNongSans;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class DanhMucActivity extends AppCompatActivity {
 
         callApi();
         callTatCaNongSanApi();
+        callApiHinhAnhNongSan();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavi);
 
@@ -70,7 +73,9 @@ public class DanhMucActivity extends AppCompatActivity {
         ApiService.apiService.convertDanhMuc().enqueue(new Callback<ArrayList<DanhMuc>>() {
             @Override
             public void onResponse(Call<ArrayList<DanhMuc>> call, Response<ArrayList<DanhMuc>> response) {
-                Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
+
+//                Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
+
                 danhMucs = response.body();
                 DanhMucAdapter danhMucAdapter = new DanhMucAdapter();
                 listView = findViewById(R.id.listView);
@@ -107,6 +112,23 @@ public class DanhMucActivity extends AppCompatActivity {
     }
 
 
+    void callApiHinhAnhNongSan() {
+        ApiService.apiService.convertAnhNongSan().enqueue(new Callback<ArrayList<AnhNongSan>>() {
+            @Override
+            public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
+                Toast.makeText(DanhMucActivity.this, "Call API Anh nong san thanh cong", Toast.LENGTH_SHORT).show();
+
+                anhNongSans = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
+
+            }
+        });
+    }
+
+
     class DanhMucAdapter extends BaseAdapter {
 
         @Override
@@ -131,7 +153,7 @@ public class DanhMucActivity extends AppCompatActivity {
             textView.setText(danhMucs.get(position).getTenDM());
             ImageView imageView = view.findViewById(R.id.hinhAnh);
 
-            if (danhMucs.get(position).getAnhDanhMuc() != null  && danhMucs.get(position).getAnhDanhMuc().length()!= 0) {
+            if (danhMucs.get(position).getAnhDanhMuc() != null && danhMucs.get(position).getAnhDanhMuc().length() != 0) {
                 Picasso.with(DanhMucActivity.this).load(danhMucs.get(position).getAnhDanhMuc())
                         .placeholder(R.drawable.fruits)
                         .into(imageView);
@@ -142,9 +164,8 @@ public class DanhMucActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
 
-
                     Intent intent = new Intent(DanhMucActivity.this, SanhamTheoDanhMucActivity.class);
-                    intent.putExtra("tenDanhMuc",danhMucs.get(position).getTenDM());
+                    intent.putExtra("tenDanhMuc", danhMucs.get(position).getTenDM());
 
                     startActivity(intent);
 
