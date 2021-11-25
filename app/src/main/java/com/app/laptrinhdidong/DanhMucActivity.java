@@ -18,11 +18,10 @@ import android.widget.Toast;
 
 import com.app.laptrinhdidong.API.ApiService;
 import com.app.laptrinhdidong.model.DanhMuc;
-import com.app.laptrinhdidong.model.nongsan;
+import com.app.laptrinhdidong.model.NongSan;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -32,7 +31,7 @@ import retrofit2.Response;
 public class DanhMucActivity extends AppCompatActivity {
     LinearLayout traiCayTuoi;
     ArrayList<DanhMuc> danhMucs;
-    static public ArrayList<nongsan> nongsans;
+    static public ArrayList<NongSan> nongsans;
     ListView listView;
 
     @Override
@@ -72,7 +71,6 @@ public class DanhMucActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<DanhMuc>> call, Response<ArrayList<DanhMuc>> response) {
                 Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
-                System.out.println("111111111111111111111111111111111111111111111111111");
                 danhMucs = response.body();
                 DanhMucAdapter danhMucAdapter = new DanhMucAdapter();
                 listView = findViewById(R.id.listView);
@@ -90,16 +88,16 @@ public class DanhMucActivity extends AppCompatActivity {
     }
 
     void callTatCaNongSanApi() {
-        ApiService.apiService.convertTatcaNongSan().enqueue(new Callback<ArrayList<nongsan>>() {
+        ApiService.apiService.convertTatcaNongSan().enqueue(new Callback<ArrayList<NongSan>>() {
             @Override
-            public void onResponse(Call<ArrayList<nongsan>> call, Response<ArrayList<nongsan>> response) {
+            public void onResponse(Call<ArrayList<NongSan>> call, Response<ArrayList<NongSan>> response) {
                 nongsans = response.body();
 
 //                Toast.makeText(DanhMucActivity.this, "Call API thanh cong tat ca nong san", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(Call<ArrayList<nongsan>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<NongSan>> call, Throwable t) {
                 Toast.makeText(DanhMucActivity.this, "Call API that bai", Toast.LENGTH_SHORT).show();
 
 

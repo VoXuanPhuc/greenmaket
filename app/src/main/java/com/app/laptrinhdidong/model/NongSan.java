@@ -2,7 +2,7 @@ package com.app.laptrinhdidong.model;
 
 import androidx.annotation.NonNull;
 
-public class nongsan {
+public class NongSan {
     int id;
     String tenNS;
     double gia;

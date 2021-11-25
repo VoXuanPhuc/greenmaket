@@ -1,12 +1,15 @@
 package com.app.laptrinhdidong.API;
 
+import com.app.laptrinhdidong.model.ChiTietHoaDon;
 import com.app.laptrinhdidong.model.DanhMuc;
+import com.app.laptrinhdidong.model.HoaDon;
 import com.app.laptrinhdidong.model.KhachHang;
-import com.app.laptrinhdidong.model.nongsan;
+import com.app.laptrinhdidong.model.NongSan;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -32,6 +35,12 @@ public interface ApiService {
     Call<KhachHang> getKhachHangById(@Path("id") long idUser);
 
     @GET("api/nong-sans")
-    Call<ArrayList<nongsan>> convertTatcaNongSan();
+    Call<ArrayList<NongSan>> convertTatcaNongSan();
+
+    @GET("api/hoa-dons")
+    Call<ArrayList<HoaDon>> convertTatCaHoaDon();
+
+    @GET("api/chi-tiet-hoa-dons")
+    Call<ArrayList<ChiTietHoaDon>> convertTatChaChiTietHoaDon();
 
 }
