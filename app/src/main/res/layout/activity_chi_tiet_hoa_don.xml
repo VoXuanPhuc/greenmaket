@@ -114,11 +114,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_regular"
+        android:id="@+id/phuongThucGiaoHang"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/bevietnampro_regular"
         android:text="Giao dịch tại cửa hàng"
         android:textColor="#908D8D"
         android:textSize="11dp"
@@ -139,7 +140,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/trangThaiGiaoDich"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -154,15 +155,16 @@
 
 
     <TextView
+        android:id="@+id/diaChiKhachHang"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="144dp"
-        android:textSize="11dp"
         android:fontFamily="@font/bevietnampro_regular"
 
         android:text="Nguyễn Thị Thu Thủy, 48 Cao Thắng, Hải Châu, Đà Nẵng
 \nSĐT: 090558932"
+        android:textSize="11dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -201,12 +203,13 @@
 
 
     <TextView
-        android:fontFamily="@font/bevietnampro_regular"
+        android:id="@+id/soLuongSanPham"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/bevietnampro_regular"
         android:text="Đã mua 3 sản phẩm"
         android:textColor="#908D8D"
         android:textSize="11dp"
@@ -217,7 +220,7 @@
 
         android:fontFamily="@font/bevietnampro_regular"
 
-        android:id="@+id/textView19"
+        android:id="@+id/ngayMua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="260dp"

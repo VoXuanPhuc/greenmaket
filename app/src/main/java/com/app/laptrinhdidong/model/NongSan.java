@@ -5,7 +5,9 @@ import androidx.annotation.NonNull;
 public class NongSan {
     int id;
     String tenNS;
+
     int gia;
+
     int soluongNhap;
     int soluongCon;
     String noiSanXuat;
@@ -29,11 +31,13 @@ public class NongSan {
         this.tenNS = tenNS;
     }
 
+
     public int getGia() {
         return gia;
     }
 
     public void setGia(int gia) {
+
         this.gia = gia;
     }
 

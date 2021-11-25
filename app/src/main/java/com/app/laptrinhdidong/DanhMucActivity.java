@@ -73,7 +73,9 @@ public class DanhMucActivity extends AppCompatActivity {
         ApiService.apiService.convertDanhMuc().enqueue(new Callback<ArrayList<DanhMuc>>() {
             @Override
             public void onResponse(Call<ArrayList<DanhMuc>> call, Response<ArrayList<DanhMuc>> response) {
+
 //                Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
+
                 danhMucs = response.body();
                 DanhMucAdapter danhMucAdapter = new DanhMucAdapter();
                 listView = findViewById(R.id.listView);
