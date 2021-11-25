@@ -58,18 +58,20 @@ public class editProfile extends AppCompatActivity {
 
                 Toast.makeText(editProfile.this, "da call", Toast.LENGTH_SHORT).show();
 
-                System.out.println("aaaaaaaaaaaaaaaaaaaaa" + khachHang.toString());
                 ApiService.apiService.updateKhachhangById((long) 1702, khachHang).enqueue(
                         new Callback<KhachHang>() {
                             @Override
                             public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
                                 if (response.isSuccessful()) {
                                     KhachHang khachHang = response.body();
+                                    System.out.println(khachHang.toString());
                                     eName.setText(khachHang.getHoTenKH());
                                     sdt.setText(activity_profile.khachHang.getSdt());
                                     diachi.setText(activity_profile.khachHang.getChitietdiachi());
                                     email.setText(activity_profile.khachHang.getEmail());
                                     Toast.makeText(editProfile.this, "success", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(editProfile.this, activity_profile.class);
+                                    startActivity(intent);
                                 }
                             }
                             @Override
@@ -79,8 +81,6 @@ public class editProfile extends AppCompatActivity {
                         }
                 );
 
-//                Intent intent = new Intent(editProfile.this, activity_profile.class);
-//                startActivity(intent);
 
             }
         });

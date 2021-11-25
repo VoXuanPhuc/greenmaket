@@ -81,8 +81,10 @@ public class activity_profile extends AppCompatActivity {
                 new Callback<KhachHang>() {
                     @Override
                     public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
-                        activity_profile.khachHang = response.body();
-                        tvName.setText(khachHang.getHoTenKH());
+                        if (response.isSuccessful()) {
+                            activity_profile.khachHang = response.body();
+                            tvName.setText(khachHang.getHoTenKH());
+                        }
                     }
 
                     @Override

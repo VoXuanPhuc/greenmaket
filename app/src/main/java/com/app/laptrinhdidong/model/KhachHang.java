@@ -3,7 +3,7 @@ package com.app.laptrinhdidong.model;
 import java.io.Serializable;
 import java.util.Date;
 
-public class KhachHang implements Serializable {
+public class KhachHang {
 
     private int id;
     private String hoTenKH;
@@ -112,5 +112,21 @@ public class KhachHang implements Serializable {
 
     public void setDiaChi(XaPhuong diaChi) {
         this.xa = diaChi;
+    }
+
+    @Override
+    public String toString() {
+        return "KhachHang{" +
+                "id=" + id +
+                ", hoTenKH='" + hoTenKH + '\'' +
+                ", tenDangNhap='" + tenDangNhap + '\'' +
+                ", matkhau='" + matkhau + '\'' +
+                ", email='" + email + '\'' +
+                ", sdt='" + sdt + '\'' +
+                ", ngaySinh=" + ngaySinh +
+                ", gioitinh='" + gioitinh + '\'' +
+                ", chitietdiachi='" + chitietdiachi + '\'' +
+                ", xa=" + xa +
+                '}';
     }
 }
