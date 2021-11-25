@@ -37,4 +37,6 @@ public interface ApiService {
     @GET("api/anh-nong-sans")
     Call<ArrayList<AnhNongSan>> convertAnhNongSan();
 
+    @GET("api/khach-hangs")
+    Call<ArrayList<KhachHang>> getAllKhachHang();
 }
