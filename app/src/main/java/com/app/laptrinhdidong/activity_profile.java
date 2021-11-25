@@ -36,6 +36,7 @@ public class activity_profile extends AppCompatActivity {
         tvName = (TextView) findViewById(R.id.name);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavi);
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -72,6 +73,11 @@ public class activity_profile extends AppCompatActivity {
         });
 
         getKhachHangById((long) 1702);
+
+        Intent intentEditProfile = getIntent();
+        if (intentEditProfile.getStringExtra("name") != null) {
+            tvName.setText(intentEditProfile.getStringExtra("name"));
+        }
     }
 
 
