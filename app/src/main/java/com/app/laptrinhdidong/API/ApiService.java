@@ -1,8 +1,9 @@
 package com.app.laptrinhdidong.API;
 
+import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.DanhMuc;
 import com.app.laptrinhdidong.model.KhachHang;
-import com.app.laptrinhdidong.model.nongsan;
+import com.app.laptrinhdidong.model.NongSan;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -32,6 +33,8 @@ public interface ApiService {
     Call<KhachHang> getKhachHangById(@Path("id") long idUser);
 
     @GET("api/nong-sans")
-    Call<ArrayList<nongsan>> convertTatcaNongSan();
+    Call<ArrayList<NongSan>> convertTatcaNongSan();
+    @GET("api/anh-nong-sans")
+    Call<ArrayList<AnhNongSan>> convertAnhNongSan();
 
 }
