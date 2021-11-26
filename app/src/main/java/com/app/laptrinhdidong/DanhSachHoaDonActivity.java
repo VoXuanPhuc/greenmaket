@@ -66,9 +66,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
             }
         });
 
-
         listView = findViewById(R.id.listViewHoaDon);
-
 
     }
 
@@ -79,14 +77,13 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
 
     void callApi() {
-        ApiService.apiService.convertTatCaHoaDon().enqueue(new Callback<ArrayList<HoaDon>>() {
+        ApiService.apiService.getHoaDonByKH((long) 1702).enqueue(new Callback<ArrayList<HoaDon>>() {
             @Override
             public void onResponse(Call<ArrayList<HoaDon>> call, Response<ArrayList<HoaDon>> response) {
                 hoaDons = response.body();
                 Toast.makeText(DanhSachHoaDonActivity.this, "Hóa Đơn Thành Công", Toast.LENGTH_SHORT).show();
 
                 HoaDonAdapter hoaDonAdapter = new HoaDonAdapter();
-
 
                 listView.setAdapter(hoaDonAdapter);
 
