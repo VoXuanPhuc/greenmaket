@@ -32,9 +32,9 @@ import retrofit2.Response;
 public class DanhMucActivity extends AppCompatActivity {
     LinearLayout traiCayTuoi;
     ArrayList<DanhMuc> danhMucs;
-    static public ArrayList<NongSan> nongsans;
+
     ListView listView;
-    static ArrayList<AnhNongSan> anhNongSans;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,8 @@ public class DanhMucActivity extends AppCompatActivity {
         setContentView(R.layout.activity_danh_muc);
 
         callApi();
-        callTatCaNongSanApi();
-        callApiHinhAnhNongSan();
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavi);
 
@@ -92,42 +92,6 @@ public class DanhMucActivity extends AppCompatActivity {
         });
     }
 
-    void callTatCaNongSanApi() {
-        ApiService.apiService.convertTatcaNongSan().enqueue(new Callback<ArrayList<NongSan>>() {
-            @Override
-            public void onResponse(Call<ArrayList<NongSan>> call, Response<ArrayList<NongSan>> response) {
-                nongsans = response.body();
-
-//                Toast.makeText(DanhMucActivity.this, "Call API thanh cong tat ca nong san", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<NongSan>> call, Throwable t) {
-                Toast.makeText(DanhMucActivity.this, "Call API that bai", Toast.LENGTH_SHORT).show();
-
-
-            }
-        });
-
-    }
-
-
-    void callApiHinhAnhNongSan() {
-        ApiService.apiService.convertAnhNongSan().enqueue(new Callback<ArrayList<AnhNongSan>>() {
-            @Override
-            public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
-                Toast.makeText(DanhMucActivity.this, "Call API Anh nong san thanh cong", Toast.LENGTH_SHORT).show();
-
-                anhNongSans = response.body();
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
-
-            }
-        });
-    }
-
 
     class DanhMucAdapter extends BaseAdapter {
 
@@ -166,7 +130,7 @@ public class DanhMucActivity extends AppCompatActivity {
 
                     Intent intent = new Intent(DanhMucActivity.this, SanhamTheoDanhMucActivity.class);
                     intent.putExtra("tenDanhMuc", danhMucs.get(position).getTenDM());
-
+                    intent.putExtra("idDanhMuc",danhMucs.get(position).getId());
                     startActivity(intent);
 
                 }
