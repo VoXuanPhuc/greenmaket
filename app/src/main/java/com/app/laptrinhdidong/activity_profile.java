@@ -72,7 +72,7 @@ public class activity_profile extends AppCompatActivity {
             }
         });
 
-        getKhachHangById((long) 1702);
+        getKhachHangById((long) khachHang.getId());
 
         Intent intentEditProfile = getIntent();
         if (intentEditProfile.getStringExtra("name") != null) {

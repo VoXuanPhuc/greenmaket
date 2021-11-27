@@ -1,8 +1,8 @@
 package com.app.laptrinhdidong.model;
 
 public class PhuongThucGH {
-    int id;
-    String mota;
+    private int id;
+    private String mota;
 
     public int getId() {
         return id;
@@ -10,5 +10,13 @@ public class PhuongThucGH {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getMota() {
+        return mota;
+    }
+
+    public void setMota(String mota) {
+        this.mota = mota;
     }
 }

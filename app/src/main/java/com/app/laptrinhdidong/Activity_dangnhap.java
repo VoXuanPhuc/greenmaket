@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +25,8 @@ public class Activity_dangnhap extends AppCompatActivity {
     ArrayList<KhachHang> khachHangs;
     Button btnDangNhap;
     TextView tvDangky;
-    TextInputEditText tenDangNhapInPut;
-    TextInputEditText matkhauInput;
+    EditText tenDangNhapInPut;
+    EditText matkhauInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,8 @@ public class Activity_dangnhap extends AppCompatActivity {
 
         tenDangNhapInPut = findViewById(R.id.tenDangNhapInPut);
         matkhauInput = findViewById(R.id.matkhauInput);
-
+        tenDangNhapInPut.setText("nganhan221");
+        matkhauInput.setText("123456");
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +65,8 @@ public class Activity_dangnhap extends AppCompatActivity {
                     if (tenDangNhapInPut.getText().toString().equals(khachHangs.get(i).getTenDangNhap())
                             && matkhauInput.getText().toString().equals(khachHangs.get(i).getMatkhau())) {
                         Toast.makeText(Activity_dangnhap.this, "Đăng nhập thanh công", Toast.LENGTH_SHORT).show();
-                        return;
+                        activity_profile.khachHang = khachHangs.get(i);
+                        startActivity(new Intent(Activity_dangnhap.this,activity_profile.class));
                     }
                 }
                 Toast.makeText(Activity_dangnhap.this, "đăng nhập thất bại", Toast.LENGTH_SHORT).show();

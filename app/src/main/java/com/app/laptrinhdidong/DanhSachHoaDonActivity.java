@@ -40,7 +40,6 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danh_sach_hoa_don);
 
-        callApi();
 
         bottomNavigationView = findViewById(R.id.menubottom);
         bottomNavigationView.setSelectedItemId(R.id.profile);
@@ -68,6 +67,9 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listViewHoaDon);
 
+        callApi((long) activity_profile.khachHang.getId());
+
+
     }
 
     public void moChiTietHoaDon() {
@@ -76,8 +78,10 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
     }
 
 
-    void callApi() {
-        ApiService.apiService.getHoaDonByKH((long) 1702).enqueue(new Callback<ArrayList<HoaDon>>() {
+    void callApi(long id) {
+
+        ApiService.apiService.getHoaDonByKH(id)
+                .enqueue(new Callback<ArrayList<HoaDon>>() {
             @Override
             public void onResponse(Call<ArrayList<HoaDon>> call, Response<ArrayList<HoaDon>> response) {
                 hoaDons = response.body();
