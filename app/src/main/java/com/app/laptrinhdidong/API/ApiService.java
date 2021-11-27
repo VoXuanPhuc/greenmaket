@@ -13,7 +13,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import retrofit2.Call;
@@ -49,6 +48,9 @@ public interface ApiService {
 
     @GET("api/hoa-dons")
     Call<ArrayList<HoaDon>> convertTatCaHoaDon();
+
+    @GET("api/hoa-dons-khachhang/{id}")
+    Call<ArrayList<HoaDon>> getHoaDonByKH(@Path("id") long idKH);
 
     @GET("api/chi-tiet-hoa-dons")
     Call<ArrayList<ChiTietHoaDon>> convertTatChaChiTietHoaDon();

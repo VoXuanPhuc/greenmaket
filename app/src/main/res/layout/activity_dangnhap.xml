@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/tenDangNhapInPut"
             android:layout_width="354dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
@@ -36,22 +37,11 @@
             android:background="@drawable/color"
             android:paddingHorizontal="20dp"
             android:paddingBottom="5dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tenDangNhapInPut"
-                android:background="@drawable/color"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"
-                android:ems="15"
-                android:paddingBottom="10dp">
-            </com.google.android.material.textfield.TextInputEditText>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-
+        <EditText
+            android:id="@+id/matkhauInput"
             android:layout_width="354dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
@@ -64,19 +54,9 @@
             android:background="@drawable/color"
             android:paddingHorizontal="20dp"
             android:paddingBottom="5dp"
-            android:gravity="center_vertical">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/matkhauInput"
-                android:background="@drawable/color"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="textPassword"
-                android:ems="15"
-                android:paddingBottom="10dp">
-            </com.google.android.material.textfield.TextInputEditText>
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            />
 
     </LinearLayout>
 

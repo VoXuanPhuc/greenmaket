@@ -1,16 +1,18 @@
 package com.app.laptrinhdidong.model;
 
-import java.sql.Date;
+
+import java.util.Date;
 
 public class HoaDon {
-    int id;
-    int tongthanhtoan;
-    int chiphivanchuyen;
-    Date ngaythanhtoan;
-    Date ngaytao;
-    String trangthai;
-    PhuongThucTT phuongthucTT;
-    KhachHang khachhang;
+    private int id;
+    private int tongthanhtoan;
+    private int chiphivanchuyen;
+    private Date ngaythanhtoan;
+    private Date ngaytao;
+    private String trangthai;
+    private PhuongThucTT phuongthucTT;
+    private PhuongThucGH phuongthucGH;
+    private KhachHang khachhang;
 
     public int getId() {
         return id;
@@ -74,6 +76,14 @@ public class HoaDon {
 
     public void setKhachhang(KhachHang khachhang) {
         this.khachhang = khachhang;
+    }
+
+    public PhuongThucGH getPhuongThucGH() {
+        return phuongthucGH;
+    }
+
+    public void setPhuongThucGH(PhuongThucGH phuongthucGH) {
+        this.phuongthucGH = phuongthucGH;
     }
 }
 
