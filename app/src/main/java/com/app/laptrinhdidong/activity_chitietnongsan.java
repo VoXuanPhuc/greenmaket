@@ -11,7 +11,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.laptrinhdidong.API.ApiService;
+import com.app.laptrinhdidong.model.AnhNongSan;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class activity_chitietnongsan extends AppCompatActivity {
     TextView tenNSTV;
@@ -41,7 +49,7 @@ public class activity_chitietnongsan extends AppCompatActivity {
         String ten = intent.getStringExtra("tenNS");
         String moTaNs = intent.getStringExtra("moTaNS");
         int gia = intent.getIntExtra("gia",0);
-        String url = intent.getStringExtra("url");
+        int idNongSan = intent.getIntExtra("maNS",0);
 
         tenNSTV  =  findViewById(R.id.tenNongsanctns);
         tenNSTV.setText(ten);
@@ -54,12 +62,32 @@ public class activity_chitietnongsan extends AppCompatActivity {
 
 
         imageIG = findViewById(R.id.hinhAnhNongSan);
-        System.out.println(url+"111111111111111111111111111111111111111111111111111111111111111");
-        if(url.length() != 0){
+//        if(url.length() != 0){
+//
+//            Picasso.with(activity_chitietnongsan.this).load(url)
+//                    .placeholder(R.drawable.chuoi)
+//                    .into(imageIG);
+//        }
 
-            Picasso.with(activity_chitietnongsan.this).load(url)
-                    .placeholder(R.drawable.chuoi)
-                    .into(imageIG);
+        try {
+            ApiService.apiService.getAnhNongSanByIdKhachHang(idNongSan).enqueue(new Callback<ArrayList<AnhNongSan>>() {
+                @Override
+                public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
+                    ArrayList<AnhNongSan> anhNongSans = response.body();
+
+                    if (anhNongSans.size() != 0)
+                        Picasso.with(activity_chitietnongsan.this).load(anhNongSans.get(0).getTen())
+                                .placeholder(R.drawable.chuoi)
+                                .into(imageIG);
+                }
+
+                @Override
+                public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
+
+                }
+            });
+        }catch (Exception e){
+
         }
 
 

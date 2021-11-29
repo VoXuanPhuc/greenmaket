@@ -43,8 +43,10 @@ public interface ApiService {
 
     @PUT("api/khach-hangs/{id}")
     Call<KhachHang> updateKhachhangById (@Path("id") long idUser, @Body KhachHang khachHang);
-    @GET("api/nong-sans")
-    Call<ArrayList<NongSan>> convertTatcaNongSan();
+    @GET("api/nong-sans-danh-muc/{idDanhmuc}")
+    Call<ArrayList<NongSan>> convertNongSanTheoDanhMuc(@Path("idDanhmuc") int idDanhMuc);
+    @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")
+    Call<ArrayList<AnhNongSan>> getAnhNongSanByIdKhachHang(@Path("idNongSan") int idNongSan);
 
     @GET("api/hoa-dons")
     Call<ArrayList<HoaDon>> convertTatCaHoaDon();
