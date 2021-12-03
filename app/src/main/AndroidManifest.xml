@@ -15,7 +15,8 @@
             android:exported="false" />
         <activity
             android:name=".activity_search"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".SanhamTheoDanhMucActivity"
             android:exported="true" />

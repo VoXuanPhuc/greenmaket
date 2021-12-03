@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 public class NongSan {
     int id;
     String tenNS;
-
     int gia;
 
     int soluongNhap;
@@ -14,6 +13,8 @@ public class NongSan {
     String moTaNS;
     DanhMuc danhmuc;
     nhacc nhacc;
+
+    private String anhDaiDienNongSan;
 
     public int getId() {
         return id;
@@ -89,4 +90,11 @@ public class NongSan {
         this.nhacc = nhacc;
     }
 
+    public String getAnhDaiDienNongSan() {
+        return anhDaiDienNongSan;
+    }
+
+    public void setAnhDaiDienNongSan(String anhDaiDienNongSan) {
+        this.anhDaiDienNongSan = anhDaiDienNongSan;
+    }
 }

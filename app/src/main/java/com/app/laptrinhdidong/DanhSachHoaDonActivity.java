@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,12 +35,13 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
     ListView listView;
     ArrayList<HoaDon> hoaDons;
     BottomNavigationView bottomNavigationView;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danh_sach_hoa_don);
-
+        progressBar = findViewById(R.id.progress);
 
         bottomNavigationView = findViewById(R.id.menubottom);
         bottomNavigationView.setSelectedItemId(R.id.profile);
@@ -85,7 +87,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<HoaDon>> call, Response<ArrayList<HoaDon>> response) {
                 hoaDons = response.body();
-                Toast.makeText(DanhSachHoaDonActivity.this, "Hóa Đơn Thành Công", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
 
                 HoaDonAdapter hoaDonAdapter = new HoaDonAdapter();
 
@@ -95,6 +97,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ArrayList<HoaDon>> call, Throwable t) {
+                progressBar.setVisibility(View.GONE);
                 Toast.makeText(DanhSachHoaDonActivity.this, "Hóa ĐƠn Thất Bại", Toast.LENGTH_SHORT).show();
 
             }
