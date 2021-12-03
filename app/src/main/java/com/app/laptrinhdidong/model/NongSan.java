@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 public class NongSan {
     int id;
     String tenNS;
-
     int gia;
 
     int soluongNhap;

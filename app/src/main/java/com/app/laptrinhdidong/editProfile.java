@@ -18,7 +18,7 @@ import retrofit2.Response;
 
 public class editProfile extends AppCompatActivity {
 
-    KhachHang khachHang = new KhachHang();
+    KhachHang khachHang;
     Button btnEditProfile;
     EditText eName;
     EditText sdt;
@@ -29,15 +29,15 @@ public class editProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+        khachHang = new KhachHang();
 
-        Intent getIntent = getIntent();
         btnEditProfile = (Button) findViewById(R.id.btnEditProfile);
         eName = (EditText) findViewById(R.id.edit_name);
         sdt = (EditText) findViewById(R.id.sdt);
         diachi = (EditText) findViewById(R.id.email);
         email = (EditText) findViewById(R.id.diachi);
 
-        eName.setText(getIntent.getStringExtra("username"));
+        eName.setText(activity_profile.khachHang.getHoTenKH());
         sdt.setText(activity_profile.khachHang.getSdt());
         diachi.setText(activity_profile.khachHang.getChitietdiachi());
         email.setText(activity_profile.khachHang.getEmail());
@@ -45,44 +45,43 @@ public class editProfile extends AppCompatActivity {
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                khachHang.setId(activity_profile.khachHang.getId());
-                khachHang.setHoTenKH(eName.getText().toString());
-                khachHang.setTenDangNhap(activity_profile.khachHang.getTenDangNhap());
-                khachHang.setMatkhau(activity_profile.khachHang.getMatkhau());
-                khachHang.setSdt(sdt.getText().toString());
-                khachHang.setEmail(email.getText().toString());
-                khachHang.setDiaChi(activity_profile.khachHang.getDiaChi());
-                khachHang.setNgaysinh(activity_profile.khachHang.getNgaysinh());
-                khachHang.setChitietdiachi(diachi.getText().toString());
-                khachHang.setGioitinh(activity_profile.khachHang.getGioitinh());
 
-                Toast.makeText(editProfile.this, "da call", Toast.LENGTH_SHORT).show();
-
-                ApiService.apiService.updateKhachhangById((long) 1702, khachHang).enqueue(
-                        new Callback<KhachHang>() {
-                            @Override
-                            public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
-                                if (response.isSuccessful()) {
-                                    KhachHang khachHang = response.body();
-                                    System.out.println(khachHang.toString());
-                                    eName.setText(khachHang.getHoTenKH());
-                                    sdt.setText(activity_profile.khachHang.getSdt());
-                                    diachi.setText(activity_profile.khachHang.getChitietdiachi());
-                                    email.setText(activity_profile.khachHang.getEmail());
-                                    Toast.makeText(editProfile.this, "success", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(editProfile.this, activity_profile.class);
-                                    startActivity(intent);
-                                }
-                            }
-                            @Override
-                            public void onFailure(Call<KhachHang> call, Throwable t) {
-                                Toast.makeText(editProfile.this, "Failure", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                );
-
-
+                khachHang = activity_profile.khachHang;
+//                khachHang.setHoTenKH(eName.getText().toString());
+//                khachHang.setSdt(sdt.getText().toString());
+//                khachHang.setEmail(email.getText().toString());
+//                khachHang.setChitietdiachi(diachi.getText().toString());
+                updateKhachHang();
             }
         });
+    }
+
+    public void updateKhachHang () {
+        Toast.makeText(editProfile.this, "da call", Toast.LENGTH_SHORT).show();
+        ApiService.apiService.updateKhachhangById(
+                (long) activity_profile.khachHang.getId(), activity_profile.khachHang).enqueue(
+                new Callback<KhachHang>() {
+                    @Override
+                    public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
+
+                        if (!response.isSuccessful()) {
+                            System.out.println(response.errorBody());
+                            System.out.println(response.toString());
+                            System.out.println("code : " + response.code());
+                        } else {
+                            activity_profile.khachHang = response.body();
+                            System.out.println(khachHang.toString());
+
+                            Toast.makeText(editProfile.this, "success", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(editProfile.this, activity_profile.class);
+                            startActivity(intent);
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<KhachHang> call, Throwable t) {
+                        Toast.makeText(editProfile.this, "Failure", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        );
     }
 }

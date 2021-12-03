@@ -24,10 +24,10 @@ import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
     Gson GSON = new GsonBuilder().serializeNulls().create();
-
     ApiService apiService= new Retrofit.Builder()
             .baseUrl("https://androidgreenmarketphuc.herokuapp.com/")
             .addConverterFactory(GsonConverterFactory.create(GSON))
@@ -43,8 +43,12 @@ public interface ApiService {
 
     @PUT("api/khach-hangs/{id}")
     Call<KhachHang> updateKhachhangById (@Path("id") long idUser, @Body KhachHang khachHang);
+
     @GET("api/nong-sans")
     Call<ArrayList<NongSan>> convertTatcaNongSan();
+
+    @GET("api/nong-sans")
+    Call<ArrayList<NongSan>> fetchNongSanByKey();
 
     @GET("api/hoa-dons")
     Call<ArrayList<HoaDon>> convertTatCaHoaDon();
@@ -58,6 +62,8 @@ public interface ApiService {
     @GET("api/anh-nong-sans")
     Call<ArrayList<AnhNongSan>> convertAnhNongSan();
 
+    @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")
+    Call<ArrayList<AnhNongSan>> getAnhNongSanTheoNongSan(@Path("idNongSan") long idNongSan);
 
     @GET("api/khach-hangs")
     Call<ArrayList<KhachHang>> getAllKhachHang();
