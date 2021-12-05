@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.laptrinhdidong.API.ApiService;
 import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.Double_temp;
 import com.app.laptrinhdidong.model.NongSan;
@@ -23,47 +24,37 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class SanhamTheoDanhMucActivity extends AppCompatActivity {
-    ListView listView ;
+    ListView listView;
     ConstraintLayout theSanPham1;
     TextView tenDanhMuc;
     BottomNavigationView bottomNavigationView;
     ArrayList<Double_temp> nongSans = new ArrayList<>();
-    ArrayList<AnhNongSan> anhNongSans;
-    String tempUrl="";
+    ArrayList<NongSan> listNognSan = new ArrayList<>();
+    int idDanhMuc;
+    String url = "";
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sanham_theo_danh_muc);
+        Intent intent = getIntent();
+        idDanhMuc = intent.getIntExtra("idDanhMuc", 0);
 
-        anhNongSans = DanhMucActivity.anhNongSans;
-        for (int i = 1; i <= DanhMucActivity.nongsans.size(); i++) {
-            Double_temp double_temp = new Double_temp();
-            double_temp.nongSan0 = DanhMucActivity.nongsans.get(i-1);
-            if(i==DanhMucActivity.nongsans.size()){
-                nongSans.add(double_temp);
-                break;
-            }
-            double_temp.nongSan1 = DanhMucActivity.nongsans.get(++i-1);
-            nongSans.add(double_temp);
-        }
+        callApi(idDanhMuc);
 
 
         bottomNavigationView = findViewById(R.id.menubottom);
 
 
-        Intent intent = getIntent();
         tenDanhMuc = findViewById(R.id.tenDanhMuc);
 
         tenDanhMuc.setText(intent.getStringExtra("tenDanhMuc"));
-        System.out.println(DanhMucActivity.nongsans.size());
-
-        listView = findViewById(R.id.listView);
-        NongSanAdapter nongSanAdapter = new NongSanAdapter()    ;
-        listView.setAdapter(nongSanAdapter);
-
-
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -94,9 +85,38 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
     }
 
 
+    void callApi(int idDanhMuc) {
+        ApiService.apiService.convertNongSanTheoDanhMuc(idDanhMuc).enqueue(new Callback<ArrayList<NongSan>>() {
+            @Override
+            public void onResponse(Call<ArrayList<NongSan>> call, Response<ArrayList<NongSan>> response) {
+                listNognSan = response.body();
+                Toast.makeText(SanhamTheoDanhMucActivity.this, "CAll Api theo danh muc thanh cong", Toast.LENGTH_SHORT).show();
+
+                System.out.println("soluong : " + listNognSan.size());
+                for (int i = 1; i <= listNognSan.size(); i++) {
+                    Double_temp double_temp = new Double_temp();
+                    double_temp.nongSan0 = listNognSan.get(i - 1);
+                    if (i == listNognSan.size()) {
+                        nongSans.add(double_temp);
+                        break;
+                    }
+                    double_temp.nongSan1 = listNognSan.get(++i - 1);
+                    nongSans.add(double_temp);
+                }
+                listView = findViewById(R.id.listView);
+                NongSanAdapter nongSanAdapter = new NongSanAdapter();
+                listView.setAdapter(nongSanAdapter);
 
 
+            }
 
+            @Override
+            public void onFailure(Call<ArrayList<NongSan>> call, Throwable t) {
+                Toast.makeText(SanhamTheoDanhMucActivity.this, "Call API that bai", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
 
 
     class NongSanAdapter extends BaseAdapter {
@@ -121,10 +141,9 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
             View view = getLayoutInflater().inflate(R.layout.itemlistview_sanphamtheodanhmuc, null);
 
 
-
-
             TextView name0, price0;
             ImageView image0;
+
             ConstraintLayout constraintLayout0;
             constraintLayout0 = view.findViewById(R.id.card0);
             name0 = view.findViewById(R.id.name0);
@@ -132,55 +151,44 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
             image0 = view.findViewById(R.id.image0);
             name0.setText(nongSans.get(position).nongSan0.getTenNS());
             price0.setText(String.valueOf(nongSans.get(position).nongSan0.getGia()));
-            for(AnhNongSan anhNongSan : DanhMucActivity.anhNongSans){
-                if(anhNongSan.getAnhnongsan().getId()== nongSans.get(position).nongSan0.getId()){
-                    Picasso.with(SanhamTheoDanhMucActivity.this).load(anhNongSan.getTen())
-                            .placeholder(R.drawable.chuoi)
-                            .into(image0);
-                    System.out.println(anhNongSan.getAnhnongsan().getId()+" và "+nongSans.get(position).nongSan0.getId()+"2222222222222222222222222222222222");
-                    tempUrl = anhNongSan.getTen();
-                    break;
+
+            ApiService.apiService.getAnhNongSanByIdKhachHang(nongSans.get(position).nongSan0.getId()).enqueue(new Callback<ArrayList<AnhNongSan>>() {
+                @Override
+                public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
+                    ArrayList<AnhNongSan> anhNongSans = response.body();
+
+                    if (anhNongSans.size() != 0){
+                        Picasso.with(SanhamTheoDanhMucActivity.this).load(anhNongSans.get(0).getTen())
+                                .placeholder(R.drawable.chuoi)
+                                .into(image0);
+
+                    }
+
                 }
 
+                @Override
+                public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
 
-            }
+                }
+            });
             constraintLayout0.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent    = new Intent(SanhamTheoDanhMucActivity.this,activity_chitietnongsan.class);
-                    intent.putExtra("tenNS",nongSans.get(position).nongSan0.getTenNS());
-                    intent.putExtra("moTaNS",nongSans.get(position).nongSan0.getMoTaNS());
-                    intent.putExtra("gia",nongSans.get(position).nongSan0.getGia());
-                    intent.putExtra("url",tempUrl);
+                    Intent intent = new Intent(SanhamTheoDanhMucActivity.this, activity_chitietnongsan.class);
+                    intent.putExtra("tenNS", nongSans.get(position).nongSan0.getTenNS());
+                    intent.putExtra("moTaNS", nongSans.get(position).nongSan0.getMoTaNS());
+                    intent.putExtra("gia", nongSans.get(position).nongSan0.getGia());
+                    intent.putExtra("maNS",nongSans.get(position).nongSan0.getId());
                     startActivity(intent);
 
                 }
             });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            if(nongSans.get(position).nongSan1 == null){
+            if (nongSans.get(position).nongSan1 == null) {
                 ConstraintLayout constraintLayout = view.findViewById(R.id.card1);
                 constraintLayout.setVisibility(View.GONE);
-            }else{
+            } else {
                 TextView name1, price1;
                 ImageView image1;
                 ConstraintLayout constraintLayout1;
@@ -192,41 +200,41 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
                 price1.setText(String.valueOf(nongSans.get(position).nongSan1.getGia()));
 
 
-                for(AnhNongSan anhNongSan : anhNongSans){
-                    if(anhNongSan.getAnhnongsan().getId()== nongSans.get(position).nongSan1.getId()){
-                        Picasso.with(SanhamTheoDanhMucActivity.this).load(anhNongSan.getTen())
-                                .placeholder(R.drawable.bananas)
-                                .into(image1);
-                        tempUrl = anhNongSan.getTen();
+                ApiService.apiService.getAnhNongSanByIdKhachHang(nongSans.get(position).nongSan1.getId()).enqueue(new Callback<ArrayList<AnhNongSan>>() {
+                    @Override
+                    public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
+                        ArrayList<AnhNongSan> anhNongSans = response.body();
+
+                        if (anhNongSans.size() != 0)
+                            Picasso.with(SanhamTheoDanhMucActivity.this).load(anhNongSans.get(0).getTen())
+                                    .placeholder(R.drawable.bananas)
+                                    .into(image1);
                     }
 
-                }
+                    @Override
+                    public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
 
+                    }
+                });
 
                 constraintLayout1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent    = new Intent(SanhamTheoDanhMucActivity.this,activity_chitietnongsan.class);
-                        intent.putExtra("tenNS",nongSans.get(position).nongSan1.getTenNS());
-                        intent.putExtra("moTaNS",nongSans.get(position).nongSan1.getMoTaNS());
-                        intent.putExtra("gia",nongSans.get(position).nongSan1.getGia());
-                        intent.putExtra("url",tempUrl);
+                        Intent intent = new Intent(SanhamTheoDanhMucActivity.this, activity_chitietnongsan.class);
+                        intent.putExtra("tenNS", nongSans.get(position).nongSan1.getTenNS());
+                        intent.putExtra("moTaNS", nongSans.get(position).nongSan1.getMoTaNS());
+                        intent.putExtra("gia", nongSans.get(position).nongSan1.getGia());
+                        intent.putExtra("maNS",nongSans.get(position).nongSan1.getId());
+
                         startActivity(intent);
 
                     }
                 });
 
-
-
             }
-
-
-
-
-
-
             return view;
         }
     }
+
 
 }

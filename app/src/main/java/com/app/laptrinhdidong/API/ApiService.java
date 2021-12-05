@@ -46,6 +46,10 @@ public interface ApiService {
 
     @GET("api/nong-sans")
     Call<ArrayList<NongSan>> convertTatcaNongSan();
+    @GET("api/nong-sans-danh-muc/{idDanhmuc}")
+    Call<ArrayList<NongSan>> convertNongSanTheoDanhMuc(@Path("idDanhmuc") int idDanhMuc);
+    @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")
+    Call<ArrayList<AnhNongSan>> getAnhNongSanByIdKhachHang(@Path("idNongSan") int idNongSan);
 
     @GET("api/nong-sans")
     Call<ArrayList<NongSan>> fetchNongSanByKey();
@@ -67,4 +71,12 @@ public interface ApiService {
 
     @GET("api/khach-hangs")
     Call<ArrayList<KhachHang>> getAllKhachHang();
+
+    @GET("api/nong-sans/{idNongSan}")
+    Call<NongSan> getNongSanById(@Path("idNongSan") int idNongSan);
+
+    @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")
+    Call<ArrayList<AnhNongSan>> getAnhNongSanByIdNongSan(@Path("idNongSan") int idNongSan);
+
+
 }
