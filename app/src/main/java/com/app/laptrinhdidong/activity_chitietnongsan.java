@@ -2,17 +2,25 @@ package com.app.laptrinhdidong;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.laptrinhdidong.API.ApiService;
 import com.app.laptrinhdidong.model.AnhNongSan;
+import com.app.laptrinhdidong.model.ItemGioHang;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -27,7 +35,7 @@ public class activity_chitietnongsan extends AppCompatActivity {
     TextView giaTV;
     ImageView imageIG;
 
-
+    ArrayList<ItemGioHang> itemGioHangs;
     ImageButton add;
     ImageButton minus;
     ImageButton love;
@@ -35,10 +43,30 @@ public class activity_chitietnongsan extends AppCompatActivity {
     Integer sl;
     int tym1;
 
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chitietnongsan);
+
+        preferences = getApplicationContext().getSharedPreferences("loginPref", MODE_PRIVATE);
+        editor = preferences.edit();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+
+            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("giohang", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
+            });
+
+            System.out.println("ket qua : Thanh cong"+itemGioHangs);
+        } catch (Exception e) {
+            System.out.println("ket qua : That bai");
+        }
+
+
+
         tym1 = R.drawable.tym_icon;
         add = (ImageButton) findViewById(R.id.them);
         minus = (ImageButton) findViewById(R.id.giam);
@@ -126,5 +154,23 @@ public class activity_chitietnongsan extends AppCompatActivity {
             }
         });
 
+
+
+        Button btnThemGioHang = findViewById(R.id.btnThemGioHang);
+        btnThemGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ItemGioHang itemGioHang = new ItemGioHang();
+                itemGioHang.setId(intent.getIntExtra("ID",0));
+                itemGioHang.setSoLuong(Integer.parseInt(number.getText().toString()));
+                itemGioHang.setGia(gia);
+                itemGioHangs.add(itemGioHang);
+
+                Gson gson = new Gson();
+                editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
+                editor.apply();
+                finish();
+            }
+        });
     }
 }
