@@ -7,6 +7,7 @@ import com.app.laptrinhdidong.model.AnhNongSan;
 
 import com.app.laptrinhdidong.model.DanhMuc;
 import com.app.laptrinhdidong.model.HoaDon;
+import com.app.laptrinhdidong.model.ItemGioHang;
 import com.app.laptrinhdidong.model.KhachHang;
 import com.app.laptrinhdidong.model.NongSan;
 import com.google.gson.Gson;
@@ -77,6 +78,11 @@ public interface ApiService {
 
     @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")
     Call<ArrayList<AnhNongSan>> getAnhNongSanByIdNongSan(@Path("idNongSan") int idNongSan);
+
+    @POST("api/hoa-dons")
+    Call<HoaDon> postHoaDon(@Body HoaDon hoaDon);
+    @POST("api/chi-tiet-hoa-dons")
+    Call<HoaDon> postItemHoaDon(@Body ChiTietHoaDon itemGioHang);
 
 
 }

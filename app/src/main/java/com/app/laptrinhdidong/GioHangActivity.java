@@ -17,7 +17,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.app.laptrinhdidong.API.ApiService;
-import com.app.laptrinhdidong.allclass.ChiTietGioHang;
+
 import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.ItemGioHang;
 import com.app.laptrinhdidong.model.NongSan;
@@ -37,9 +37,9 @@ import retrofit2.Response;
 
 public class GioHangActivity extends AppCompatActivity {
 
-    CookieManager cookieManager = CookieManager.getInstance();
+
     ArrayList<ItemGioHang> itemGioHangs;
-    ArrayList<ChiTietGioHang> chiTietGioHangs;
+
     ListView listView;
     Button buttonThanhToan;
     TextView textViewTongTienhang;
@@ -47,6 +47,7 @@ public class GioHangActivity extends AppCompatActivity {
     TextView tongTienTanhToan;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,19 +58,15 @@ public class GioHangActivity extends AppCompatActivity {
         preferences = getApplicationContext().getSharedPreferences("loginPref", MODE_PRIVATE);
         editor = preferences.edit();
 
-
+//        editor.putString("cart","[{ \"id\" :2001, \"soLuong\" :30 }, {\"id\" :2002, \"soLuong\" :20 }]");
+//        editor.apply();
 
         tongTienTanhToan = findViewById(R.id.tongTienTanhToan);
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-//            editor.putString("cart","[{ \"id\" :2001, \"soLuong\" :30 }, {\"id\" :2002, \"soLuong\" :20 }]");// or put anything you want in this with String type
-//
-//            editor.apply();
 
-            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("cart","[]"), new TypeReference<ArrayList<ItemGioHang>>() {
+            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("cart", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
             });
-//            CookieManager.getInstance().setCookie("https://androidgreenmarketphuc.herokuapp.com/","[{ \"id\" :2001, \"soLuong\" :30 }, {\"id\" :2002, \"soLuong\" :20 }]");
-
 
 
         } catch (Exception e) {
@@ -119,16 +116,21 @@ public class GioHangActivity extends AppCompatActivity {
 
     }
 
-    void setCookie(){
-        Gson gson  =  new Gson();
-        editor.putString("cart",gson.toJson(itemGioHangs));// or put anything you want in this with String type
+    void setCookie() {
+        Gson gson = new Gson();
+        editor.putString("cart", gson.toJson(itemGioHangs));// or put anything you want in this with String type
         editor.apply();
     }
+
     public static String withLargeIntegers(double value) {
         DecimalFormat df = new DecimalFormat("###,###,###");
         return df.format(value);
     }
 
+
+    class Result extends Thread {
+
+    }
 
     class ItemGiohangAdapter extends BaseAdapter {
 
@@ -173,6 +175,8 @@ public class GioHangActivity extends AppCompatActivity {
                             soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
                             tongTien.setText(String.valueOf(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
                             tongTienTanhToan.setText(String.valueOf(Integer.parseInt(tongTienTanhToan.getText().toString()) + Integer.valueOf(tongTien.getText().toString())));
+
+                            itemGioHangs.get(position).setGia(nongSan[0].getGia());
                         }
 
                         @Override
@@ -185,12 +189,17 @@ public class GioHangActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
                     ArrayList<AnhNongSan> anhNongSans = response.body();
-
+                    itemGioHangs.get(position).setUrl(anhNongSans.get(0).getTen());
                     if (anhNongSans.size() != 0)
                         Picasso.with(GioHangActivity.this).load(anhNongSans.get(0).getTen())
                                 .placeholder(R.drawable.trailuu)
                                 .into(imageView);
-                }      @Override
+
+
+                    setCookie();
+                }
+
+                @Override
                 public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
 
                 }
@@ -219,8 +228,7 @@ public class GioHangActivity extends AppCompatActivity {
                     if (Integer.parseInt(soLuong.getText().toString()) == 1) {
                         tongTienTanhToan.setText("0");
                         itemGioHangs.remove(position);
-                        Gson gson  =  new Gson();
-                        cookieManager.setCookie("https://androidgreenmarketphuc.herokuapp.com/", gson.toJson(itemGioHangs).toString());
+                        Gson gson = new Gson();
 
                         notifyDataSetChanged();
                     } else {
@@ -242,8 +250,6 @@ public class GioHangActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
 }
