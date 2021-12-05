@@ -18,26 +18,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/textView24"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="136dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Phí vận chuyển: 25.000 đ"
         android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/textView23"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="120dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Ship hàng 25.000 đ"
         android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
@@ -55,13 +55,13 @@
         app:srcCompat="@drawable/back" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_regular"
-
         android:id="@+id/textView4"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/bevietnampro_regular"
         android:text="Phương thức giao hàng"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -94,6 +94,7 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="" />
 
         <RadioButton
@@ -115,12 +116,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Giao dịch tại cửa hàng"
         android:textSize="11dp"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
@@ -140,13 +141,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/textView25"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="172dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Địa chỉ giao hàng"
         android:textColor="@color/black"
         android:textSize="12dp"
@@ -154,28 +155,30 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/editTextTextPersonName"
         android:layout_width="363dp"
         android:layout_height="33dp"
+        android:clickable="false"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:fontFamily="@font/bevietnampro_medium"
         android:hint="Nhập ở đây"
 
+        android:inputType="textPersonName"
         android:textSize="12dp"
+
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/textView26"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Giỏ hàng"
         android:textColor="#000"
         android:textSize="12dp"
@@ -183,13 +186,13 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/thongBaoSoLuong"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Có x sản phẩm trong giõ hàng"
         android:textColor="#A0A0A0"
         android:textSize="11dp"
@@ -198,22 +201,22 @@
 
     <ListView
         android:id="@+id/listViewThanhToan"
-        android:layout_marginTop="270dp"
-        android:layout_marginBottom="160dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="270dp"
+        android:layout_marginBottom="160dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Tổng tiền hàng"
         android:textColor="#535353"
         android:textSize="17dp"
@@ -222,13 +225,13 @@
         app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_medium"
-
         android:id="@+id/tongTienThanhToan"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="300.000 đ"
         android:textColor="#535353"
         android:textSize="17dp"
@@ -237,16 +240,16 @@
         app:layout_constraintTop_toBottomOf="@+id/listViewThanhToan" />
 
     <Button
-        android:fontFamily="@font/bevietnampro_medium"
-android:textColor="@color/white"
         android:id="@+id/btnThanhToan"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="@drawable/bg_btn"
         android:layout_marginStart="35dp"
         android:layout_marginEnd="35dp"
+        android:background="@drawable/bg_btn"
+        android:fontFamily="@font/bevietnampro_medium"
         android:text="Thanh toán hóa đơn"
         android:textAllCaps="false"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/menubottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

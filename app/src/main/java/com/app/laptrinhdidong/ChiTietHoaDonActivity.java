@@ -108,7 +108,7 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
                 chiTietHoaDonCuaKH  =new ArrayList<>();
                 for (ChiTietHoaDon chiTietHoaDon : chiTietHoaDons
                 ) {
-                    if(chiTietHoaDon.getHoadon().getId()== intent.getIntExtra("maHD",0))
+                    if(chiTietHoaDon.getHoadon().getId().equals(String.valueOf(intent.getIntExtra("maHD",0))))
                     chiTietHoaDonCuaKH.add(chiTietHoaDon);
                 }
                 soLuongSanPham.setText("Đã mua "+String.valueOf(chiTietHoaDonCuaKH.size())+" sản phẩm");

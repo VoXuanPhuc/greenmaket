@@ -1,24 +1,25 @@
 package com.app.laptrinhdidong.model;
 
 
+import java.time.Instant;
 import java.util.Date;
 
 public class HoaDon {
-    private int id;
+    private String  id;
     private int tongthanhtoan;
     private int chiphivanchuyen;
-    private Date ngaythanhtoan;
-    private Date ngaytao;
+    private String ngaythanhtoan;
+    private String ngaytao;
     private String trangthai;
-    private PhuongThucTT phuongthucTT;
-    private PhuongThucGH phuongthucGH;
-    private KhachHang khachhang;
+    private PhuongThucTT phuongthucTT = new PhuongThucTT();
+    private PhuongThucGH phuongthucGH = new PhuongThucGH();
+    private KhachHang khachhang = new KhachHang();
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -38,19 +39,19 @@ public class HoaDon {
         this.chiphivanchuyen = chiphivanchuyen;
     }
 
-    public Date getNgaythanhtoan() {
+    public String getNgaythanhtoan() {
         return ngaythanhtoan;
     }
 
-    public void setNgaythanhtoan(Date ngaythanhtoan) {
+    public void setNgaythanhtoan(String ngaythanhtoan) {
         this.ngaythanhtoan = ngaythanhtoan;
     }
 
-    public Date getNgaytao() {
+    public String getNgaytao() {
         return ngaytao;
     }
 
-    public void setNgaytao(Date ngaytao) {
+    public void setNgaytao(String ngaytao) {
         this.ngaytao = ngaytao;
     }
 

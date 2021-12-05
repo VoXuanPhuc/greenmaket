@@ -3,7 +3,7 @@ package com.app.laptrinhdidong.model;
 import java.util.ArrayList;
 
 public class ChiTietHoaDon {
-    int id;
+    String id;
     int gia;
     int soluong;
     NongSan nongsan;
@@ -17,11 +17,11 @@ public class ChiTietHoaDon {
         this.nongsan = nongsan;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
