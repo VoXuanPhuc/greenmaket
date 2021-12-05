@@ -52,6 +52,7 @@ public class activity_search extends AppCompatActivity {
         inputSearch = (EditText) findViewById(R.id.edSearch);
 
         fetchNongSanByKey("");
+
         searchNongSan();
 
         bottomNavigationView = findViewById(R.id.bottomNavi);
