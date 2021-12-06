@@ -69,7 +69,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.listViewHoaDon);
 
-        callApi((long) activity_profile.khachHang.getId());
+        callApi((long) Long.parseLong(activity_profile.khachHang.getId()));
 
 
     }

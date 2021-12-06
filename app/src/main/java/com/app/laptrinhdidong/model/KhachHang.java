@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class KhachHang {
 
-    private int id;
+    private String id;
     private String hoTenKH;
     private String tenDangNhap;
     private String matkhau;
     private String email;
     private String sdt;
-    private Date ngaySinh;
+    private String ngaySinh;
     private String gioitinh;
     private String chitietdiachi;
     private XaPhuong xa;
@@ -19,8 +19,8 @@ public class KhachHang {
     public KhachHang() {
     }
 
-    public KhachHang(int id, String hoTenKH, String tenDangNhap, String matkhau,
-                     String email, String sdt, Date ngaysinh, String gioitinh,
+    public KhachHang(String id, String hoTenKH, String tenDangNhap, String matkhau,
+                     String email, String sdt, String ngaysinh, String gioitinh,
                      String chitietdiachi, XaPhuong diaChi) {
         this.id = id;
         this.hoTenKH = hoTenKH;
@@ -34,11 +34,11 @@ public class KhachHang {
         this.xa = diaChi;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -82,11 +82,11 @@ public class KhachHang {
         this.sdt = sdt;
     }
 
-    public Date getNgaysinh() {
+    public String getNgaysinh() {
         return ngaySinh;
     }
 
-    public void setNgaysinh(Date ngaysinh) {
+    public void setNgaysinh(String ngaysinh) {
         this.ngaySinh = ngaysinh;
     }
 

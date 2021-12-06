@@ -59,7 +59,7 @@ public class editProfile extends AppCompatActivity {
     public void updateKhachHang () {
         Toast.makeText(editProfile.this, "da call", Toast.LENGTH_SHORT).show();
         ApiService.apiService.updateKhachhangById(
-                (long) activity_profile.khachHang.getId(), activity_profile.khachHang).enqueue(
+                (long) Long.parseLong(activity_profile.khachHang.getId()), activity_profile.khachHang).enqueue(
                 new Callback<KhachHang>() {
                     @Override
                     public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
