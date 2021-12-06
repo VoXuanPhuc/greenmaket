@@ -65,7 +65,7 @@ public class GioHangActivity extends AppCompatActivity {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
 
-            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("cart", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
+            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("giohang", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
             });
 
 
@@ -118,7 +118,7 @@ public class GioHangActivity extends AppCompatActivity {
 
     void setCookie() {
         Gson gson = new Gson();
-        editor.putString("cart", gson.toJson(itemGioHangs));// or put anything you want in this with String type
+        editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
         editor.apply();
     }
 

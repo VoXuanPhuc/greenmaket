@@ -179,6 +179,7 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
                     intent.putExtra("moTaNS", nongSans.get(position).nongSan0.getMoTaNS());
                     intent.putExtra("gia", nongSans.get(position).nongSan0.getGia());
                     intent.putExtra("maNS",nongSans.get(position).nongSan0.getId());
+                    intent.putExtra("ID",nongSans.get(position).nongSan0.getId());
                     startActivity(intent);
 
                 }
@@ -225,7 +226,7 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
                         intent.putExtra("moTaNS", nongSans.get(position).nongSan1.getMoTaNS());
                         intent.putExtra("gia", nongSans.get(position).nongSan1.getGia());
                         intent.putExtra("maNS",nongSans.get(position).nongSan1.getId());
-
+                        intent.putExtra("ID",nongSans.get(position).nongSan1.getId());
                         startActivity(intent);
 
                     }

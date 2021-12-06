@@ -133,15 +133,16 @@
         android:paddingLeft="50dp">
 
         <Button
+            android:id="@+id/btnThemGioHang"
             android:layout_width="190dp"
             android:layout_height="120dp"
             android:background="#2DA44E"
             android:drawableStart="@drawable/img_4"
+            android:fontFamily="@font/roboto"
             android:paddingHorizontal="10dp"
             android:text="Thêm vào giỏ hàng"
             android:textColor="@color/white"
             android:textSize="14dp"
-            android:fontFamily="@font/roboto"
             android:textStyle="bold"
             tools:ignore="TextContrastCheck" />
 
