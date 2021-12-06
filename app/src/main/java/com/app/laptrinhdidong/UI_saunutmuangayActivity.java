@@ -120,7 +120,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                 HoaDon hoaDon = new HoaDon();
                 hoaDon.setId(null);
                 hoaDon.setChiphivanchuyen(15000);
-                hoaDon.getKhachhang().setId(1715);
+                hoaDon.getKhachhang().setId("1715");
                 hoaDon.setNgaythanhtoan(Instant.now().toString());
                 hoaDon.setNgaytao(Instant.now().toString());
                 hoaDon.getPhuongThucGH().setId(2152);

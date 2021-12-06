@@ -73,6 +73,9 @@ public interface ApiService {
     @GET("api/khach-hangs")
     Call<ArrayList<KhachHang>> getAllKhachHang();
 
+    @POST("api/khach-hangs")
+    Call<KhachHang> postKhachHang(@Body KhachHang khachHang);
+
     @GET("api/nong-sans/{idNongSan}")
     Call<NongSan> getNongSanById(@Path("idNongSan") int idNongSan);
 
@@ -83,6 +86,9 @@ public interface ApiService {
     Call<HoaDon> postHoaDon(@Body HoaDon hoaDon);
     @POST("api/chi-tiet-hoa-dons")
     Call<HoaDon> postItemHoaDon(@Body ChiTietHoaDon itemGioHang);
+
+
+
 
 
 }
