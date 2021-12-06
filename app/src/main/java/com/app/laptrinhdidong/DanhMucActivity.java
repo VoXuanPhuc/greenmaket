@@ -61,7 +61,7 @@ public class DanhMucActivity extends AppCompatActivity {
                         startActivity(new Intent(DanhMucActivity.this, activity_search.class));
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(DanhMucActivity.this, Activity_dangnhap.class));
+                        startActivity(new Intent(DanhMucActivity.this, activity_profile.class));
                         break;
                 }
                 return true;

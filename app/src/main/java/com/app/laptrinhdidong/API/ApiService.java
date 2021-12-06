@@ -40,10 +40,10 @@ public interface ApiService {
     Call<ArrayList<DanhMuc>> convertDanhMuc();
 
     @GET("api/khach-hangs/{id}")
-    Call<KhachHang> getKhachHangById (@Path("id") long idUser);
+    Call<KhachHang> getKhachHangById (@Path("id") String idUser);
 
     @PUT("api/khach-hangs/{id}")
-    Call<KhachHang> updateKhachhangById (@Path("id") long idUser, @Body KhachHang khachHang);
+    Call<KhachHang> updateKhachhangById (@Path("id") String idUser, @Body KhachHang khachHang);
 
     @GET("api/nong-sans")
     Call<ArrayList<NongSan>> convertTatcaNongSan();
