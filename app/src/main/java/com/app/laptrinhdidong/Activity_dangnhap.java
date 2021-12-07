@@ -3,6 +3,7 @@ package com.app.laptrinhdidong;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -65,8 +66,12 @@ public class Activity_dangnhap extends AppCompatActivity {
                     if (tenDangNhapInPut.getText().toString().equals(khachHangs.get(i).getTenDangNhap())
                             && matkhauInput.getText().toString().equals(khachHangs.get(i).getMatkhau())) {
                         Toast.makeText(Activity_dangnhap.this, "Đăng nhập thanh công", Toast.LENGTH_SHORT).show();
-                        activity_profile.khachHang = khachHangs.get(i);
+                        SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("idKhachHang", khachHangs.get(i).getId());
+                        editor.apply();
                         startActivity(new Intent(Activity_dangnhap.this,activity_profile.class));
+                        return;
                     }
                 }
                 Toast.makeText(Activity_dangnhap.this, "đăng nhập thất bại", Toast.LENGTH_SHORT).show();

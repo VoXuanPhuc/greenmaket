@@ -29,7 +29,7 @@ public class editProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        khachHang = new KhachHang();
+        khachHang = activity_profile.khachHang;
 
         btnEditProfile = (Button) findViewById(R.id.btnEditProfile);
         eName = (EditText) findViewById(R.id.edit_name);
@@ -46,20 +46,18 @@ public class editProfile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                khachHang = activity_profile.khachHang;
-//                khachHang.setHoTenKH(eName.getText().toString());
-//                khachHang.setSdt(sdt.getText().toString());
-//                khachHang.setEmail(email.getText().toString());
-//                khachHang.setChitietdiachi(diachi.getText().toString());
-                updateKhachHang();
+                khachHang.setHoTenKH(eName.getText().toString());
+                khachHang.setSdt(sdt.getText().toString());
+                khachHang.setEmail(email.getText().toString());
+                khachHang.setChitietdiachi(diachi.getText().toString());
+                updateKhachHang(khachHang);
             }
         });
     }
 
-    public void updateKhachHang () {
-        Toast.makeText(editProfile.this, "da call", Toast.LENGTH_SHORT).show();
+    public void updateKhachHang (KhachHang khachHang) {
         ApiService.apiService.updateKhachhangById(
-                (long) Long.parseLong(activity_profile.khachHang.getId()), activity_profile.khachHang).enqueue(
+                activity_profile.khachHang.getId(), khachHang).enqueue(
                 new Callback<KhachHang>() {
                     @Override
                     public void onResponse(Call<KhachHang> call, Response<KhachHang> response) {
@@ -70,9 +68,7 @@ public class editProfile extends AppCompatActivity {
                             System.out.println("code : " + response.code());
                         } else {
                             activity_profile.khachHang = response.body();
-                            System.out.println(khachHang.toString());
-
-                            Toast.makeText(editProfile.this, "success", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(editProfile.this, "cập nhật thành công", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(editProfile.this, activity_profile.class);
                             startActivity(intent);
                         }

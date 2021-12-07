@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,16 +25,18 @@ public class activity_profile extends AppCompatActivity {
     Button editProfile;
     Button hoaDon;
     TextView tvName;
-
+    Button btnLogut;
     public static KhachHang khachHang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
+        SharedPreferences preferences = getSharedPreferences("login",MODE_PRIVATE);
         editProfile = (Button) findViewById(R.id.editProfile);
         hoaDon = (Button) findViewById(R.id.hoadon);
         tvName = (TextView) findViewById(R.id.name);
+        btnLogut = (Button) findViewById(R.id.dangxuat);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavi);
 
 
@@ -72,7 +75,23 @@ public class activity_profile extends AppCompatActivity {
             }
         });
 
-        getKhachHangById((long) Long.parseLong(khachHang.getId()));
+        btnLogut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.remove("idKhachHang");
+                editor.commit();
+                activity_profile.khachHang = null;
+                startActivity(new Intent(activity_profile.this, DanhMucActivity.class));
+            }
+        });
+
+        if (preferences.contains("idKhachHang")) {
+            String idKhachHang = preferences.getString("idKhachHang", "");
+            getKhachHangById(idKhachHang);
+        } else if (!preferences.contains("idKhachHang")) {
+            startActivity(new Intent(activity_profile.this, Activity_dangnhap.class));
+        }
 
         Intent intentEditProfile = getIntent();
         if (intentEditProfile.getStringExtra("name") != null) {
@@ -81,8 +100,7 @@ public class activity_profile extends AppCompatActivity {
     }
 
 
-
-    public void getKhachHangById(long khachhangId) {
+    public void getKhachHangById(String khachhangId) {
         ApiService.apiService.getKhachHangById(khachhangId).enqueue(
                 new Callback<KhachHang>() {
                     @Override
@@ -99,6 +117,5 @@ public class activity_profile extends AppCompatActivity {
                     }
                 }
         );
-
     }
 }
