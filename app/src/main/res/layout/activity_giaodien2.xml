@@ -4,19 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2DA44E"
+    android:background="#4BC66D"
     android:orientation="vertical"
     tools:context=".giaodien2">
+
+    <Button
+        android:id="@+id/btnskip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textSize="16sp"
+        android:background="@null"
+        android:layout_marginLeft="300dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Nhiều loại hàng tốt"
-        android:textColor="#F8C81E"
-        android:textSize="30dp"
+        android:textColor="#FFFF00"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.612"
@@ -27,7 +38,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="105dp"
         android:orientation="vertical">
 
         <TextView
@@ -36,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="Đến với chúng tôi bạn không những mua\n được nhiều loại hàng tốt mà còn đem đến\n cho bạn những điều thú vị.   "
+            android:text="Đến với chúng tôi bạn không những mua\n được nhiều loại hàng tốt mà còn đem\n đến cho bạn những điều thú vị.   "
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:fontFamily="@font/bevietnampro_regular"/>
@@ -44,11 +55,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
@@ -57,10 +68,10 @@
     </LinearLayout>
     <ImageButton
         android:id="@+id/next"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bttron"
         android:src="@drawable/img_37"
-        android:layout_marginLeft="320dp"/>
+        android:layout_marginLeft="300dp"/>
 </LinearLayout>

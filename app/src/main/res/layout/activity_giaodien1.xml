@@ -101,10 +101,10 @@
             android:id="@+id/textView2"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="85dp"
             android:background="#2DA44E"
-            android:padding="5dp"
+            android:padding="3dp"
             android:text="Nông sản tươi"
             android:textColor="#FFFF8D"
             android:textSize="35dp"
@@ -113,7 +113,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="165dp"
-            android:layout_height="170dp"
+            android:layout_height="165dp"
             app:srcCompat="@drawable/img_16" />
     </LinearLayout>
 
@@ -185,12 +185,12 @@
 
     <ImageButton
         android:id="@+id/next"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/bttron"
         android:src="@drawable/img_37"
-        android:layout_marginLeft="320dp"/>
+        android:layout_marginLeft="300dp"/>
 
 
     <ImageView

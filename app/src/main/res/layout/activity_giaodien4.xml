@@ -4,19 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2DA44E"
+    android:background="#4BC66D"
     android:orientation="vertical"
     tools:context=".giaodien4">
+
+    <Button
+        android:id="@+id/btnskip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textSize="16sp"
+        android:background="@null"
+        android:layout_marginLeft="300dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="Tạo cửa hàng dành riêng \ncho bạn "
-        android:textColor="#F8C81E"
-        android:textSize="30dp"
+        android:text="Tạo cửa hàng dành\n riêng cho bạn "
+        android:textColor="#FFFF00"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/bevietnampro_medium"/>
 
@@ -39,24 +50,26 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="400dp"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ImageView
             android:id="@+id/imageView_giohang"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_marginTop="2dp"
             app:srcCompat="@drawable/online" />
     </LinearLayout>
 
     <ImageButton
         android:id="@+id/next"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="3dp"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/bttron"
         android:src="@drawable/img_37"
-        android:layout_marginLeft="320dp"/>
+        android:layout_marginLeft="300dp"/>
 </LinearLayout>
