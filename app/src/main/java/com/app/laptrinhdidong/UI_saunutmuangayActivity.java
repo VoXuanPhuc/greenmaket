@@ -193,6 +193,10 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
 
     int tt = 0;
 
+    public void finish(View view) {
+        finish();
+    }
+
     class NongSanAdapter extends BaseAdapter {
 
         @Override

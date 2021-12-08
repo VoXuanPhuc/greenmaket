@@ -79,6 +79,7 @@ public interface ApiService {
     @GET("api/nong-sans/{idNongSan}")
     Call<NongSan> getNongSanById(@Path("idNongSan") int idNongSan);
 
+
     @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")
     Call<ArrayList<AnhNongSan>> getAnhNongSanByIdNongSan(@Path("idNongSan") int idNongSan);
 
@@ -87,6 +88,8 @@ public interface ApiService {
     @POST("api/chi-tiet-hoa-dons")
     Call<HoaDon> postItemHoaDon(@Body ChiTietHoaDon itemGioHang);
 
+    @GET("api/chitiethoadonbyHoadon/{idHoaDon}")
+    Call<ArrayList<ChiTietHoaDon>> getItemHoaDonByHoaDon(@Path("idHoaDon") int idHoaDon);
 
 
 

@@ -137,4 +137,7 @@ public class activity_search extends AppCompatActivity {
     }
 
 
+    public void finish(View view) {
+        finish();
+    }
 }

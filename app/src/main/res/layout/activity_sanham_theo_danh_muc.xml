@@ -13,18 +13,20 @@
         android:layout_height="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:onClick="finish"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
 
     <TextView
-        android:fontFamily="@font/bevietnampro_regular"
-
         android:id="@+id/tenDanhMuc"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/bevietnampro_regular"
+        android:onClick="finish"
         android:text="Trái Cây Tươi"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/imageView"

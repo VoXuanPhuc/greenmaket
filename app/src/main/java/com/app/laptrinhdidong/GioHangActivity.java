@@ -127,6 +127,10 @@ public class GioHangActivity extends AppCompatActivity {
         return df.format(value);
     }
 
+    public void finish(View view) {
+        finish();
+    }
+
 
     class Result extends Thread {
 

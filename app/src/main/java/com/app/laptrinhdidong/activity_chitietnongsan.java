@@ -173,4 +173,8 @@ public class activity_chitietnongsan extends AppCompatActivity {
             }
         });
     }
+
+    public void finish(View view) {
+        finish();
+    }
 }
