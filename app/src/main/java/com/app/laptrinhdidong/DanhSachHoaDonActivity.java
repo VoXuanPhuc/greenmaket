@@ -104,6 +104,9 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
         });
     }
 
+    public void finish(View view) {finish();
+    }
+
 
     class HoaDonAdapter extends BaseAdapter {
 

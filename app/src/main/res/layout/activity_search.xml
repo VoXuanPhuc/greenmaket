@@ -8,16 +8,17 @@
     android:background="@color/white">
 
     <TextView
+        android:onClick="finish"
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:drawableStart="@drawable/back_icon"
+        android:fontFamily="@font/bevietnampro_regular"
         android:text="Tìm kiếm"
         android:textColor="@color/black"
-        android:textSize="18dp"
-        android:fontFamily="@font/bevietnampro_regular"/>
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/edSearch"

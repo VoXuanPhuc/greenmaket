@@ -118,6 +118,10 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
         });
     }
 
+    public void finish(View view) {
+        finish();
+    }
+
 
     class NongSanAdapter extends BaseAdapter {
 
