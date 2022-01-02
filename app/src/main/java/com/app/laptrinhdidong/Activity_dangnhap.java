@@ -28,7 +28,7 @@ public class Activity_dangnhap extends AppCompatActivity {
     TextView tvDangky;
     EditText tenDangNhapInPut;
     EditText matkhauInput;
-
+    TextView quenmatkhau;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,15 +36,26 @@ public class Activity_dangnhap extends AppCompatActivity {
         btnDangNhap = (Button) findViewById(R.id.btnDangnhap);
         tvDangky = (TextView) findViewById(R.id.dangky);
 
+        quenmatkhau = (TextView) findViewById(R.id.quenmatkhau);
 
         tenDangNhapInPut = findViewById(R.id.tenDangNhapInPut);
         matkhauInput = findViewById(R.id.matkhauInput);
-        tenDangNhapInPut.setText("nganhan221");
+        tenDangNhapInPut.setText("nganct@gmail.vn");
         matkhauInput.setText("123456");
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CallApi();
+                String email = tenDangNhapInPut.getText().toString();
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                if(email.isEmpty()) {
+                    Toast.makeText(getApplicationContext(),"enter email address",Toast.LENGTH_SHORT).show();
+                }else {
+                    if (email.trim().matches(emailPattern)) {
+                        CallApi();
+                    } else {
+                        Toast.makeText(getApplicationContext(),"Invalid email address", Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
 
@@ -52,6 +63,13 @@ public class Activity_dangnhap extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Activity_dangnhap.this, activity_dangky.class));
+            }
+        });
+
+        quenmatkhau.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Activity_dangnhap.this, ForgotPassword.class));
             }
         });
     }
@@ -63,7 +81,7 @@ public class Activity_dangnhap extends AppCompatActivity {
                 khachHangs = response.body();
 
                 for (int i = 0; i < khachHangs.size(); i++) {
-                    if (tenDangNhapInPut.getText().toString().equals(khachHangs.get(i).getTenDangNhap())
+                    if (tenDangNhapInPut.getText().toString().equals(khachHangs.get(i).getEmail())
                             && matkhauInput.getText().toString().equals(khachHangs.get(i).getMatkhau())) {
                         Toast.makeText(Activity_dangnhap.this, "Đăng nhập thanh công", Toast.LENGTH_SHORT).show();
                         SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
