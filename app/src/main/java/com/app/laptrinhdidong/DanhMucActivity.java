@@ -128,7 +128,11 @@ public class DanhMucActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
 
-                    Intent intent = new Intent(DanhMucActivity.this, SanhamTheoDanhMucActivity.class);
+//                    Intent intent = new Intent(DanhMucActivity.this, SanhamTheoDanhMucActivity.class);
+//                    intent.putExtra("tenDanhMuc", danhMucs.get(position).getTenDM());
+//                    intent.putExtra("idDanhMuc",danhMucs.get(position).getId());
+
+                    Intent intent = new Intent(DanhMucActivity.this, MainActivity_NongSanTheoDanhMuc.class);
                     intent.putExtra("tenDanhMuc", danhMucs.get(position).getTenDM());
                     intent.putExtra("idDanhMuc",danhMucs.get(position).getId());
                     startActivity(intent);

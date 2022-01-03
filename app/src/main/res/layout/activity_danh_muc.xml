@@ -13,30 +13,14 @@
         android:layout_marginTop="10dp">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:text="Danh mục"
-                android:textColor="#2DA44E"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:background="@drawable/img_38" />
-        </RelativeLayout>
+            android:layout_height="?actionBarSize"/>
 
     </LinearLayout>
 
 
     <ListView
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

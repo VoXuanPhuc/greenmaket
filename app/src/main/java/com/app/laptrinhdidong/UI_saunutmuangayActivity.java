@@ -145,7 +145,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                                     chiTietHoaDon.setHoadon(hoaDonNew);
 
                                     NongSan nongSan = new NongSan();
-                                    nongSan.setId(itemGioHang.getId());
+                                    nongSan.setId(Integer.valueOf(itemGioHang.getId()));
                                     chiTietHoaDon.setNongsan(nongSan);
                                     chiTietHoaDon.setGia(itemGioHang.getGia());
                                     chiTietHoaDon.setSoluong(itemGioHang.getSoLuong());
@@ -230,7 +230,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
             ImageView imageView = view.findViewById(R.id.hinhanhchitiet_hoaDon);
 
 
-            ApiService.apiService.getNongSanById(itemGioHangs.get(position).getId()).enqueue(
+            ApiService.apiService.getNongSanById(Integer.parseInt(itemGioHangs.get(position).getId())).enqueue(
                     new Callback<NongSan>() {
                         @Override
                         public void onResponse(Call<NongSan> call, Response<NongSan> response) {

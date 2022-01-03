@@ -10,6 +10,7 @@ import com.app.laptrinhdidong.model.HoaDon;
 import com.app.laptrinhdidong.model.ItemGioHang;
 import com.app.laptrinhdidong.model.KhachHang;
 import com.app.laptrinhdidong.model.NongSan;
+import com.app.laptrinhdidong.model.YeuThich;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -20,6 +21,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
@@ -91,7 +93,10 @@ public interface ApiService {
     @GET("api/chitiethoadonbyHoadon/{idHoaDon}")
     Call<ArrayList<ChiTietHoaDon>> getItemHoaDonByHoaDon(@Path("idHoaDon") int idHoaDon);
 
+    @GET("api/yeu-thiches")
+    Call<YeuThich> postYeuThich(@Body YeuThich yeuThich);
 
-
+    @DELETE("api/yeu-thiches")
+    Call<YeuThich> deleteYeuThich(@Body YeuThich yeuThich);
 
 }
