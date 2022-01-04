@@ -29,4 +29,9 @@ public class DanhMuc {
     public void setTenDM(String tenDM) {
         this.tenDM = tenDM;
     }
+
+    @Override
+    public String toString() {
+        return tenDM;
+    }
 }

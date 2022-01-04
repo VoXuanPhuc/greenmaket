@@ -49,6 +49,7 @@ public interface ApiService {
 
     @GET("api/nong-sans")
     Call<ArrayList<NongSan>> convertTatcaNongSan();
+
     @GET("api/nong-sans-danh-muc/{idDanhmuc}")
     Call<ArrayList<NongSan>> convertNongSanTheoDanhMuc(@Path("idDanhmuc") int idDanhMuc);
     @GET("api/get-anh-nong-sans-by-Nongsan/{idNongSan}")

@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.laptrinhdidong.API.ApiService;
 import com.app.laptrinhdidong.R;
+import com.app.laptrinhdidong.activity_chitietnongsan;
 import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.NongSan;
 import com.squareup.picasso.Picasso;
@@ -43,14 +44,35 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-//        Picasso.with(context).load(listNongSan.get(position).getAnhDaiDienNongSan()).into(holder.imageNongsan);
-        holder.imageNongsan.setImageResource(R.drawable.raucaixanh);
         holder.tenNongsan.setText(listNongSan.get(position).getTenNS());
-        holder.motangan.setText(listNongSan.get(position).getMoTaNS());
         NumberFormat format = NumberFormat.getCurrencyInstance();
+
         format.setMaximumFractionDigits(0);
         format.setCurrency(Currency.getInstance("VND"));
         holder.gia.setText(format.format((long)listNongSan.get(position).getGia()));
+
+
+        try {
+            ApiService.apiService.getAnhNongSanByIdKhachHang(listNongSan.get(position).getId())
+                    .enqueue(new Callback<ArrayList<AnhNongSan>>() {
+                @Override
+                public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
+                    ArrayList<AnhNongSan> anhNongSans = response.body();
+
+                    if (anhNongSans.size() != 0)
+                        Picasso.with(context).load(anhNongSans.get(0).getTen())
+                                .placeholder(R.drawable.raucaixanh)
+                                .into(holder.imageNongsan);
+                }
+
+                @Override
+                public void onFailure(Call<ArrayList<AnhNongSan>> call, Throwable t) {
+
+                }
+            });
+        }catch (Exception e){
+
+        }
     }
 
     @Override
@@ -60,14 +82,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imageNongsan;
         TextView tenNongsan;
-        TextView motangan;
+//        TextView motangan;
         TextView gia;
         public MyViewHolder(View itemView) {
             super((itemView));
             imageNongsan = itemView.findViewById(R.id.imageSearchNongSan);
             tenNongsan = itemView.findViewById(R.id.tenNongsan);
-            motangan = itemView.findViewById(R.id.mieutaNongsan);
+//            motangan = itemView.findViewById(R.id.mieutaNongsan);
             gia = itemView.findViewById(R.id.searchgiann);
         }
     }
+
+
 }

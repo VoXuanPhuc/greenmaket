@@ -1,0 +1,45 @@
+﻿Ngày 2-1-2022
+
+Xét menu dưới đúng với trang hiện tại.
+Xét sự kiện cho nút back. 
+Tạo animation cho trang giới thiệu. (vân anh)
+
+Trang đăng nhập: (thủy)
+	Check email khi nhập. /x
+	Tạo trang quên mật khẩu./x
+	Gửi email để lấy mật khẩu.
+
+Trang danh sách hóa đơn:(phúc)
+	Không đúng dữ liệu /x
+
+Trang tìm kiếm (phúc)
+	Fix ảnh cho trang tìm kiếm. /X
+	bo góc cho cart /x
+	Bỏ mô tả /x
+	Lọc theo danh mục  ----> !!!!!!!
+	Showdown cho cart /x
+
+Trang danh mục: (phúc)
+	Bỏ chữ danh mục./x
+	Bỏ đường kẻ giữa các mục. /x
+
+Trang sản phẩm theo danh mục: (đại)
+	làm cho phần header nứ sticky
+	bỏ đường kẻ. 
+	nghiên cứu load sản phẩm từ từ ra, load lần đầu 1 ít, rồi tiếp load 1 ít.
+	format số tiền.
+	nút yêu thích.
+	nút thêm giỏ hàng. 
+	loading cho mấy m làm.
+
+Trang chi tiết sản phẩm: (Hòa)
+	Format tiền.
+	Tìm trái tim yêu thích khác cho đẹp ( nghiên yêu thích )
+	Nghiên cứu tạo slide cho hình ảnh (bỏ)
+
+All: 	
+	Vân anh, thêm ảnh cho danh mục trái cây, rau củ, Hòa làm hải sản Thủy làm thịt tươi với sản phẩm khô. /x
+	
+
+Ngày họp lại : (deadline)
+	ngày 4 8h
