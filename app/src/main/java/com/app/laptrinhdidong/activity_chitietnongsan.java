@@ -160,15 +160,30 @@ public class activity_chitietnongsan extends AppCompatActivity {
         btnThemGioHang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                boolean ketQuaTimKiem = false;
                 ItemGioHang itemGioHang = new ItemGioHang();
-                itemGioHang.setId(intent.getIntExtra("ID",0));
+                itemGioHang.setId(String.valueOf(intent.getIntExtra("ID",0)));
                 itemGioHang.setSoLuong(Integer.parseInt(number.getText().toString()));
                 itemGioHang.setGia(gia);
-                itemGioHangs.add(itemGioHang);
-
                 Gson gson = new Gson();
-                editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
-                editor.apply();
+                int i = 0;
+                for (i=0;i<itemGioHangs.size();i++){
+                    if(itemGioHangs.get(i).getId().equals(String.valueOf(intent.getIntExtra("ID",0)))){
+                        ketQuaTimKiem = true;
+                        break;
+                    }
+                }
+
+                if(ketQuaTimKiem == true){
+                    itemGioHangs.get(i).setSoLuong(itemGioHangs.get(i).getSoLuong()+Integer.parseInt(number.getText().toString()));
+                    editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
+                    editor.apply();
+                }else{
+                    itemGioHangs.add(itemGioHang);
+                    editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
+                    editor.apply();
+                }
+
                 finish();
             }
         });

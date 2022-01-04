@@ -11,4 +11,8 @@
     <color name="profileedittext">#2DA44E</color>
     <color name="edSearch">#A2F3C3</color>
     <color name="edHintSearch">#2DA44E</color>
+
+
+    <color name="color_bar">#A2F3C3</color>
+    <color name="black_trans">#A2F3C3</color>
 </resources>

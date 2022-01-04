@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#A2F3C3">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingtoolbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A2F3C3"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="40dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/raucaixanh" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/potatoes_image" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/garlics" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/otngot" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/onions" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/traidau" />
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_hinhtron"
+                        android:src="@drawable/pineapple" />
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="110dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="128dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bg_khuyenmai">
+
+                        <TextView
+                            android:layout_width="45dp"
+
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="@font/bevietnampro_medium"
+                            android:gravity="center"
+                            android:text="Hàng khuyến mãi"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/grape" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="128dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bg_khuyenmai">
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="@font/bevietnampro_medium"
+                            android:gravity="center"
+                            android:text="Hàng khuyến mãi"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/traidau" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="128dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bg_khuyenmai">
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="@font/bevietnampro_medium"
+                            android:gravity="center"
+                            android:text="Hàng khuyến mãi"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/oranges" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="128dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/bg_khuyenmai">
+
+                        <TextView
+                            android:layout_width="45dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:fontFamily="@font/bevietnampro_medium"
+                            android:gravity="center"
+                            android:text="Hàng khuyến mãi"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/apple" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+
+
+            <androidx.appcompat.widget.Toolbar
+
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="18dp"
+        android:paddingBottom="65dp"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menubottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/icon_color"
+        app:itemRippleColor="#AAAAAA"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation_items"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

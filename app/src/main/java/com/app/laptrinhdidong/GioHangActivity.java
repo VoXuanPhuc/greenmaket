@@ -14,6 +14,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.app.laptrinhdidong.API.ApiService;
@@ -39,7 +40,7 @@ public class GioHangActivity extends AppCompatActivity {
 
 
     ArrayList<ItemGioHang> itemGioHangs;
-
+    ProgressBar progressBar;
     ListView listView;
     Button buttonThanhToan;
     TextView textViewTongTienhang;
@@ -52,7 +53,7 @@ public class GioHangActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gio_hang);
-
+        progressBar = findViewById(R.id.progress);
 
 //        SET COOKIE
         preferences = getApplicationContext().getSharedPreferences("loginPref", MODE_PRIVATE);
@@ -116,6 +117,7 @@ public class GioHangActivity extends AppCompatActivity {
 
     }
 
+
     void setCookie() {
         Gson gson = new Gson();
         editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
@@ -170,17 +172,21 @@ public class GioHangActivity extends AppCompatActivity {
             tongTien = view.findViewById(R.id.giohang_giaSP);
             soLuong = view.findViewById(R.id.giohang_soLuong);
             final NongSan[] nongSan = new NongSan[1];
-            ApiService.apiService.getNongSanById(itemGioHangs.get(position).getId())
+            ApiService.apiService.getNongSanById(Integer.parseInt(itemGioHangs.get(position).getId()))
                     .enqueue(new Callback<NongSan>() {
                         @Override
                         public void onResponse(Call<NongSan> call, Response<NongSan> response) {
                             nongSan[0] = response.body();
                             ten.setText(nongSan[0].getTenNS());
                             soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
-                            tongTien.setText(String.valueOf(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
-                            tongTienTanhToan.setText(String.valueOf(Integer.parseInt(tongTienTanhToan.getText().toString()) + Integer.valueOf(tongTien.getText().toString())));
+                            tongTien.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
+                            tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
 
                             itemGioHangs.get(position).setGia(nongSan[0].getGia());
+
+                            if(position == itemGioHangs.size()-1){
+                                progressBar.setVisibility(View.GONE);
+                            }
                         }
 
                         @Override
@@ -189,7 +195,7 @@ public class GioHangActivity extends AppCompatActivity {
                         }
                     });
 
-            ApiService.apiService.getAnhNongSanByIdNongSan(itemGioHangs.get(position).getId()).enqueue(new Callback<ArrayList<AnhNongSan>>() {
+            ApiService.apiService.getAnhNongSanByIdNongSan(Integer.parseInt(itemGioHangs.get(position).getId())).enqueue(new Callback<ArrayList<AnhNongSan>>() {
                 @Override
                 public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
                     ArrayList<AnhNongSan> anhNongSans = response.body();
@@ -220,8 +226,8 @@ public class GioHangActivity extends AppCompatActivity {
                     itemGioHangs.get(position).setSoLuong(itemGioHangs.get(position).getSoLuong() + 1);
                     soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
 
-                    tongTien.setText(String.valueOf(nongSan[0].getGia() * itemGioHangs.get(position).getSoLuong()));
-                    tongTienTanhToan.setText(String.valueOf(Integer.parseInt(tongTienTanhToan.getText().toString()) + nongSan[0].getGia()));
+                    tongTien.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
+                    tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
                     setCookie();
                 }
             });
@@ -239,8 +245,8 @@ public class GioHangActivity extends AppCompatActivity {
                         itemGioHangs.get(position).setSoLuong(itemGioHangs.get(position).getSoLuong() - 1);
 
                         soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
-                        tongTien.setText(String.valueOf(nongSan[0].getGia() * itemGioHangs.get(position).getSoLuong()));
-                        tongTienTanhToan.setText(String.valueOf(Integer.parseInt(tongTienTanhToan.getText().toString()) - nongSan[0].getGia()));
+                        tongTien.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
+                        tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
 
                     }
                     setCookie();

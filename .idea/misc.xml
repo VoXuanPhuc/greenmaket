@@ -144,19 +144,25 @@
         <entry key="..\:/Users/Phuc/Desktop/greenmaket/app/src/main/res/layout/activity_danh_muc.xml" value="0.22" />
         <entry key="..\:/Users/Phuc/Desktop/greenmaket/app/src/main/res/layout/activity_danh_sach_hoa_don.xml" value="0.22" />
         <entry key="..\:/Users/Phuc/Desktop/greenmaket/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_chi_tiet_hoa_don.xml" value="0.21" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/drawable-v24/add.xml" value="0.240625" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_chi_tiet_hoa_don.xml" value="0.22" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_chitietnongsan.xml" value="0.5211608222490931" />
-        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_danh_muc.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_danh_muc.xml" value="0.25" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_danh_sach_hoa_don.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_giaodien4.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_gio_hang.xml" value="0.25" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_main_nong_san_theo_danh_muc.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_sanham_theo_danh_muc.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/activity_ui_saunutmuangay.xml" value="0.22" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/dong_hoa_don.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/dong_sanphan_thanhtoan.xml" value="0.22" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/item_user.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/itemlistview_sanphamtheodanhmuc.xml" value="0.33" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/layout_dongchitiet_hoadon.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/layout/layout_dongsanpham_giohang.xml" value="0.22" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/menu/menu_main.xml" value="0.25" />
+        <entry key="..\:/Users/TRAN DAI/Documents/app 2/greenmarket/app/src/main/res/menu/navigation_items.xml" value="0.33" />
         <entry key="..\:/Users/TRAN DAI/Downloads/Green_Market/Green_Market/greenmarket/app/src/main/res/layout/activity_dangky.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/TRAN DAI/Downloads/app/greenmarket/app/src/main/res/layout/activity_chi_tiet_hoa_don.xml" value="0.33" />
         <entry key="..\:/Users/TRAN DAI/Downloads/app/greenmarket/app/src/main/res/layout/activity_profile.xml" value="0.22447916666666667" />
