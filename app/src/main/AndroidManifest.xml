@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
-            android:name=".ForgotPassword"
+            android:name=".mailapi.ForgotPassword"
             android:exported="false" />
         <activity
             android:name=".UI_saunutmuangayActivity"
