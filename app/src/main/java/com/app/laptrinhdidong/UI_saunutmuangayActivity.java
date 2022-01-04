@@ -61,7 +61,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
         preferences = getApplicationContext().getSharedPreferences("loginPref", MODE_PRIVATE);
         editor = preferences.edit();
         try {
-            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("cart", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
+            itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("giohang", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
             });
 
         } catch (Exception e) {
@@ -145,7 +145,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                                     chiTietHoaDon.setHoadon(hoaDonNew);
 
                                     NongSan nongSan = new NongSan();
-                                    nongSan.setId(itemGioHang.getId());
+                                    nongSan.setId(Integer.valueOf(itemGioHang.getId()));
                                     chiTietHoaDon.setNongsan(nongSan);
                                     chiTietHoaDon.setGia(itemGioHang.getGia());
                                     chiTietHoaDon.setSoluong(itemGioHang.getSoLuong());
@@ -160,8 +160,6 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
 
                                                     System.out.println("chi tiet "+gson.toJson(chiTietHoaDon));
 
-
-                                                    Toast.makeText(UI_saunutmuangayActivity.this, "Thêm Chi Tiết thành công", Toast.LENGTH_SHORT).show();
                                                 }
 
                                                 @Override
@@ -171,6 +169,15 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                                             }
                                     );
                                 }
+
+                                editor.putString("giohang", "[]");// or put anything you want in this with String type
+                                editor.apply();
+                                Intent intent   = new Intent(UI_saunutmuangayActivity.this, ChiTietHoaDonActivity.class);
+                                intent.putExtra("trangThaiDonHang",hoaDonNew.getTrangthai());
+                                intent.putExtra("ngayMua",hoaDonNew.getNgaytao().toString());
+                                intent.putExtra("tongTien",hoaDonNew.getTongthanhtoan());
+                                intent.putExtra("maHD",hoaDonNew.getId());
+                                startActivity(intent);
 
 
                             }
@@ -223,7 +230,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
             ImageView imageView = view.findViewById(R.id.hinhanhchitiet_hoaDon);
 
 
-            ApiService.apiService.getNongSanById(itemGioHangs.get(position).getId()).enqueue(
+            ApiService.apiService.getNongSanById(Integer.parseInt(itemGioHangs.get(position).getId())).enqueue(
                     new Callback<NongSan>() {
                         @Override
                         public void onResponse(Call<NongSan> call, Response<NongSan> response) {

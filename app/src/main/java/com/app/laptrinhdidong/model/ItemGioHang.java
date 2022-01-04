@@ -1,17 +1,11 @@
 package com.app.laptrinhdidong.model;
 
 public class ItemGioHang {
-    private int id;
+    private String id;
     private int soLuong;
     private String url;
     private  int gia;
 
-    public ItemGioHang(int id, int soLuong, String url, int gia) {
-        this.id = id;
-        this.soLuong = soLuong;
-        this.url = url;
-        this.gia = gia;
-    }
 
     public int getGia() {
         return gia;
@@ -22,16 +16,7 @@ public class ItemGioHang {
     }
 
     public ItemGioHang(){}
-    public ItemGioHang(int id, int soLuong) {
-        this.id = id;
-        this.soLuong = soLuong;
-    }
 
-    public ItemGioHang(int id, int soLuong, String url) {
-        this.id = id;
-        this.soLuong = soLuong;
-        this.url = url;
-    }
 
     public String getUrl() {
         return url;
@@ -41,11 +26,11 @@ public class ItemGioHang {
         this.url = url;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
