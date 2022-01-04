@@ -1,0 +1,19 @@
+﻿Ngày 2-1-2022
+
+Đại
+	Chi tiết nông sản
+	add giỏ hàng từ trang sản phẩm danh mục
+	tối ưu header danh mục
+	thêm loading cho các trang còn lại
+	sửa loading trong giỏ hàng
+
+Phúc	
+	Nghiên cứu fix hình ảnh trong tìm kiếm
+	them loading cho đăng nhập, đăng ký quên mật khẩu.	
+	Nghiên cứu fix menu đúng vs trang
+	Sort hóa đơn ms nhất
+
+nghiên cứu fix hình ảnh
+
+Ngày họp lại : (deadline)
+	ngày 6 8h

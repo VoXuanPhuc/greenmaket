@@ -79,7 +79,7 @@ public class activity_search extends AppCompatActivity {
                     case R.id.search:
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(activity_search.this, Activity_dangnhap.class));
+                        startActivity(new Intent(activity_search.this, activity_profile.class));
                         break;
                 }
                 return true;

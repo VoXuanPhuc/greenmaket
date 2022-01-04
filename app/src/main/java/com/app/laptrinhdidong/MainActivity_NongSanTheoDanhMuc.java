@@ -76,7 +76,7 @@ public void onNavigationItemSelected(){
                     startActivity(new Intent(MainActivity_NongSanTheoDanhMuc.this, activity_search.class));
                     break;
                 case R.id.profile:
-                    startActivity(new Intent(MainActivity_NongSanTheoDanhMuc.this, Activity_dangnhap.class));
+                    startActivity(new Intent(MainActivity_NongSanTheoDanhMuc.this, activity_profile.class));
                     break;
             }
             return true;

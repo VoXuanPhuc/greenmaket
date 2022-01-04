@@ -14,8 +14,7 @@
         android:theme="@style/Theme.Laptrinhdidong">
         <activity
             android:name=".mailapi.ForgotPassword"
-
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".MainActivity_NongSanTheoDanhMuc"
             android:exported="false" />

@@ -98,7 +98,7 @@ public class GioHangActivity extends AppCompatActivity {
                         startActivity(new Intent(GioHangActivity.this, activity_search.class));
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(GioHangActivity.this, Activity_dangnhap.class));
+                        startActivity(new Intent(GioHangActivity.this, activity_profile.class));
                         break;
                 }
                 return true;
@@ -199,13 +199,13 @@ public class GioHangActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<ArrayList<AnhNongSan>> call, Response<ArrayList<AnhNongSan>> response) {
                     ArrayList<AnhNongSan> anhNongSans = response.body();
-                    itemGioHangs.get(position).setUrl(anhNongSans.get(0).getTen());
-                    if (anhNongSans.size() != 0)
+                    if (anhNongSans.size() != 0) {
+                        itemGioHangs.get(position).setUrl(anhNongSans.get(0).getTen());
                         Picasso.with(GioHangActivity.this).load(anhNongSans.get(0).getTen())
                                 .placeholder(R.drawable.trailuu)
                                 .into(imageView);
 
-
+                    }
                     setCookie();
                 }
 
