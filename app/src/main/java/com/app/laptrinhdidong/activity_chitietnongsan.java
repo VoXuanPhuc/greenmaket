@@ -18,6 +18,9 @@ import android.widget.Toast;
 import com.app.laptrinhdidong.API.ApiService;
 import com.app.laptrinhdidong.model.AnhNongSan;
 import com.app.laptrinhdidong.model.ItemGioHang;
+import com.app.laptrinhdidong.model.KhachHang;
+import com.app.laptrinhdidong.model.NongSan;
+import com.app.laptrinhdidong.model.YeuThich;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
@@ -42,10 +45,12 @@ public class activity_chitietnongsan extends AppCompatActivity {
     TextView number;
     Integer sl;
     int tym1;
-
+    int idNongSan;
+    int gia;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-
+    Intent intent;
+String idYeuThich;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,11 +65,10 @@ public class activity_chitietnongsan extends AppCompatActivity {
             itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("giohang", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
             });
 
-            System.out.println("ket qua : Thanh cong"+itemGioHangs);
+            System.out.println("ket qua : Thanh cong" + itemGioHangs);
         } catch (Exception e) {
             System.out.println("ket qua : That bai");
         }
-
 
 
         tym1 = R.drawable.tym_icon;
@@ -72,21 +76,21 @@ public class activity_chitietnongsan extends AppCompatActivity {
         minus = (ImageButton) findViewById(R.id.giam);
         love = (ImageButton) findViewById(R.id.yeuthichbaidang);
         number = (TextView) findViewById(R.id.soluongctns);
-        Intent intent = getIntent();
+        intent = getIntent();
 
         String ten = intent.getStringExtra("tenNS");
         String moTaNs = intent.getStringExtra("moTaNS");
-        int gia = intent.getIntExtra("gia",0);
-        int idNongSan = intent.getIntExtra("maNS",0);
+        gia = intent.getIntExtra("gia", 0);
+        idNongSan = intent.getIntExtra("maNS", 0);
 
-        tenNSTV  =  findViewById(R.id.tenNongsanctns);
+        tenNSTV = findViewById(R.id.tenNongsanctns);
         tenNSTV.setText(ten);
 
         moTaNSTV = findViewById(R.id.danhmucnongsanctns);
         moTaNSTV.setText(moTaNs);
 
         giaTV = findViewById(R.id.gianongsanctns);
-        giaTV.setText(String.valueOf(gia)+" đ");
+        giaTV.setText(String.valueOf(gia) + " đ");
 
 
         imageIG = findViewById(R.id.hinhAnhNongSan);
@@ -114,12 +118,9 @@ public class activity_chitietnongsan extends AppCompatActivity {
 
                 }
             });
-        }catch (Exception e){
+        } catch (Exception e) {
 
         }
-
-
-
 
 
         sl = Integer.parseInt(number.getText().toString());
@@ -146,39 +147,94 @@ public class activity_chitietnongsan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (tym1 == R.drawable.tym_icon) {
+                    if(idYeuThich != null){
+                        callApiRemoveYeuThich();
+                    }
+
                     tym1 = R.drawable.traitim2;
                 } else {
+                    callApiCallLove();
                     tym1 = R.drawable.tym_icon;
                 }
                 love.setImageResource(tym1);
             }
         });
+        initOnClickForButtonAddCart();
 
 
+    }
+    public void callApiRemoveYeuThich(){
+ApiService.apiService.deleteYeuThich(idYeuThich).enqueue(
+        new Callback<YeuThich>() {
+            @Override
+            public void onResponse(Call<YeuThich> call, Response<YeuThich> response) {
+                Toast.makeText(activity_chitietnongsan.this, "Đã xóa nông sản này ra khỏi danh sách yêu thích", Toast.LENGTH_SHORT).show();
+            }
 
+            @Override
+            public void onFailure(Call<YeuThich> call, Throwable t) {
+
+            }
+        }
+);
+    }
+    public void callApiCallLove(){
+        SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
+        YeuThich yeuThich = new YeuThich();
+        yeuThich.setId(null);
+        KhachHang khachHang = new KhachHang();
+        khachHang.setId(preferences.getString("idKhachHang",""));
+        NongSan nongSan = new NongSan() ;
+        nongSan.setId(idNongSan);
+
+        yeuThich.setKhachhang(khachHang);
+        yeuThich.setNongsan(nongSan);
+
+
+        ApiService.apiService.postYeuThich(yeuThich).enqueue(new Callback<YeuThich>() {
+            @Override
+            public void onResponse(Call<YeuThich> call, Response<YeuThich> response) {
+                if(response.body() != null){
+                    Toast.makeText(activity_chitietnongsan.this, "Đã thêm nông sản này vào danh sách yêu thích", Toast.LENGTH_SHORT).show();
+idYeuThich = response.body().getId();
+                }else{
+                    Toast.makeText(activity_chitietnongsan.this, "Thất bại", Toast.LENGTH_SHORT).show();
+                    System.out.println("mes loi"+response);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<YeuThich> call, Throwable t) {
+                Toast.makeText(activity_chitietnongsan.this, "Thất bại", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    public void initOnClickForButtonAddCart() {
         Button btnThemGioHang = findViewById(R.id.btnThemGioHang);
         btnThemGioHang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean ketQuaTimKiem = false;
                 ItemGioHang itemGioHang = new ItemGioHang();
-                itemGioHang.setId(String.valueOf(intent.getIntExtra("ID",0)));
+                itemGioHang.setId(String.valueOf(intent.getIntExtra("ID", 0)));
                 itemGioHang.setSoLuong(Integer.parseInt(number.getText().toString()));
                 itemGioHang.setGia(gia);
                 Gson gson = new Gson();
                 int i = 0;
-                for (i=0;i<itemGioHangs.size();i++){
-                    if(itemGioHangs.get(i).getId().equals(String.valueOf(intent.getIntExtra("ID",0)))){
+                for (i = 0; i < itemGioHangs.size(); i++) {
+                    if (itemGioHangs.get(i).getId().equals(String.valueOf(intent.getIntExtra("ID", 0)))) {
                         ketQuaTimKiem = true;
                         break;
                     }
                 }
 
-                if(ketQuaTimKiem == true){
-                    itemGioHangs.get(i).setSoLuong(itemGioHangs.get(i).getSoLuong()+Integer.parseInt(number.getText().toString()));
+                if (ketQuaTimKiem == true) {
+                    itemGioHangs.get(i).setSoLuong(itemGioHangs.get(i).getSoLuong() + Integer.parseInt(number.getText().toString()));
                     editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
                     editor.apply();
-                }else{
+                } else {
                     itemGioHangs.add(itemGioHang);
                     editor.putString("giohang", gson.toJson(itemGioHangs));// or put anything you want in this with String type
                     editor.apply();
@@ -187,6 +243,7 @@ public class activity_chitietnongsan extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     public void finish(View view) {

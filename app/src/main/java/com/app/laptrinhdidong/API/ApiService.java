@@ -93,10 +93,11 @@ public interface ApiService {
     @GET("api/chitiethoadonbyHoadon/{idHoaDon}")
     Call<ArrayList<ChiTietHoaDon>> getItemHoaDonByHoaDon(@Path("idHoaDon") int idHoaDon);
 
-    @GET("api/yeu-thiches")
+
+    @POST("api/yeu-thiches")
     Call<YeuThich> postYeuThich(@Body YeuThich yeuThich);
 
-    @DELETE("api/yeu-thiches")
-    Call<YeuThich> deleteYeuThich(@Body YeuThich yeuThich);
+    @DELETE("api/yeu-thiches/{idYeuThich}")
+    Call<YeuThich> deleteYeuThich(@Path("idYeuThich") String idYeuThich);
 
 }
