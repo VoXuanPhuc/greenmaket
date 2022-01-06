@@ -55,7 +55,6 @@ public class GioHangActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gio_hang);
         progressBar = findViewById(R.id.progress);
 
-//        SET COOKIE
         preferences = getApplicationContext().getSharedPreferences("loginPref", MODE_PRIVATE);
         editor = preferences.edit();
 
@@ -231,7 +230,7 @@ public class GioHangActivity extends AppCompatActivity {
                     soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
 
                     tongTien.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
-                    tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
+                    tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) +itemGioHangs.get(position).getGia()));
                     setCookie();
                 }
             });
@@ -250,7 +249,7 @@ public class GioHangActivity extends AppCompatActivity {
 
                         soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
                         tongTien.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
-                        tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
+                        tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) - itemGioHangs.get(position).getGia()));
 
                     }
                     setCookie();

@@ -59,7 +59,7 @@ public class NongSanAdapter extends RecyclerView.Adapter<NongSanAdapter.UserView
 
                 if (anhNongSans.size() != 0){
                     Picasso.with(context).load(anhNongSans.get(0).getTen())
-                            .placeholder(R.drawable.chuoi)
+                            .placeholder(R.drawable.loading)
                             .into(holder.image0);
 
                     holder.constraintLayout0.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +111,7 @@ public class NongSanAdapter extends RecyclerView.Adapter<NongSanAdapter.UserView
 
                     if (anhNongSans.size() != 0)
                         Picasso.with(context).load(anhNongSans.get(0).getTen())
-                                .placeholder(R.drawable.bananas)
+                                .placeholder(R.drawable.loading)
                                 .into(holder.image1);
 
                     holder.constraintLayout1.setOnClickListener(new View.OnClickListener() {

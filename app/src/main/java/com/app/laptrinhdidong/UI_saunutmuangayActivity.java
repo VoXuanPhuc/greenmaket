@@ -126,7 +126,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                 hoaDon.getPhuongThucGH().setId(2152);
                 hoaDon.getPhuongthucTT().setId(2201);
                 hoaDon.setTongthanhtoan(tt);
-                hoaDon.setTrangthai("Đã Thanh Toán");
+                hoaDon.setTrangthai("Chưa Thanh Toán");
 
 
                 ApiService.apiService.postHoaDon(hoaDon).enqueue(

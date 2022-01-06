@@ -101,7 +101,7 @@ public class activity_chitietnongsan extends AppCompatActivity {
 //                    .into(imageIG);
 //        }
         Picasso.with(activity_chitietnongsan.this).load(intent.getStringExtra("URL"))
-                                .placeholder(R.drawable.chuoi)
+                                .placeholder(R.drawable.loading)
                                 .into(imageIG);
 //        try {
 //            ApiService.apiService.getAnhNongSanByIdKhachHang(idNongSan).enqueue(new Callback<ArrayList<AnhNongSan>>() {
