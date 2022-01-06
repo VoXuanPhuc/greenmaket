@@ -5,7 +5,15 @@ public class ItemGioHang {
     private int soLuong;
     private String url;
     private  int gia;
+    private String tenNS;
 
+    public String getTenNS() {
+        return tenNS;
+    }
+
+    public void setTenNS(String tenNS) {
+        this.tenNS = tenNS;
+    }
 
     public int getGia() {
         return gia;

@@ -62,6 +62,20 @@ public class NongSanAdapter extends RecyclerView.Adapter<NongSanAdapter.UserView
                             .placeholder(R.drawable.chuoi)
                             .into(holder.image0);
 
+                    holder.constraintLayout0.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context, activity_chitietnongsan.class);
+                            intent.putExtra("tenNS", nongSan.nongSan0.getTenNS());
+                            intent.putExtra("moTaNS", nongSan.nongSan0.getMoTaNS());
+                            intent.putExtra("gia", nongSan.nongSan0.getGia());
+                            intent.putExtra("maNS",nongSan.nongSan0.getId());
+                            intent.putExtra("ID",nongSan.nongSan0.getId());
+                            intent.putExtra("URL",anhNongSans.get(0).getTen());
+                            context.startActivity(intent);
+
+                        }
+                    });
                 }
 
             }
@@ -71,19 +85,7 @@ public class NongSanAdapter extends RecyclerView.Adapter<NongSanAdapter.UserView
 
             }
         });
-        holder.constraintLayout0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, activity_chitietnongsan.class);
-                intent.putExtra("tenNS", nongSan.nongSan0.getTenNS());
-                intent.putExtra("moTaNS", nongSan.nongSan0.getMoTaNS());
-                intent.putExtra("gia", nongSan.nongSan0.getGia());
-                intent.putExtra("maNS",nongSan.nongSan0.getId());
-                intent.putExtra("ID",nongSan.nongSan0.getId());
-                context.startActivity(intent);
 
-            }
-        });
 
 
 
@@ -111,6 +113,21 @@ public class NongSanAdapter extends RecyclerView.Adapter<NongSanAdapter.UserView
                         Picasso.with(context).load(anhNongSans.get(0).getTen())
                                 .placeholder(R.drawable.bananas)
                                 .into(holder.image1);
+
+                    holder.constraintLayout1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context, activity_chitietnongsan.class);
+                            intent.putExtra("tenNS", nongSan.nongSan1.getTenNS());
+                            intent.putExtra("moTaNS", nongSan.nongSan1.getMoTaNS());
+                            intent.putExtra("gia", nongSan.nongSan1.getGia());
+                            intent.putExtra("maNS",nongSan.nongSan1.getId());
+                            intent.putExtra("ID",nongSan.nongSan1.getId());
+                            intent.putExtra("URL",anhNongSans.get(0).getTen());
+                            context.startActivity(intent);
+
+                        }
+                    });
                 }
 
                 @Override
@@ -120,19 +137,7 @@ public class NongSanAdapter extends RecyclerView.Adapter<NongSanAdapter.UserView
             });
 
 
-            holder.constraintLayout1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, activity_chitietnongsan.class);
-                    intent.putExtra("tenNS", nongSan.nongSan1.getTenNS());
-                    intent.putExtra("moTaNS", nongSan.nongSan1.getMoTaNS());
-                    intent.putExtra("gia", nongSan.nongSan1.getGia());
-                    intent.putExtra("maNS",nongSan.nongSan1.getId());
-                    intent.putExtra("ID",nongSan.nongSan1.getId());
-                    context.startActivity(intent);
 
-                }
-            });
 
         }
     }
