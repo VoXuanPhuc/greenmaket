@@ -67,6 +67,7 @@ public class GioHangActivity extends AppCompatActivity {
         try {
 
             itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("giohang", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
+
             });
 
 
@@ -74,6 +75,9 @@ public class GioHangActivity extends AppCompatActivity {
             System.out.println("ket qua : That bai");
         }
 
+        if(itemGioHangs.size()==0){
+            progressBar.setVisibility(View.GONE);
+        }
         buttonThanhToan = findViewById(R.id.button);
         buttonThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,7 +187,7 @@ public class GioHangActivity extends AppCompatActivity {
                             tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
 
                             itemGioHangs.get(position).setGia(nongSan[0].getGia());
-
+                            itemGioHangs.get(position).setTenNS(nongSan[0].getTenNS());
                             if(position == itemGioHangs.size()-1){
                                 progressBar.setVisibility(View.GONE);
                             }

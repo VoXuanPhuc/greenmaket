@@ -120,7 +120,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                 HoaDon hoaDon = new HoaDon();
                 hoaDon.setId(null);
                 hoaDon.setChiphivanchuyen(15000);
-                hoaDon.getKhachhang().setId("1715");
+                hoaDon.getKhachhang().setId(activity_profile.khachHang.getId());
                 hoaDon.setNgaythanhtoan(Instant.now().toString());
                 hoaDon.setNgaytao(Instant.now().toString());
                 hoaDon.getPhuongThucGH().setId(2152);
@@ -147,7 +147,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
                                     NongSan nongSan = new NongSan();
                                     nongSan.setId(Integer.valueOf(itemGioHang.getId()));
                                     chiTietHoaDon.setNongsan(nongSan);
-                                    chiTietHoaDon.setGia(itemGioHang.getGia());
+                                    chiTietHoaDon.setGia(itemGioHang.getGia()*itemGioHang.getSoLuong());
                                     chiTietHoaDon.setSoluong(itemGioHang.getSoLuong());
 
 
@@ -230,30 +230,39 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
             ImageView imageView = view.findViewById(R.id.hinhanhchitiet_hoaDon);
 
 
-            ApiService.apiService.getNongSanById(Integer.parseInt(itemGioHangs.get(position).getId())).enqueue(
-                    new Callback<NongSan>() {
-                        @Override
-                        public void onResponse(Call<NongSan> call, Response<NongSan> response) {
+//            ApiService.apiService.getNongSanById(Integer.parseInt(itemGioHangs.get(position).getId())).enqueue(
+//                    new Callback<NongSan>() {
+//                        @Override
+//                        public void onResponse(Call<NongSan> call, Response<NongSan> response) {
+//
+//                            NongSan nongSan = response.body();
+//                            price.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan.getGia()).toString());
+//                            name.setText(nongSan.getTenNS());
+//                            qty.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
+//                            tt += itemGioHangs.get(position).getSoLuong() * nongSan.getGia();
+//
+//
+//                            TextView tongTien = findViewById(R.id.tongTienThanhToan);
+//                            tongTien.setText(String.valueOf(withLargeIntegers(tt)) + " đ");
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<NongSan> call, Throwable t) {
+//
+//                        }
+//
+//
+//                    }
+//            );
 
-                            NongSan nongSan = response.body();
-                            price.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan.getGia()).toString());
-                            name.setText(nongSan.getTenNS());
+            price.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * itemGioHangs.get(position).getGia()).toString());
+                            name.setText(itemGioHangs.get(position).getTenNS());
                             qty.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
-                            tt += itemGioHangs.get(position).getSoLuong() * nongSan.getGia();
+                            tt += itemGioHangs.get(position).getSoLuong() * itemGioHangs.get(position).getGia();
 
 
                             TextView tongTien = findViewById(R.id.tongTienThanhToan);
                             tongTien.setText(String.valueOf(withLargeIntegers(tt)) + " đ");
-                        }
-
-                        @Override
-                        public void onFailure(Call<NongSan> call, Throwable t) {
-
-                        }
-
-
-                    }
-            );
 
             Picasso.with(UI_saunutmuangayActivity.this).load(itemGioHangs.get(position).getUrl())
                     .placeholder(R.drawable.pngegg)
