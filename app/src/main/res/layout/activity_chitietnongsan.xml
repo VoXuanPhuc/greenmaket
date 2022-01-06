@@ -83,7 +83,7 @@
             android:layout_marginBottom="15dp"
             android:background="@drawable/radiou_editprofile"
             android:scaleType="fitCenter"
-            android:src="@drawable/traitim2"
+            android:src="@drawable/tymtym"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         <LinearLayout
