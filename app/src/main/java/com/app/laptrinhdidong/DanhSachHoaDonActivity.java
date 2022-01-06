@@ -24,6 +24,7 @@ import com.app.laptrinhdidong.model.HoaDon;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -87,6 +88,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ArrayList<HoaDon>> call, Response<ArrayList<HoaDon>> response) {
                 hoaDons = response.body();
+                Collections.sort(hoaDons);
                 progressBar.setVisibility(View.GONE);
 
                 HoaDonAdapter hoaDonAdapter = new HoaDonAdapter();
@@ -145,7 +147,8 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
             }
 
             trangThai.setText(hoaDons.get(position).getTrangthai());
-            tongThanhTona.setText(String.valueOf(hoaDons.get(position).getTongthanhtoan()));
+
+            tongThanhTona.setText(String.format("%..2f",(double) hoaDons.get(position).getTongthanhtoan()));
 
             ConstraintLayout constraintLayout = view.findViewById(R.id.itemhoadon);
             constraintLayout.setOnClickListener(new View.OnClickListener() {

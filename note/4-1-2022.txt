@@ -8,10 +8,11 @@
 	sửa loading trong giỏ hàng
 
 Phúc	
-	Nghiên cứu fix hình ảnh trong tìm kiếm
+	Nghiên cứu fix hình ảnh trong tìm kiếm /x
 	them loading cho đăng nhập, đăng ký quên mật khẩu.	
-	Nghiên cứu fix menu đúng vs trang
-	Sort hóa đơn ms nhất
+	Nghiên cứu fix menu đúng vs trang 
+	Sort hóa đơn ms nhất /x
+	Format tiền /x
 
 nghiên cứu fix hình ảnh
 

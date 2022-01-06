@@ -3,8 +3,9 @@ package com.app.laptrinhdidong.model;
 
 import java.time.Instant;
 import java.util.Date;
+import java.util.Objects;
 
-public class HoaDon {
+public class HoaDon implements Comparable<HoaDon>{
     private String  id;
     private int tongthanhtoan;
     private int chiphivanchuyen;
@@ -85,6 +86,12 @@ public class HoaDon {
 
     public void setPhuongThucGH(PhuongThucGH phuongthucGH) {
         this.phuongthucGH = phuongthucGH;
+    }
+
+
+    @Override
+    public int compareTo(HoaDon hoaDon) {
+        return hoaDon.getNgaytao().compareTo(getNgaytao());
     }
 }
 
