@@ -134,6 +134,7 @@ public class activity_search extends AppCompatActivity {
                     searchAdapter = new SearchAdapter(nongSans, activity_search.this);
                     recyclerView.setAdapter(searchAdapter);
                     searchAdapter.notifyDataSetChanged();
+
                 }
             }
 
@@ -211,7 +212,6 @@ public class activity_search extends AppCompatActivity {
             recyclerView.setAdapter(searchAdapter);
             searchAdapter.notifyDataSetChanged();
         }
-
     }
 
     public void finish(View view) {

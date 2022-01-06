@@ -88,8 +88,7 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
 
 
         textViewTongTienHang = findViewById(R.id.tongTienHang);
-        textViewTongTienHang.setText(String.valueOf(intent.getIntExtra("tongTien", 0)));
-
+        textViewTongTienHang.setText(String.format("%,.2f",(double) intent.getIntExtra("tongTien", 0)));
 
     }
 

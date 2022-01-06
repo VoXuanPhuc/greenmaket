@@ -148,7 +148,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
             trangThai.setText(hoaDons.get(position).getTrangthai());
 
-            tongThanhTona.setText(String.format("%..2f",(double) hoaDons.get(position).getTongthanhtoan()));
+            tongThanhTona.setText(String.format("%,.2f",(double) hoaDons.get(position).getTongthanhtoan()));
 
             ConstraintLayout constraintLayout = view.findViewById(R.id.itemhoadon);
             constraintLayout.setOnClickListener(new View.OnClickListener() {
