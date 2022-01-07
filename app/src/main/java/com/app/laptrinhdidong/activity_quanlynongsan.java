@@ -56,11 +56,11 @@ public class activity_quanlynongsan extends AppCompatActivity {
       dm.add(new danhmucClass("Trai cay tuoi", "Rau sach", "Thit" , "Ca"));
         lvQuanLyNongSan = findViewById(R.id.listviewnongsan);
 
-        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.chuoi));
-        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.chuoi));
-        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.chuoi));
-        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.chuoi));
-        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.chuoi));
-        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.chuoi));
+        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.traidau));
+        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.traidau));
+        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.traidau));
+        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.traidau));
+        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.traidau));
+        nongsan.add(new nongsanClass("Chuoi", dm.get(0), "Trai cay sach", 20.000, 20, R.drawable.traidau));
     }
 }
