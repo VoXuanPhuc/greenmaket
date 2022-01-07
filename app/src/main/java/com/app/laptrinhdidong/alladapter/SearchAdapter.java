@@ -61,7 +61,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
                     if (anhNongSans.size() != 0)
                         Picasso.with(context).load(anhNongSans.get(0).getTen())
-                                .placeholder(R.drawable.raucaixanh)
+                                .placeholder(R.drawable.isloading)
                                 .into(holder.imageNongsan);
                 }
 

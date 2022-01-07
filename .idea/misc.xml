@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/drawable-v24/round.xml" value="0.21481481481481482" />
+        <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2064814814814815" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/drawable/round10dp.xml" value="0.21481481481481482" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/activity_baidang.xml" value="0.1" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/activity_chi_tiet_hoa_don.xml" value="0.20416666666666666" />
@@ -19,6 +20,7 @@
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/activity_quanlynongsan.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/activity_sanham_theo_danh_muc.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/activity_search.xml" value="0.2" />
+        <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/dong_hoa_don.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/itemlistview_danhmuc.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/itemlistview_sanphamtheodanhmuc.xml" value="0.20416666666666666" />
         <entry key="..\:/HKI-3/Thuy/greenmarket/app/src/main/res/layout/layout_dongchitiet_hoadon.xml" value="0.20416666666666666" />

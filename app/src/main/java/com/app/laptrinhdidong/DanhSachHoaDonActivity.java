@@ -23,8 +23,12 @@ import com.app.laptrinhdidong.allclass.danhmucClass;
 import com.app.laptrinhdidong.model.HoaDon;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Currency;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,7 +65,7 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
                         startActivity(new Intent(DanhSachHoaDonActivity.this, activity_search.class));
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(DanhSachHoaDonActivity.this, Activity_dangnhap.class));
+                        startActivity(new Intent(DanhSachHoaDonActivity.this, activity_profile.class));
                         break;
                 }
                 return true;
@@ -137,7 +141,13 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
             maHD.setText("HD" + String.valueOf(hoaDons.get(position).getId()));
 
-            ngay.setText(hoaDons.get(position).getNgaytao().toString());
+            SimpleDateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
+
+            try {
+                ngay.setText((CharSequence) dateFormat.parse(hoaDons.get(position).getNgaytao()));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
 
             if (hoaDons.get(position).getTrangthai().equals("Đã giao")) {
                 trangThai.setTextColor(Color.parseColor("#009969"));
@@ -148,7 +158,11 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
             trangThai.setText(hoaDons.get(position).getTrangthai());
 
-            tongThanhTona.setText(String.format("%,.2f",(double) hoaDons.get(position).getTongthanhtoan()));
+            NumberFormat format = NumberFormat.getCurrencyInstance();
+            format.setMaximumFractionDigits(0);
+            format.setCurrency(Currency.getInstance("VND"));
+
+            tongThanhTona.setText(format.format((double) hoaDons.get(position).getTongthanhtoan()));
 
             ConstraintLayout constraintLayout = view.findViewById(R.id.itemhoadon);
             constraintLayout.setOnClickListener(new View.OnClickListener() {

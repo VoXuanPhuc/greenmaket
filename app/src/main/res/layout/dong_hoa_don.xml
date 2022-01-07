@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    tools:layout_editor_absoluteX="21dp"
+    tools:layout_editor_absoluteY="-31dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="0dp"
         android:background="#00FFFFFF"
-        >
+        android:padding="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/itemhoadon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:padding="15dp"
             android:background="@drawable/bg_dong_hoadon"
+            android:padding="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/textView2"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="Mã Hóa Đơn : "
                 android:textColor="#484848"
                 android:textSize="17dp"
@@ -38,12 +38,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/maHD"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="#HD000001"
                 android:textColor="#28363A"
                 android:textSize="17dp"
@@ -52,12 +52,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/tt"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="Thành Tiền : "
                 android:textColor="#484848"
                 android:textSize="15dp"
@@ -65,12 +65,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/ngay"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="01/30/2021"
                 android:textColor="#28363A"
                 android:textSize="15dp"
@@ -80,12 +80,12 @@
 
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/textView3"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="Ngày : "
                 android:textColor="#484848"
                 android:textSize="14dp"
@@ -93,13 +93,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/thanhTien"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="15.124.000"
                 android:textColor="#990000"
                 android:textSize="15dp"
@@ -109,27 +109,12 @@
 
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="VND"
-                android:textColor="#28363A"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/thanhTien"
-                app:layout_constraintTop_toBottomOf="@+id/ngay" />
-
-
-            <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/tth"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="Trạng thái : "
                 android:textColor="#484848"
                 android:textSize="15dp"
@@ -137,13 +122,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/tt" />
 
             <TextView
-                android:fontFamily="@font/bevietnampro_medium"
-
                 android:id="@+id/trangThai"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/bevietnampro_medium"
                 android:text="Chưa thanh toán"
                 android:textColor="#990000"
                 android:textSize="15dp"
@@ -154,16 +139,14 @@
             <ImageView
                 android:layout_width="51dp"
                 android:layout_height="51dp"
-
-                android:layout_marginStart="288dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
                 android:src="@drawable/icon_detail"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </LinearLayout>
