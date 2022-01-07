@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,10 +29,13 @@ public class Activity_dangnhap extends AppCompatActivity {
     EditText tenDangNhapInPut;
     EditText matkhauInput;
     TextView quenmatkhau;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
+        progressBar = findViewById(R.id.progress);
+        progressBar.setVisibility(View.INVISIBLE);
         btnDangNhap = (Button) findViewById(R.id.btnDangnhap);
         tvDangky = (TextView) findViewById(R.id.dangky);
 
@@ -44,6 +48,7 @@ public class Activity_dangnhap extends AppCompatActivity {
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 String email = tenDangNhapInPut.getText().toString();
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 if(email.isEmpty()) {
@@ -87,6 +92,7 @@ public class Activity_dangnhap extends AppCompatActivity {
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putString("idKhachHang", khachHangs.get(i).getId());
                         editor.apply();
+                        progressBar.setVisibility(View.GONE);
                         startActivity(new Intent(Activity_dangnhap.this,activity_profile.class));
                         return;
                     }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,8 @@ public class ForgotPassword extends AppCompatActivity {
     EditText editTextEmail;
     TextView dangnhap;
     TextView dangky;
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +37,14 @@ public class ForgotPassword extends AppCompatActivity {
         editTextEmail = findViewById(R.id.email);
         dangnhap = findViewById(R.id.dangnhap);
         dangky = findViewById(R.id.dangky);
+        progressBar = findViewById(R.id.progress);
+        progressBar.setVisibility(View.INVISIBLE);
         Button buttonbtngetpass = (Button) findViewById(R.id.btngetpass);
 
         buttonbtngetpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
                 CallApi();
             }
         });
@@ -67,6 +73,8 @@ public class ForgotPassword extends AppCompatActivity {
         javaMailapi javamailapi = new javaMailapi(this, mEmail, mSubject, mMessage);
 
         javamailapi.execute();
+        progressBar.setVisibility(View.GONE);
+
         Toast.makeText(ForgotPassword.this, "Da gui mat kh", Toast.LENGTH_SHORT).show();
     }
 
@@ -84,6 +92,8 @@ public class ForgotPassword extends AppCompatActivity {
                         return;
                     }
                 }
+                progressBar.setVisibility(View.GONE);
+
                 Toast.makeText(ForgotPassword.this, "Email khong ton tai ", Toast.LENGTH_SHORT).show();
             }
 

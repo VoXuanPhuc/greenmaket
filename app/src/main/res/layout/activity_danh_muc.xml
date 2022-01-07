@@ -7,28 +7,6 @@
     android:background="#A2F3C3"
     tools:context=".DanhMucActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp">
-        <RelativeLayout
-            android:layout_height="?actionBarSize"
-            android:layout_width="match_parent">
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="Green market"
-                android:textColor="#2DA44E"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-            android:layout_height="?actionBarSize"/>
-    </LinearLayout>
-
-
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"

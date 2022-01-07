@@ -95,7 +95,6 @@ public class GioHangActivity extends AppCompatActivity {
                         startActivity(new Intent(GioHangActivity.this, DanhMucActivity.class));
                         break;
                     case R.id.card:
-                        startActivity(new Intent(GioHangActivity.this, GioHangActivity.class));
 
                         break;
                     case R.id.search:
