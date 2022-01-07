@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,12 +38,14 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
     ArrayList<NongSan> listNognSan = new ArrayList<>();
     int idDanhMuc;
     String url = "";
-
+    ProgressBar progressBar;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sanham_theo_danh_muc);
+
+        progressBar = findViewById(R.id.progress);
         Intent intent = getIntent();
         idDanhMuc = intent.getIntExtra("idDanhMuc", 0);
 
@@ -163,7 +166,7 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
 
                     if (anhNongSans.size() != 0){
                         Picasso.with(SanhamTheoDanhMucActivity.this).load(anhNongSans.get(0).getTen())
-                                .placeholder(R.drawable.chuoi)
+                                .placeholder(R.drawable.loading)
                                 .into(image0);
 
                     }
@@ -212,7 +215,7 @@ public class SanhamTheoDanhMucActivity extends AppCompatActivity {
 
                         if (anhNongSans.size() != 0)
                             Picasso.with(SanhamTheoDanhMucActivity.this).load(anhNongSans.get(0).getTen())
-                                    .placeholder(R.drawable.bananas)
+                                    .placeholder(R.drawable.loading)
                                     .into(image1);
                     }
 

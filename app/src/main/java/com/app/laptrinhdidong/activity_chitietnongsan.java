@@ -106,7 +106,7 @@ String idYeuThich;
 //                    .into(imageIG);
 //        }
         Picasso.with(activity_chitietnongsan.this).load(intent.getStringExtra("URL"))
-                                .placeholder(R.drawable.chuoi)
+                                .placeholder(R.drawable.loading)
                                 .into(imageIG);
 //        try {
 //            ApiService.apiService.getAnhNongSanByIdKhachHang(idNongSan).enqueue(new Callback<ArrayList<AnhNongSan>>() {
@@ -159,7 +159,7 @@ String idYeuThich;
                         callApiRemoveYeuThich();
                     }
 
-                    tym1 = R.drawable.traitim2;
+                    tym1 = R.drawable.tymtym;
                 } else {
                     callApiCallLove();
                     tym1 = R.drawable.tym_icon;

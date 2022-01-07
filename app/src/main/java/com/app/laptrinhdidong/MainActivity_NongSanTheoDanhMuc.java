@@ -14,6 +14,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.app.laptrinhdidong.API.ApiService;
@@ -33,7 +35,7 @@ public class MainActivity_NongSanTheoDanhMuc extends AppCompatActivity {
     private AppBarLayout appBarLayout;
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private Toolbar toolbar;
-
+    ProgressBar progressBar;
     private RecyclerView recyclerView;
     private NongSanAdapter nongSanAdapter;
     BottomNavigationView bottomNavigationView;
@@ -47,6 +49,7 @@ public class MainActivity_NongSanTheoDanhMuc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nong_san_theo_danh_muc);
         bottomNavigationView = findViewById(R.id.menubottom);
+        progressBar = findViewById(R.id.progress);
         Intent intent = getIntent();
         idDanhMuc = intent.getIntExtra("idDanhMuc", 0);
 
@@ -142,6 +145,7 @@ public void onNavigationItemSelected(){
                     nongSans.add(double_temp);
                 }
                 initRecycleView(nongSans);
+                progressBar.setVisibility(View.GONE);
 //                listView = findViewById(R.id.listView);
 //                SanhamTheoDanhMucActivity.NongSanAdapter nongSanAdapter = new SanhamTheoDanhMucActivity.NongSanAdapter();
 //                listView.setAdapter(nongSanAdapter);
@@ -152,7 +156,7 @@ public void onNavigationItemSelected(){
             @Override
             public void onFailure(Call<ArrayList<NongSan>> call, Throwable t) {
                 Toast.makeText(MainActivity_NongSanTheoDanhMuc.this, "Call API that bai", Toast.LENGTH_SHORT).show();
-
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
