@@ -1,8 +1,8 @@
 ﻿Ngày 2-1-2022
 
 Đại
-	Sửa tiền
-	Format tiền
+	Sửa tiền X
+	Format tiền X
 	Sửa trái tim
 	Chi tiết sản từ tìm kiếm.
 

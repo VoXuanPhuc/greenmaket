@@ -159,7 +159,7 @@ String idYeuThich;
                         callApiRemoveYeuThich();
                     }
 
-                    tym1 = R.drawable.traitim2;
+                    tym1 = R.drawable.tymtym;
                 } else {
                     callApiCallLove();
                     tym1 = R.drawable.tym_icon;
