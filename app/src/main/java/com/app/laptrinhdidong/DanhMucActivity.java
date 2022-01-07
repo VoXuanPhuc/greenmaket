@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,12 +36,14 @@ public class DanhMucActivity extends AppCompatActivity {
 
     ListView listView;
 
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danh_muc);
 
+        progressBar = findViewById(R.id.progress);
         callApi();
 
 
@@ -76,6 +79,7 @@ public class DanhMucActivity extends AppCompatActivity {
 
 //                Toast.makeText(DanhMucActivity.this, "Call API thanh cong", Toast.LENGTH_SHORT).show();
 
+                progressBar.setVisibility(View.GONE);
                 danhMucs = response.body();
                 DanhMucAdapter danhMucAdapter = new DanhMucAdapter();
                 listView = findViewById(R.id.listView);

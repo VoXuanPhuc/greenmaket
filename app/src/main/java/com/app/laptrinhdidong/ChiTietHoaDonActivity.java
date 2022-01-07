@@ -79,7 +79,7 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
                         startActivity(new Intent(ChiTietHoaDonActivity.this, activity_search.class));
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(ChiTietHoaDonActivity.this, Activity_dangnhap.class));
+                        startActivity(new Intent(ChiTietHoaDonActivity.this, activity_profile.class));
                         break;
                 }
                 return true;

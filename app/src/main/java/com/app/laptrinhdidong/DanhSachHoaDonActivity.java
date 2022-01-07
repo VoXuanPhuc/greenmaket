@@ -141,13 +141,9 @@ public class DanhSachHoaDonActivity extends AppCompatActivity {
 
             maHD.setText("HD" + String.valueOf(hoaDons.get(position).getId()));
 
-            SimpleDateFormat dateFormat= new SimpleDateFormat("dd/MM/yyyy");
 
-            try {
-                ngay.setText((CharSequence) dateFormat.parse(hoaDons.get(position).getNgaytao()));
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
+            ngay.setText(hoaDons.get(position).getNgaytao());
+
 
             if (hoaDons.get(position).getTrangthai().equals("Đã giao")) {
                 trangThai.setTextColor(Color.parseColor("#009969"));
