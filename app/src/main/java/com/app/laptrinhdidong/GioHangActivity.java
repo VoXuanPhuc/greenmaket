@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.laptrinhdidong.API.ApiService;
 
@@ -81,7 +82,13 @@ public class GioHangActivity extends AppCompatActivity {
         buttonThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GioHangActivity.this, UI_saunutmuangayActivity.class));
+                if(itemGioHangs.size() == 0){
+                    Toast.makeText(GioHangActivity.this, "Chưa có mặt hàng nào trong giỏ hàng", Toast.LENGTH_SHORT).show();
+                }else{
+                    startActivity(new Intent(GioHangActivity.this, UI_saunutmuangayActivity.class));
+
+                }
+
             }
         });
 
@@ -263,6 +270,10 @@ public class GioHangActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    protected void onRestart() {
+        finish();
+        super.onRestart();
+    }
 }
 
