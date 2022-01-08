@@ -50,10 +50,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/roboto"
+                android:fontFamily="@font/roboto_thin"
                 android:text="Nông sản sạch"
                 android:textColor="@color/black"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
             <TextView
