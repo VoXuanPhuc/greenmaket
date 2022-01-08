@@ -86,17 +86,17 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="15dp">
+
         <TextView
             android:id="@+id/dangky"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
+            android:fontFamily="@font/bevietnampro_light"
             android:text="Đăng ký"
-            android:paddingLeft="20sp"
             android:textColor="#23834C"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/bevietnampro_light"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/quenmatkhau"
