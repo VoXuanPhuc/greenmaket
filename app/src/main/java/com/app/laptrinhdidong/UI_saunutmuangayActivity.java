@@ -196,6 +196,13 @@ RadioButton radioButton2;
             @Override
             public void onClick(View v) {
                 editTextTextPersonName.setVisibility(View.GONE);
+                if(ch ==false){
+                    ch =true;
+                    tt-= 25000;
+                    TextView tongTien = findViewById(R.id.tongTienThanhToan);
+                    tongTien.setText(String.valueOf(withLargeIntegers(tt)) + " đ");
+                }
+
             }
         });
 
@@ -205,11 +212,18 @@ RadioButton radioButton2;
                     @Override
                     public void onClick(View v) {
                         editTextTextPersonName.setVisibility(View.VISIBLE);
+                        if(ch == true){
+                            ch = false;
+                            tt+= 25000;
+                            TextView tongTien = findViewById(R.id.tongTienThanhToan);
+                            tongTien.setText(String.valueOf(withLargeIntegers(tt)) + " đ");
+                        }
+
                     }
                 }
         );
     }
-
+    boolean ch = true;
     int tt = 0;
 
     public void finish(View view) {
