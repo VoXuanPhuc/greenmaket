@@ -182,7 +182,8 @@ public class GioHangActivity extends AppCompatActivity {
                             ten.setText(nongSan[0].getTenNS());
                             soLuong.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
                             tongTien.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan[0].getGia()));
-                            tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".","")) + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
+                            tongTienTanhToan.setText(withLargeIntegers(Integer.parseInt(tongTienTanhToan.getText().toString().replace(".",""))
+                                    + Integer.valueOf(tongTien.getText().toString().replace(".",""))));
 
                             itemGioHangs.get(position).setGia(nongSan[0].getGia());
                             itemGioHangs.get(position).setTenNS(nongSan[0].getTenNS());

@@ -72,9 +72,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
                         anhNongSans.add(anhNongSan);
                     }
-                    setOnClickForItemListView(holder.item_listViewSearch, listNongSan.get(position), anhNongSans.get(0));
-
-
+                    setOnClickForItemListView(holder.item_listViewSearch,
+                            listNongSan.get(position), anhNongSans.get(0));
 
                 }
 
