@@ -66,9 +66,10 @@ public class ForgotPassword extends AppCompatActivity {
     }
     private void senEmail(String password) {
         String mEmail = editTextEmail.getText().toString();
-        String mSubject = "Đây là mật khẩu của bạn ! GreenMarket app";
-
-        String mMessage = password;
+        String mSubject = "Đây là mật khẩu của bạn từ GreenMarket";
+        
+        String mMessage = "Xin chào bạn, đây là mật khẩu truy cập ứng dụng greenmarket của bạn trên ứng dụng của chúng tôi : ";
+        mMessage += password;
 
         javaMailapi javamailapi = new javaMailapi(this, mEmail, mSubject, mMessage);
 
