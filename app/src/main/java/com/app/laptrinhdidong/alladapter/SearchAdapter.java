@@ -72,7 +72,19 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
                         anhNongSans.add(anhNongSan);
                     }
-                    setOnClickForItemListView(holder.item_listViewSearch, listNongSan.get(position), anhNongSans.get(0));
+                    holder.item_listViewSearch.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(context,activity_chitietnongsan.class);
+                            intent.putExtra("tenNS", listNongSan.get(position).getTenNS());
+                            intent.putExtra("moTaNS", listNongSan.get(position).getMoTaNS());
+                            intent.putExtra("gia", listNongSan.get(position).getGia());
+                            intent.putExtra("maNS",listNongSan.get(position).getId());
+                            intent.putExtra("ID",listNongSan.get(position).getId());
+                            intent.putExtra("URL",anhNongSans.get(0).getTen());
+                            context.startActivity(intent);
+                        }
+                    });
 
 
 
@@ -109,19 +121,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     }
 
     public void setOnClickForItemListView(LinearLayout item_listViewSearch,NongSan nongSan,AnhNongSan anhNongSan){
-    item_listViewSearch.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(context,activity_chitietnongsan.class);
-            intent.putExtra("tenNS", nongSan.getTenNS());
-            intent.putExtra("moTaNS", nongSan.getMoTaNS());
-            intent.putExtra("gia", nongSan.getGia());
-            intent.putExtra("maNS",nongSan.getId());
-            intent.putExtra("ID",nongSan.getId());
-            intent.putExtra("URL",anhNongSan.getTen());
-            context.startActivity(intent);
-        }
-    });
+
     }
 
 }
