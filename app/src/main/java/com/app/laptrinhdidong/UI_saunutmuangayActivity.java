@@ -13,8 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,14 +47,15 @@ import retrofit2.Response;
 public class UI_saunutmuangayActivity extends AppCompatActivity {
     ArrayList<ItemGioHang> itemGioHangs;
     ListView listView;
-
+EditText editTextTextPersonName;
     TextView textViewTongTienThanhToan;
     Button btnThanhToan;
     BottomNavigationView bottomNavigationView;
     ArrayList<NongSan> nongSans;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-
+RadioButton radioButton;
+RadioButton radioButton2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +63,8 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
         ObjectMapper objectMapper = new ObjectMapper();
         preferences = getApplicationContext().getSharedPreferences("loginPref", MODE_PRIVATE);
         editor = preferences.edit();
+        editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
+        initOnClick();
         try {
             itemGioHangs = (ArrayList<ItemGioHang>) objectMapper.readValue(preferences.getString("giohang", "[]"), new TypeReference<ArrayList<ItemGioHang>>() {
             });
@@ -68,21 +73,6 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
             System.out.println("ket qua : That bai");
         }
 
-//        for (ItemGioHang itemGioHang : itemGioHangs) {
-//            ApiService.apiService.getNongSanById(itemGioHang.getId()).enqueue(
-//                    new Callback<NongSan>() {
-//                        @Override
-//                        public void onResponse(Call<NongSan> call, Response<NongSan> response) {
-//                            nongSans.add(response.body());
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<NongSan> call, Throwable t) {
-//
-//                        }
-//                    }
-//            );
-//        }
 
         listView = findViewById(R.id.listViewThanhToan);
         NongSanAdapter nongSanAdapter = new NongSanAdapter();
@@ -117,10 +107,13 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
                 HoaDon hoaDon = new HoaDon();
                 hoaDon.setId(null);
                 hoaDon.setChiphivanchuyen(15000);
-                hoaDon.getKhachhang().setId(activity_profile.khachHang.getId());
+
+
+                hoaDon.getKhachhang().setId(preferences.getString("idKhachHang",""));
                 hoaDon.setNgaythanhtoan(Instant.now().toString());
                 hoaDon.setNgaytao(Instant.now().toString());
                 hoaDon.getPhuongThucGH().setId(2152);
@@ -197,6 +190,25 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
 
     }
 
+    public void initOnClick(){
+        radioButton = findViewById(R.id.radioButton);
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                editTextTextPersonName.setVisibility(View.GONE);
+            }
+        });
+
+        radioButton2 = findViewById(R.id.radioButton2);
+        radioButton2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        editTextTextPersonName.setVisibility(View.VISIBLE);
+                    }
+                }
+        );
+    }
 
     int tt = 0;
 
@@ -230,30 +242,7 @@ public class UI_saunutmuangayActivity extends AppCompatActivity {
             ImageView imageView = view.findViewById(R.id.hinhanhchitiet_hoaDon);
 
 
-//            ApiService.apiService.getNongSanById(Integer.parseInt(itemGioHangs.get(position).getId())).enqueue(
-//                    new Callback<NongSan>() {
-//                        @Override
-//                        public void onResponse(Call<NongSan> call, Response<NongSan> response) {
-//
-//                            NongSan nongSan = response.body();
-//                            price.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * nongSan.getGia()).toString());
-//                            name.setText(nongSan.getTenNS());
-//                            qty.setText(String.valueOf(itemGioHangs.get(position).getSoLuong()));
-//                            tt += itemGioHangs.get(position).getSoLuong() * nongSan.getGia();
-//
-//
-//                            TextView tongTien = findViewById(R.id.tongTienThanhToan);
-//                            tongTien.setText(String.valueOf(withLargeIntegers(tt)) + " đ");
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<NongSan> call, Throwable t) {
-//
-//                        }
-//
-//
-//                    }
-//            );
+
 
             price.setText(withLargeIntegers(itemGioHangs.get(position).getSoLuong() * itemGioHangs.get(position).getGia()).toString());
                             name.setText(itemGioHangs.get(position).getTenNS());
