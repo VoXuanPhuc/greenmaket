@@ -60,7 +60,8 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
         ngayMua.setText(intent.getStringExtra("ngayMua"));
 
         diaChiKhachHang = findViewById(R.id.diaChiKhachHang);
-        diaChiKhachHang.setText(activity_profile.khachHang.getHoTenKH() + ", " + activity_profile.khachHang.getChitietdiachi());
+        SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
+        diaChiKhachHang.setText(preferences.getString("chiTietDiaChi",""));
 
         callApi();
 
@@ -109,7 +110,7 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
                         chiTietHoaDonAdapter chiTietHoaDonAdapter = new chiTietHoaDonAdapter();
                         progressBar.setVisibility(View.GONE);
                         listView.setAdapter(chiTietHoaDonAdapter);
-
+                        soLuongSanPham.setText("Đã mua "+chiTietHoaDons.size()+" sản phẩm");
                     }
 
                     @Override

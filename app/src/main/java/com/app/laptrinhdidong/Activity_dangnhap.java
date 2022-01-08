@@ -89,6 +89,7 @@ public class Activity_dangnhap extends AppCompatActivity {
                         SharedPreferences preferences = getSharedPreferences("login", MODE_PRIVATE);
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putString("idKhachHang", khachHangs.get(i).getId());
+                        editor.putString("chiTietDiaChi", khachHangs.get(i).getHoTenKH()+","+khachHangs.get(i).getChitietdiachi());
                         editor.apply();
                         progressBar.setVisibility(View.GONE);
                         startActivity(new Intent(Activity_dangnhap.this,activity_profile.class));
