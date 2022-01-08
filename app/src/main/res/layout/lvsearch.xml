@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="80dp"
     android:background="@drawable/round10dp"
     android:backgroundTint="@color/white"
     >
@@ -17,6 +17,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             android:src="@drawable/isloading"
+            android:padding="10dp"
             />
 
         <LinearLayout
@@ -25,13 +26,12 @@
             android:layout_height="match_parent"
             android:background="@color/profileedittext"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingVertical="5px">
+            android:paddingHorizontal="20dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="4dp">
 
                 <TextView
                     android:id="@+id/tenNongsan"
@@ -41,7 +41,7 @@
                     android:fontFamily="@font/bevietnampro_regular"
                     android:text="Rau xanh"
                     android:textColor="@color/white"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -52,7 +52,7 @@
                     android:fontFamily="@font/bevietnampro_regular"
                     android:text="Rau xanh"
                     android:textColor="@color/white"
-                    android:textSize="15dp"
+                    android:textSize="14dp"
                     android:textStyle="bold" />
             </RelativeLayout>
 

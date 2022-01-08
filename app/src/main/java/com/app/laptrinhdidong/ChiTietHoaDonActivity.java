@@ -25,7 +25,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Currency;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -80,7 +82,7 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
                         startActivity(new Intent(ChiTietHoaDonActivity.this, activity_search.class));
                         break;
                     case R.id.profile:
-                        startActivity(new Intent(ChiTietHoaDonActivity.this, Activity_dangnhap.class));
+                        startActivity(new Intent(ChiTietHoaDonActivity.this, activity_profile.class));
                         break;
                 }
                 return true;
@@ -150,7 +152,11 @@ public class ChiTietHoaDonActivity extends AppCompatActivity {
             TextView tong_CTHD = view.findViewById(R.id.tong_CTHD);
             ImageView hinhanhchitiet_hoaDon = view.findViewById(R.id.hinhanhchitiet_hoaDon);
 
-            tong_CTHD.setText(String.valueOf(chiTietHoaDons.get(position).getGia()));
+            NumberFormat format = NumberFormat.getCurrencyInstance();
+            format.setMaximumFractionDigits(0);
+            format.setCurrency(Currency.getInstance("VND"));
+
+            tong_CTHD.setText(format.format((double)(chiTietHoaDons.get(position).getGia())));
             soLuowng_CTHD.setText(String.valueOf(chiTietHoaDons.get(position).getSoluong()));
 
 

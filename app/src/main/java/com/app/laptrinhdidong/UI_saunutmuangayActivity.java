@@ -119,7 +119,7 @@ RadioButton radioButton2;
                 hoaDon.getPhuongThucGH().setId(2152);
                 hoaDon.getPhuongthucTT().setId(2201);
                 hoaDon.setTongthanhtoan(tt);
-                hoaDon.setTrangthai("Chưa Thanh Toán");
+                hoaDon.setTrangthai("Đang chờ duyệt");
 
 
                 ApiService.apiService.postHoaDon(hoaDon).enqueue(

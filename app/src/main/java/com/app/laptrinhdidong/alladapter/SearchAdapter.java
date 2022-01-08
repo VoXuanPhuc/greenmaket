@@ -88,6 +88,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
 
 
 
+
                 }
 
                 @Override

@@ -86,21 +86,6 @@
         </TextView>
 
         <TextView
-            android:id="@+id/textView8"
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="34dp"
-            android:fontFamily="@font/bevietnampro_regular"
-            android:text="đ"
-            android:textColor="@color/black"
-            android:textSize="13dp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/tong_CTHD"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/textView7"
 
             android:layout_width="wrap_content"

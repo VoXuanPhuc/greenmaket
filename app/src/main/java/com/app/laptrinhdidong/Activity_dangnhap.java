@@ -43,8 +43,6 @@ public class Activity_dangnhap extends AppCompatActivity {
 
         tenDangNhapInPut = findViewById(R.id.tenDangNhapInPut);
         matkhauInput = findViewById(R.id.matkhauInput);
-        tenDangNhapInPut.setText("nganct@gmail.vn");
-        matkhauInput.setText("123456");
         btnDangNhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
